@@ -8,7 +8,7 @@ Mission Statement
 
 When first searching through the API docs before setting down to write the code, I realized just how vast and thorough the docs were. And then I realized I could leverage this. As a user of my own library, I wanted a way to ask the library what my options were when interacting with a Nimble Storage device rather than just try to memorize all of my options.
 
-Imagine sitting at a Nimble Storage restaraunt wanting to order something to do with a device:
+Imagine sitting at a Nimble Storage restaurant wanting to order something to do with a device:
 
 A waiter/waitress comes by and hands you a menu.
 
@@ -66,7 +66,7 @@ narc.available_methods.grep /read/
 
 (I plan on fleshing out this piece a bit more)
 
-Once an apropriate method has been selected, you can then call it on the `nimble` Object
+Once an apropriate method has been selected, you can then call it on the `narc` Object
 
 ```
 narc.read_volumes

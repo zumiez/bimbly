@@ -1,0 +1,1532 @@
+NsSchedule:
+  Desc: Protection schedule associated with a volume collection or protection template.
+  Type: object
+  Members:
+    id:
+      Desc: ID of protection schedule.
+      Type: NsObjectID
+    schedule_id:
+      Desc: ID of protection schedule.
+      Type: NsObjectID
+      Depricated: Yes
+    name:
+      Desc: Name of protection schedule.
+      Type: NsObjectName
+    schedule_name:
+      Desc: Name of protection schedule.
+      Type: NsObjectName
+      Depricated: Yes
+    period:
+      Desc: Frequency of snapshots.
+      Type: NsUnsignedLong
+    period_unit:
+      Desc: Units for repeat frequency -- minutes, hours, days or weeks.
+      Type: NsPeriodUnit
+    at_time:
+      Desc: Time of day when snapshot should be taken.
+      Type: NsTimeOfDay
+    until_time:
+      Desc: Time of day to stop taking snapshots.
+      Type: NsTimeOfDay
+    days:
+      Desc: Which days snapshots should be taken.
+      Type: NsDays
+    num_retain:
+      Desc: Number of snapshots to retain.
+      Type: NsUnsignedLong
+    downstream_partner:
+      Desc: Partner name if snapshots created by this schedule should be replicated.
+      Type: NsObjectName
+      Depricated: Yes
+    downstream_partner_id:
+      Desc: Partner ID if snapshots created by this schedule should be replicated.
+      Type: NsObjectID
+    downstream_partner_name:
+      Desc: Partner name if snapshots created by this schedule should be replicated.
+      Type: NsObjectName
+    replicate_every:
+      Desc: Which snapshots should be replicated.
+      Type: NsUnsignedLong
+    num_retain_replica:
+      Desc: Number of snapshots to retain on the replica.
+      Type: NsUnsignedLong
+    repl_alert_thres:
+      Desc: Replication alert threshold.
+      Type: NsTime
+    snap_verify:
+      Desc: Run verification tool on snapshot created by this schedule.
+      Type: NsBoolean
+    skip_db_consistency_check:
+      Desc: Skip consistency check for database files on snapshots created by this schedule.
+      Type: NsBoolean
+    disable_appsync:
+      Desc: Disables application synchronized snapshots and creates crash consistent snapshots instead.
+      Type: NsBoolean
+    schedule_type:
+      Desc: Schedule type regular or external_trigger.
+      Type: NsScheduleType
+NsFcInterfaceUpdateInfo:
+  Desc: Fibre Channel interface information to update.
+  Type: object
+  Members:
+    id:
+      Desc: ID of Fibre Channel interface.
+      Type: NsObjectID
+    online:
+      Desc: Identify whether the Fibre Channel interface is online.
+      Type: NsBoolean
+NsDomainName:
+  Desc: Domain name for the Active Directory. Example 'abc.corp'.
+  Type: string
+NsISCSIInitiators:
+  Desc: List of iSCSI initiators.
+  Type: Array Of NsISCSIInitiator
+NsNIC:
+  Desc: Network interface controller.
+  Type: object
+  Members:
+    name:
+      Desc: Name of NIC.
+      Type: NsObjectName
+    subnet_label:
+      Desc: Subnet label for this NIC.
+      Type: NsObjectName
+    data_ip:
+      Desc: Data IP address.
+      Type: NsIPAddress
+    tagged:
+      Desc: Identify whether the NIC is tagged.
+      Type: NsBoolean
+NsFCInitiators:
+  Desc: List of Fibre Channel initiators.
+  Type: Array Of NsFCInitiator
+NsAccessControlRecords:
+  Desc: List of access control records associated with a volume or snapshot or protocol endpoint.
+  Type: Array Of NsAccessControlRecord
+NsNetZoneType:
+  Desc: Possible values 'none', 'evenodd', 'bisect', 'single'.
+  Type: string
+NsStatIdComp:
+  Desc: Domain_id and set_id components of stat name.  String of up to 64 alphanumberic characters.  Undercore and hyphen are allowed.  For example "ds".
+  Type: string
+NsArrayFcConfig:
+  Desc: Array Fibre Channel configuration.
+  Type: object
+  Members:
+    name:
+      Desc: Name of the array.
+      Type: NsObjectName
+    array_name:
+      Desc: Name of the array.
+      Type: NsObjectName
+      Depricated: Yes
+    id:
+      Desc: ID of the array.
+      Type: NsObjectID
+    array_id:
+      Desc: ID of the array.
+      Type: NsObjectID
+      Depricated: Yes
+    ctrlr_a_fc_config:
+      Desc: Controller A Fibre Channel configuration.
+      Type: NsCtrlrFcConfig
+    ctrlr_b_fc_config:
+      Desc: Controller B Fibre Channel configuration.
+      Type: NsCtrlrFcConfig
+NsObjectIDKVList:
+  Desc: A list of key value pairs containing object ids as values.
+  Type: Array Of NsObjectIDKV
+NsScope:
+  Desc: Possible values array serial number, or '-'. Example 'AC-109084'.
+  Type: string
+NsPinnedVolumeInfo:
+  Desc: Select fields containing pinned volume info.
+  Type: object
+  Members:
+    id:
+      Desc: ID of volume.
+      Type: NsObjectID
+    name:
+      Desc: Name of volume.
+      Type: NsVolSnapName
+    size_pinned_cache_bytes:
+      Desc: Total pinned cache size of the volume in bytes.
+      Type: NsBytes
+NsAccessApplyTo:
+  Desc: Possible values 'volume', 'snapshot', 'both', 'pe', 'vvol_volume', 'vvol_snapshot'.
+  Type: string
+NsAsciiString255:
+  Desc: String of printable ASCII characters, maximum length 255.
+  Type: string
+NsFcInterfaceList:
+  Desc: List of Fibre Channel interfaces.
+  Type: Array Of NsFcInterfaceInfo
+NsObjectIDKV:
+  Desc: A key value pair containing an object id as a value.
+  Type: object
+  Members:
+    key:
+      Desc: Identifier of key-value pair.
+      Type: NsString
+    id:
+      Desc: An object id.
+      Type: NsObjectID
+NsTargetSubnets:
+  Desc: List of target subnet tables.
+  Type: Array Of NsTargetSubnet
+NsRouteConfigs:
+  Desc: List of route configs.
+  Type: Array Of NsRoute
+NsNetConfigRole:
+  Desc: Possible values 'active', 'backup', 'draft'.
+  Type: string
+NsPrivilegeList:
+  Desc: List of privileges associated with a role.
+  Type: Array Of NsPrivilege
+NsArraySerialNumber:
+  Desc: Example 'AC-109084'.
+  Type: string
+NsEventType:
+  Desc: Non-negative integer in range [0,2147483647].
+  Type: number
+NsADTestUserReturn:
+  Desc: Active Directory user details.
+  Type: object
+  Members:
+    username:
+      Desc: Name of the Active Directory user.
+      Type: NsString
+    primary_group_name:
+      Desc: Name of the Active Directory group the user belongs to. RBAC is based on this primary group.
+      Type: NsGroupName
+    primary_group_id:
+      Desc: Id of the Active Directory group the user belongs to. RBAC is based on this primary group.
+      Type: NsObjectID
+    group_count:
+      Desc: Number of Active Directory groups the user belongs to.
+      Type: NsUnsignedLong
+    groups:
+      Desc: List of Active Directory groups the user belongs to.
+      Type: NsUserGroupNames
+    role:
+      Desc: The role the user belongs to.
+      Type: NsUserRoles
+NsSnapVolListReturn:
+  Desc: Object returned after creating snapshot collection.
+  Type: object
+  Members:
+    snap_ids:
+      Desc: A list of snapshot ids.
+      Type: NsObjectIDKVList
+NsPlatFcOperationalStatus:
+  Desc: Possible values 'plat_fc_operational_status_unknown', 'plat_fc_operational_status_unconfigured', 'plat_fc_operational_status_configured', 'plat_fc_operational_status_operational', 'plat_fc_operational_status_fault', 'plat_fc_operational_status_admin_offline', plat_fc_operational_status_initializing.
+  Type: string
+NsVolSnapName:
+  Desc: String of up to 215 alphanumeric, hyphenated, colon, or period-separated characters; but cannot begin with hyphen, colon or period. This type is used for object sets containing volumes, snapshots, snapshot collections and protocol endpoints.
+  Type: string
+NsPlatFcLinkStatus:
+  Desc: Possible values 'plat_fc_link_status_unknown', 'plat_fc_link_status_down', 'plat_fc_link_status_up', 'plat_fc_link_status_not_connected', 'plat_fc_link_status_error'.
+  Type: string
+NsCRUDOperations:
+  Desc: List of CRUD (Create, Read, Update, Delete) operations associated with an object.
+  Type: Array Of NsCRUDOperation
+NsArrayNetConfigs:
+  Desc: List of array network configs.
+  Type: Array Of NsArrayNet
+NsFcLinkInfo:
+  Desc: Fibre Channel link information.
+  Type: object
+  Members:
+    link_speed:
+      Desc: Speed of the Fibre Channel link.
+      Type: NsPlatFcLinkSpeed
+    max_link_speed:
+      Desc: Maximum speed of the Fibre Channel link.
+      Type: NsPlatFcLinkSpeed
+    link_status:
+      Desc: Status of the Fibre Channel link.
+      Type: NsPlatFcLinkStatus
+    operational_status:
+      Desc: Operational status of the Fibre Channel link.
+      Type: NsPlatFcOperationalStatus
+NsStatsSensor:
+  Desc: Data for one stat sensor.
+  Type: object
+  Members:
+    name:
+      Desc: Name sensor.
+      Type: NsString
+    index:
+      Desc: Index of sensor in stat for versioning.
+      Type: NsUnsignedLong
+    msec:
+      Desc: Creation time of stat sensor in millisecs.
+      Type: NsUnsignedLong
+    prev_unavail:
+      Desc: Previous stat value is not valid.
+      Type: NsBoolean
+    cur_unavail:
+      Desc: Current stat value is not valid.
+      Type: NsBoolean
+    cur:
+      Desc: Current stat value.
+      Type: NsUnsignedLong
+    prev:
+      Desc: Previous stat value from last sample period.
+      Type: NsUnsignedLong
+NsFcFabricInfo:
+  Desc: Fibre Channel fabric information.
+  Type: object
+  Members:
+    fabric_switch_name:
+      Desc: Name of the Fibre Channel switch.
+      Type: NsAsciiString255
+    fabric_switch_port:
+      Desc: Port on the Fibre Channel switch to which connection is established.
+      Type: NsAsciiString16
+    fabric_switch_wwnn:
+      Desc: WWNN (World Wide Node Name) for the connected port on the fabric switch.
+      Type: NsWWN
+    fabric_switch_wwpn:
+      Desc: WWPN (World Wide Port Name) for the connected port on the fabric switch.
+      Type: NsWWN
+    fabric_wwn:
+      Desc: WWNN(World Wide Node Name) for the Fabric Switch.
+      Type: NsWWN
+    fc_id:
+      Desc: FCID assigned to the Fabric Channel fabric port.
+      Type: NsFcId
+    logged_in:
+      Desc: Login information for interface. True if interface has logged in to the Fibre Channel fabric, else false.
+      Type: NsBoolean
+NsArraySummaryList:
+  Desc: List of arrays' information. Each item contains array_name and array_id for the array name and its ID respectively.
+  Type: Array Of NsArraySummary
+NsFlexiblePassword:
+  Desc: A password with few constraints. A string of up to 255 characters. Example 'password_25-24'.
+  Type: string
+NsTargetName:
+  Desc: The iSCSI Qualified Name (IQN) or the Fibre Channel World Wide Node Name (WWNN) of the target.
+  Type: string
+NsArraySummary:
+  Desc: Array summary information.
+  Type: object
+  Members:
+    id:
+      Desc: Array API ID.
+      Type: NsObjectID
+    array_id:
+      Desc: Array API ID.
+      Type: NsObjectID
+      Depricated: Yes
+    name:
+      Desc: Unique name of array.
+      Type: NsObjectName
+    array_name:
+      Desc: Unique name of array.
+      Type: NsObjectName
+      Depricated: Yes
+NsStatsSensors:
+  Desc: Set of stat sensors for this record.
+  Type: Array Of NsStatsSensor
+NsSubnet:
+  Desc: A subnet configuration.
+  Type: object
+  Members:
+    label:
+      Desc: Subnet label.
+      Type: NsObjectName
+    network:
+      Desc: Network IP address.
+      Type: NsIPAddress
+    netmask:
+      Desc: Subnet netmask address.
+      Type: NsIPNetmask
+    netzone_type:
+      Desc: Netzone type.
+      Type: NsNetZoneType
+    type:
+      Desc: Subnet type.
+      Type: NsSubnetType
+    allow_iscsi:
+      Desc: Allow iSCSI.
+      Type: NsBoolean
+    allow_group:
+      Desc: Allow group.
+      Type: NsBoolean
+    discovery_ip:
+      Desc: Discovery IP.
+      Type: NsIPAddress
+    mtu:
+      Desc: MTU for specified subnet.
+      Type: NsMTU
+    vlan_id:
+      Desc: VLAN ID for specified subnet.
+      Type: NsVlanId
+NsSnapcollSummary:
+  Desc: Select fields containing snapshot collection information.
+  Type: object
+  Members:
+    snapcoll_id:
+      Desc: ID of snapshot collection.
+      Type: NsObjectID
+    snapcoll_name:
+      Desc: Name of snapshot collection.
+      Type: NsVolSnapName
+    snapcoll_creation_time:
+      Desc: Creation time of snapshot collection.
+      Type: NsTime
+NsAuditLogAccessType:
+  Desc: Possible values 'GUI', 'CLI', 'API'.
+  Type: string
+NsIPNetmask:
+  Desc: A netmask expressed as a 32 bit binary value must have the highest bit set (2^31) and the lowest bit clear (2^0) with the first zero followed by only zeros. Example '255.255.255.0'.
+  Type: string
+NsSpacePolicy:
+  Desc: Possible values 'invalid', 'offline', 'non_writable', 'read_only', 'login_only'.
+  Type: string
+NsPrivilege:
+  Desc: Privilege info.
+  Type: object
+  Members:
+    object_type:
+      Desc: Object type name associated with this privilege.
+      Type: NsString
+    operations:
+      Desc: List of operations associated with the above object for this privilege.
+      Type: NsCRUDOperations
+NsStatsResponse:
+  Desc: List of stats records.
+  Type: Array Of NsStatsRecord
+NsEmail:
+  Desc: Case insensitive email address. Example bob@wikipedia.com.
+  Type: string
+SmFcInitiatorAliasSource:
+  Desc: Possible values 'invalid', 'user', 'fabric'.
+  Type: string
+NsSensorList:
+  Desc: Comma separated list of up to 64 stat sensor names. Sensor names are non-empty alphanumeric strings without spaces. The underscore '_' is allowed. Example 'reads,scratch_slosh_cur,schedCpuQueueSizeSysHiPrio'.
+  Type: string
+NsBoolean:
+  Desc: Possible values 'true', 'false'.
+  Type: boolean
+NsOperationType:
+  Desc: Possible values 'edit_vol', 'snap_vol', 'edit_snap', 'add_vol_acl', 'remove_vol_acl', 'create_initiator_grp', 'delete_initiator_grp', 'edit_initiator_grp', 'add_fc_vol_acl', 'add_initiator', 'remove_initiator'.
+  Type: string
+NsFCInitiator:
+  Desc: Fibre Channel initiator.
+  Type: object
+  Members:
+    id:
+      Desc: Unique identifier of the Fibre Channel initiator.
+      Type: NsObjectID
+    initiator_id:
+      Desc: Unique identifier of the Fibre Channel initiator.
+      Type: NsObjectID
+      Depricated: Yes
+    alias:
+      Desc: Alias of the Fibre Channel initiator.
+      Type: NsInitiatorAlias
+    wwpn:
+      Desc: WWPN (World Wide Port Name) of the Fibre Channel initiator.
+      Type: NsWWN
+NsThrottles:
+  Desc: All the throttles for the partner.
+  Type: Array Of NsThrottle
+NsPlatNicType:
+  Desc: Possible values 'nic_type_unknown', 'nic_type_tp', 'nic_type_sfp'.
+  Type: string
+NsFcPortInfo:
+  Desc: Fibre Channel port information.
+  Type: object
+  Members:
+    name:
+      Desc: Name of Fibre Channel port.
+      Type: NsObjectName
+    bus_location:
+      Desc: PCI bus location of the HBA for this Fibre Channel port.
+      Type: NsBusLocation
+    port:
+      Desc: HBA port number for this Fibre Channel port.
+      Type: NsPlatPort
+    slot:
+      Desc: HBA slot number for this Fibre Channel port.
+      Type: NsPlatSlot
+NsArrayDetail:
+  Desc: Detailed array information.
+  Type: object
+  Members:
+    id:
+      Desc: Array API ID.
+      Type: NsObjectID
+    array_id:
+      Desc: Array API ID.
+      Type: NsObjectID
+      Depricated: Yes
+    name:
+      Desc: Unique name of array.
+      Type: NsObjectName
+    array_name:
+      Desc: Unique name of array.
+      Type: NsObjectName
+      Depricated: Yes
+    evac_time:
+      Desc: Start time of array evacuation.
+      Type: NsTime
+    evac_usage:
+      Desc: Initial data in the array.
+      Type: NsBytes
+    usable_capacity:
+      Desc: Usable capacity of the array.
+      Type: NsBytes
+    usage:
+      Desc: Usage of the array.
+      Type: NsBytes
+    vol_usage_compressed_bytes:
+      Desc: Usage of volumes in the array.
+      Type: NsBytes
+    snap_usage_compressed_bytes:
+      Desc: Usage of snapshots in the array.
+      Type: NsBytes
+    usage_valid:
+      Desc: Indicate whether usage of the array is valid.
+      Type: NsBoolean
+    migrate:
+      Desc: Migrate status of array.
+      Type: NsPoolMigrate
+NsSnapshotListFromSnapshotCollections:
+  Desc: Snapshot list as presented in snapshot collections object set.
+  Type: Array Of NsSnapshotFromSnapshotCollections
+NsTokenReportUserDetailsReturn:
+  Desc: Return values of token reporting user details.
+  Type: object
+  Members:
+    user_name:
+      Desc: User name for the session.
+      Type: NsUserName
+    primary_group_id:
+      Desc: The ID of the primary Active Directory user group the user belongs to. RBAC is granted based on this group.
+      Type: NsObjectID
+    primary_group_name:
+      Desc: The primary Active Directory user group the user belongs to. RBAC is granted based on this group.
+      Type: NsUserGroupName
+    group_count:
+      Desc: The number of Active Directory user groups the user belongs to.
+      Type: NsUnsignedLong
+    role:
+      Desc: Role of the user.
+      Type: NsUserRoles
+    inactivity_timeout:
+      Desc: Role of the user.
+      Type: NsUnsignedLong
+    user_id:
+      Desc: Global Id of the user.
+      Type: NsObjectID
+    groups:
+      Desc: The list of Active Directory groups the user belongs to.
+      Type: NsUserGroupNames
+NsAppSyncType:
+  Desc: Possible values 'none', 'vss', 'vmware'.
+  Type: string
+NsAppName:
+  Desc: String of 0-255 printable ASCII characters. Example 'GUI'.
+  Type: string
+NsSnapVol:
+  Desc: Select fields containing volume info.
+  Type: object
+  Members:
+    vol_id:
+      Desc: ID of volume.
+      Type: NsObjectID
+    snap_name:
+      Desc: Snapshot name.
+      Type: NsVolSnapName
+    snap_description:
+      Desc: Snapshot description.
+      Type: NsDescription
+    cookie:
+      Desc: A cookie.
+      Type: NsString
+    online:
+      Desc: Snapshot is online.
+      Type: NsBoolean
+    writable:
+      Desc: Snapshot is writable.
+      Type: NsBoolean
+    app_uuid:
+      Desc: Application identifier of snapshots.
+      Type: NsAppUuid
+    agent_type:
+      Desc: External management agent type.
+      Type: NsAgentType
+    metadata:
+      Desc: Key-value pairs that augment a snapshot's attributes.
+      Type: NsKeyValues
+NsAuditOperationType:
+  Desc: Possible values 'create', 'read', 'update', 'delete', 'other'.
+  Type: string
+NsCRUDOperation:
+  Desc: A CRUD (Create, Read, Update, Delete) operation associated with an object.
+  Type: string
+NsFcInterfaceUpdateList:
+  Desc: List of Fibre Channel interfaces to update.
+  Type: Array Of NsFcInterfaceUpdateInfo
+NsIPAddressList:
+  Desc: List of IP Addresses.
+  Type: Array Of NsIPAddressObject
+NsUnsignedLong:
+  Desc: Unsigned 64-bit integer. Example 1234.
+  Type: number
+NsActiveDirectoryServerList:
+  Desc: Comma separated strings of up to 63 characters of hostname and/or ip addresses. Total length cannot exceed 255 characters.
+  Type: string
+NsSeverityLevel:
+  Desc: Possible values 'info', 'notice', 'warning', 'critical'.
+  Type: string
+NsAccessControlRecord:
+  Desc: An access control record associated with a volume or snapshot or protocol endpoint.
+  Type: object
+  Members:
+    id:
+      Desc: ID of access control record.
+      Type: NsObjectID
+    acl_id:
+      Desc: ID of access control record.
+      Type: NsObjectID
+      Depricated: Yes
+    initiator_group_id:
+      Desc: ID of initiator group.
+      Type: NsObjectID
+    initiator_group_name:
+      Desc: Name of initiator group.
+      Type: NsObjectName
+    chap_user_id:
+      Desc: ID of chap user.
+      Type: NsObjectID
+    chap_user_name:
+      Desc: Name of chap user.
+      Type: NsObjectName
+    apply_to:
+      Desc: State of apply to.
+      Type: NsAccessApplyTo
+    lun:
+      Desc: LUN of snapshot or volume. Secondary LUN if this is Virtual Volume.
+      Type: NsUnsignedLong
+    access_protocol:
+      Desc: Access protocol of snapshot or volume.
+      Type: NsAccessProtocol
+    snapluns:
+      Desc: Information about the snapshot LUNs. This information is available only for Fibre Channel.
+      Type: NsSnapLunInfoList
+    pe_id:
+      Desc: ID of protocol endpoint.
+      Type: NsObjectID
+    pe_name:
+      Desc: Name of protocol endpoint.
+      Type: NsVolSnapName
+    pe_lun:
+      Desc: LUN of protocol endpoint.
+      Type: NsUnsignedLong
+    vol_id:
+      Desc: ID of volume.
+      Type: NsObjectID
+    vol_name:
+      Desc: Name of volume.
+      Type: NsVolSnapName
+    snap_id:
+      Desc: ID of snapshot.
+      Type: NsObjectID
+    snap_name:
+      Desc: Name of snapshot.
+      Type: NsVolSnapName
+NsPartnerCfgSyncStatus:
+  Desc: Possible values 'N/A', 'Yes', 'No'.
+  Type: string
+NsPlatFcLinkSpeed:
+  Desc: Possible values 'plat_fc_link_speed_unknown', 'plat_fc_link_speed_2G', 'plat_fc_link_speed_4G', 'plat_fc_link_speed_8G', 'plat_fc_link_speed_16G', 'plat_fc_link_speed_32G', 'plat_fc_link_speed_10G', 'plat_fc_link_speed_40G'.
+  Type: string
+NsALUA:
+  Desc: Possible values 'active_optimized', 'active_non_optimized', 'standby', 'unavailable', 'logical_block_dependent', 'invalid', 'offline', 'transitioning'.
+  Type: string
+NsObjectID:
+  Desc: A 42 digit hexadecimal number. Example '2a0df0fe6f7dc7bb16000000000000000000004817'.
+  Type: string
+NsFqdn:
+  Desc: String of up to 255 alphanumeric characters; - and . are allowed after the first and before the last character. Example 'example-1.com'.
+  Type: string
+NsNetConfigName:
+  Desc: Possible values 'active', 'backup', 'draft'.
+  Type: string
+NsSnapLunInfoList:
+  Desc: Information about the snapshot LUNs as presented in the access_control_records object set. This information is available only for Fibre Channel.
+  Type: Array Of NsSnapLunInfo
+NsSnapshotFromSnapshotCollections:
+  Desc: Snapshot as presented in snapshot collections object set.
+  Type: object
+  Members:
+    id:
+      Desc: Snapshot collection id which owns this snapshot.
+      Type: NsObjectID
+    snapcoll_id:
+      Desc: Snapshot collection id which owns this snapshot.
+      Type: NsObjectID
+    name:
+      Desc: Snapshot collection name which owns this snapshot.
+      Type: NsVolSnapName
+    snapcoll_name:
+      Desc: Snapshot collection name which owns this snapshot.
+      Type: NsVolSnapName
+    vol_id:
+      Desc: Volume id that is parent to this snapshot.
+      Type: NsObjectID
+    vol_name:
+      Desc: Volume name that is parent to this snapshot.
+      Type: NsVolSnapName
+    snap_id:
+      Desc: Snapshot id.
+      Type: NsObjectID
+      Depricated: Yes
+    snap_name:
+      Desc: Snapshot name.
+      Type: NsVolSnapName
+      Depricated: Yes
+    schedule_id:
+      Desc: ID of protection schedule.
+      Type: NsObjectID
+    schedule_name:
+      Desc: Name of protection schedule.
+      Type: NsObjectName
+NsPlatPort:
+  Desc: Port on the HBA (Host Bus Adapter).
+  Type: number
+NsObjectIDList:
+  Desc: A list of object ids.
+  Type: Array Of NsObjectID
+NsVolStatus:
+  Desc: Possible values 'online', 'offline', 'non_writable', 'read_only', 'login_only'.
+  Type: string
+NsChapPassword:
+  Desc: String of 12 to 16 printable ASCII characters excluding ampersand and ^[];`. Example 'password_25-24'.
+  Type: string
+NsPassword:
+  Desc: String of 8 to 255 printable characters excluding ampersand, backslash and ~;[]`. Example 'password-91'.
+  Type: string
+NsWWN:
+  Desc: Eight bytes expressed in hex separated by colons. Example 'af32f120bcba431a'.
+  Type: string
+NsThrottle:
+  Desc: A single throttle for the partner.
+  Type: object
+  Members:
+    id:
+      Desc: Id of the throttle.
+      Type: NsObjectID
+    name:
+      Desc: Name of the throttle.
+      Type: NsObjectName
+    description:
+      Desc: Description of the throttle.
+      Type: NsObjectName
+    creation_time:
+      Desc: Creation time of the throttle.
+      Type: NsTime
+    last_modified:
+      Desc: Last modification time of the throttle.
+      Type: NsTime
+    thr_partner_id:
+      Desc: ID of the partner object.
+      Type: NsObjectID
+    thr_day_mask:
+      Desc: Mask for days that the throttle operates.
+      Type: NsUnsignedLong
+    thr_at_time:
+      Desc: Start time set for the throttle.
+      Type: NsTimeOfDay
+    thr_until_time:
+      Desc: End time set for the throttle.
+      Type: NsTimeOfDay
+    thr_bandwidth:
+      Desc: Bandwidth set for the throttle in megabits per second.
+      Type: NsUnsignedLong
+    thr_bandwidth_kbps:
+      Desc: Bandwidth set for the throttle in kilobits per second.
+      Type: NsUnsignedLong
+NsSnapshotListFromVolumes:
+  Desc: Snapshot list as presented in volumes object set.
+  Type: Array Of NsSnapshotFromVolumes
+NsJobStatus:
+  Desc: Possible values 'done', 'inprogress'.
+  Type: string
+NsSnapVolList:
+  Desc: List of snapshots to create.
+  Type: Array Of NsSnapVol
+NsAccessProtocol:
+  Desc: Possible values 'iscsi', 'fc'.
+  Type: string
+NsSearchName:
+  Desc: Alphanumeric string, up to 64 characters including hyphen, period, colon. Example 'vol1'.
+  Type: string
+NsFcId:
+  Desc: Unique identifier of the Fibre Channel port in hexadecimal representation.
+  Type: string
+NsKeyValues:
+  Desc: List of key-value pairs. Keys must be unique and non-empty. When creating an object, values must be non-empty. When updating an object, an empty value causes the corresponding key to be removed.
+  Type: Array Of NsKeyValue
+NsPercent:
+  Desc: Percentage as integer from 0 to 100.
+  Type: number
+NsActiveDirectoryComputerName:
+  Desc: Name of the computer account in Active Directory. Example 'storage-array01'.
+  Type: string
+NsUserGroupName:
+  Desc: String of up to 64 uppercase or lowercase characters excluding ampersand, less than, greater than and ^/\[];|=,+*?;. Example 'admin-group-24'.
+  Type: string
+NsBaseWWN:
+  Desc: Six bytes expressed in hex separated by colons. Example 'af32f1'.
+  Type: string
+NsVolumeListReturn:
+  Desc: Object containing a list of volume names and IDs.
+  Type: object
+  Members:
+    vol_list:
+      Desc: A list of volume names and IDs.
+      Type: NsVolumeList
+NsPoolMigrate:
+  Desc: Possible values 'none', 'in', 'out'.
+  Type: string
+NsToken:
+  Desc: String of 31 or 32 alphanumeric characters. Example '9f53a789f1e9eae7b9385f4d8873fb1'.
+  Type: string
+NsISCSIInitiator:
+  Desc: ISCSI initiator.
+  Type: object
+  Members:
+    id:
+      Desc: Unique identifier of the iSCSI initiator.
+      Type: NsObjectID
+    initiator_id:
+      Desc: Unique identifier of the iSCSI initiator.
+      Type: NsObjectID
+      Depricated: Yes
+    label:
+      Desc: Unique label of the iSCSI initiator.
+      Type: NsObjectName
+    iqn:
+      Desc: IQN name of the iSCSI initiator.
+      Type: NsIQN
+    ip_address:
+      Desc: IP address of the iSCSI initiator.
+      Type: NsInitiatorIPAddress
+NsOfflineReason:
+  Desc: Possible values 'user', 'recovery', 'replica', 'over_volume_limit', 'over_snapshot_limit', 'over_volume_reserve', 'over_snapshot_reserve', 'nvram_loss_recovery', 'serial_number_collision', 'encryption_inactive', 'encryption_key_deleted', 'vvol_unbind', 'cache_unpin_in_progress'.
+  Type: string
+NsSnapStatus:
+  Desc: Possible values 'invalid', 'okay', 'failed_delete', 'deleted', 'creating', 'create_retry', 'force_delete', 'deferred_delete'.
+  Type: string
+NsObjectType:
+  Desc: Possible values 'active_directory', 'group', 'chapuser', 'initiatorgrp', 'perfpolicy', 'snapshot', 'snapcoll', 'vol', 'volcoll', 'partner', 'array', 'pool', 'initiator', 'protsched', 'volacl', 'throttle', 'sshkey', 'user', 'protpol', 'prottmpl', 'branch', 'route', 'role', 'privilege', 'netconfig', 'events', 'session', 'subnet', 'array_netconfig', 'nic', 'initiatorgrp_subnet', 'fc_initiator_alias', 'fc_port', 'fc_interface_collection', 'fc', 'event_dipatcher', 'fc_target_port_group', 'encrypt_key', 'encrypt_config', 'snapshot_lun', 'syslog', 'async_job', 'application_server', 'audit_log', 'ip address', 'disk', 'shelf', 'protocol_endpoint', 'folder', 'pe_acl', 'vvol', 'vvol_acl'.
+  Type: string
+NsRoute:
+  Desc: Route configuration.
+  Type: object
+  Members:
+    tgt_network:
+      Desc: Target network address.
+      Type: NsIPAddress
+    tgt_netmask:
+      Desc: Target network mask.
+      Type: NsIPNetmask
+    gateway:
+      Desc: Gateway IP address.
+      Type: NsIPAddress
+NsOrganizationalUnit:
+  Desc: The location where the computer account has to be created. The value should be specified in fully distinguished name (DN) format. Reserved characters - comma, plus sign, double quote, backslash, left angle bracket, right angle bracket, semicolon, linefeed, carriage return, equals sign and forward slash must be escaped. Example ou=ABC\, San Jose,dc=MY,dc=LOCAL.
+  Type: string
+NsEventCategory:
+  Desc: Possible values 'unknown', 'hardware', 'service', 'replication', 'volume', 'update', 'configuration', 'test', 'security'.
+  Type: string
+NsOptionalObjectID:
+  Desc: An optional NsObjectID. A 42 digit hexadecimal number or the empty string. Example '1234123412341234123412341234123412341234cd' or ''.
+  Type: string
+NsNICList:
+  Desc: List of NICs.
+  Type: Array Of NsNIC
+NsIPAddress:
+  Desc: Four numbers in the range [0,255] separated by periods. Example '128.0.0.1'.
+  Type: string
+NsChksum:
+  Desc: A 8 digit hexadecimal number. Example 'ffffffff'.
+  Type: string
+NsPeriodUnit:
+  Desc: Possible values 'minutes', 'hours', 'days', 'weeks'.
+  Type: string
+NsProtectionPolicyType:
+  Desc: Possible values 'protection_template', 'volume_collection'.
+  Type: string
+NsErrorCode:
+  Desc: Non-negative integer in range [0,9000].
+  Type: string
+NsSoftwareVersion:
+  Desc: Software version of storage array or group.
+  Type: string
+NsMTU:
+  Desc: Positive integer in range [512,1600].
+  Type: number
+NsSnapshotFromVolumes:
+  Desc: Snapshot as presented in volumes object set.
+  Type: object
+  Members:
+    id:
+      Desc: Snapshot id.
+      Type: NsObjectID
+    snap_id:
+      Desc: Snapshot id.
+      Type: NsObjectID
+      Depricated: Yes
+    name:
+      Desc: Snapshot name.
+      Type: NsVolSnapName
+    snap_name:
+      Desc: Snapshot name.
+      Type: NsVolSnapName
+      Depricated: Yes
+NsIPAddressObject:
+  Desc: Object wrapper of IP Address.
+  Type: object
+  Members:
+    ip_addr:
+      Desc: An IP Address.
+      Type: NsIPAddress
+NsAuditActivity:
+  Desc: String of 1-1476 printable characters. Example 'Created snapshot % of volume %'.
+  Type: string
+NsDescription:
+  Desc: String of up to 255 printable ASCII characters. Example '99.9999% availability'.
+  Type: string
+NsAppServerType:
+  Desc: Possible values 'vss', 'vmware'.
+  Type: string
+NsExtendedPrivilegeList:
+  Desc: List of extended privileges associated with a role.
+  Type: Array Of NsExtendedPrivilege
+NsArrayFcConfigList:
+  Desc: List of array Fibre Channel configurations.
+  Type: Array Of NsArrayFcConfig
+NsAuditLogUserName:
+  Desc: String of up to 32 alphanumeric characters, beginning with a letter. Or _ampersand_amp;lt;system_ampersand_amp;gt; for system user. Example 'user99'.
+  Type: string
+NsVlanId:
+  Desc: Positive integer in range [0,4096].
+  Type: number
+NsFcInterfaceInfo:
+  Desc: Fibre Channel interface information.
+  Type: object
+  Members:
+    name:
+      Desc: Name of Fibre Channel interface.
+      Type: NsObjectName
+    wwnn:
+      Desc: WWNN (World Wide Node Name) for this Fibre Channel interface.
+      Type: NsWWN
+    wwpn:
+      Desc: WWPN (World Wide Port Name)for this Fibre Channel interface.
+      Type: NsWWN
+    online:
+      Desc: Identify whether the Fibre Channel interface is online.
+      Type: NsBoolean
+    bus_location:
+      Desc: PCI bus location of the HBA.
+      Type: NsBusLocation
+    slot:
+      Desc: Information about the Fibre Channel slot.
+      Type: NsPlatSlot
+    port:
+      Desc: Information about the Fibre Channel port on which the interface is hosted.
+      Type: NsPlatPort
+NsAbsolutePath:
+  Desc: Absolute path that starts with / and delimited by /. Each component name must conform to NsObjectName type. Example '/path/to/folder'.
+  Type: string
+NsInitiatorIPAddress:
+  Desc: String of four period-separated numbers, each in range [0,255]. Example '128.0.0.1' or '*'.
+  Type: string
+NsCommaSeparatedList:
+  Desc: Comma separated list of up to 64 non-empty lowercase alphanumeric strings without spaces. Example 'name,app_id'.
+  Type: string
+NsPlatSlot:
+  Desc: Slot that is mapped on the PCIe bus.
+  Type: number
+NsDomainUser:
+  Desc: Active Directory username. String up to 255 printable characters. Example 'joe-91'.
+  Type: string
+NsFullName:
+  Desc: Alphanumeric string of up to 64 chars, starts with letter, can include space, apostrophe('), hythen(-). Example 'User-13 Peterson'.
+  Type: string
+NsBulkVolSettingReturn:
+  Desc: Return codes for setting an attribute to a list of items.
+  Type: object
+  Members:
+    error_codes:
+      Desc: Error codes for every element in a list of items.
+      Type: NsErrorCodeList
+NsExtUserId:
+  Desc: String of up to 255 printable ASCII characters. Example 'S_aba-123'.
+  Type: string
+NsBusLocation:
+  Desc: Platform HBA (Host Bus Adapter) bus location. Example  00008100.0.
+  Type: string
+NsVolumeList:
+  Desc: List of volumes associated with a volume collection.
+  Type: Array Of NsVolumeSummary
+NsNetbiosName:
+  Desc: Netbios name for the Active Directory. Example 'corp'.
+  Type: string
+NsPerfPolicyName:
+  Desc: String of up to 64 alphanumeric characters, - and . and  and space are allowed after first character. Example 'SQL Server Logs'.
+  Type: string
+NsAuditCategory:
+  Desc: Possible values 'data_provisioning', 'data_protection', 'data_access', 'user_access', 'system_configuration', 'software_update'.
+  Type: string
+NsPoolMergeReturn:
+  Desc: Return values of pool merge.
+  Type: object
+  Members:
+    snapcoll_count:
+      Desc: Snapshot collection count.
+      Type: NsUnsignedLong
+    array_list:
+      Desc: List of arrays in the pool with detailed information. When create/update array list, only arrays' id is required.
+      Type: NsArrayDetailList
+    array_count:
+      Desc: Number of arrays in the pool.
+      Type: NsUnsignedLong
+    unassigned_array_list:
+      Desc: List of arrays being unassigned from the pool.
+      Type: NsArraySummaryList
+    all_flash:
+      Desc: Indicate whether the pool is an all_flash pool.
+      Type: NsBoolean
+    cache_capacity:
+      Desc: Total usable cache capacity of the pool in bytes.
+      Type: NsBytes
+    capacity:
+      Desc: Total storage space of the pool in bytes.
+      Type: NsBytes
+    compressed_snap_usage_bytes:
+      Desc: Compressed usage of snapshots in the pool.
+      Type: NsBytes
+    compressed_vol_usage_bytes:
+      Desc: Compressed usage of volumes in the pool.
+      Type: NsBytes
+    compression_ratio:
+      Desc: Compression savings for the pool expressed as ratio.
+      Type: NsRatio
+    creation_time:
+      Desc: Time when this pool was created.
+      Type: NsTime
+    dedupe_ratio:
+      Desc: Dedupe savings for the pool expressed as ratio.
+      Type: NsRatio
+    description:
+      Desc: Text description of pool. Default ''.
+      Type: NsDescription
+    free_space:
+      Desc: Free space of the pool in bytes.
+      Type: NsBytes
+    full_name:
+      Desc: Fully qualified name of pool.
+      Type: NsObjectName
+    id:
+      Desc: Identifier for the pool.
+      Type: NsObjectID
+    dedupe_enabled:
+      Desc: Indicate whether the pool is a dedupe enabled pool.
+      Type: NsBoolean
+    last_modified:
+      Desc: Time when this pool was last modified.
+      Type: NsTime
+    name:
+      Desc: Name of pool.
+      Type: NsObjectName
+    pinnable_cache_capacity:
+      Desc: Total pinnable cache capacity of the pool in bytes.
+      Type: NsBytes
+    pinned_cache_capacity:
+      Desc: Total pinned cache capacity of the pool in bytes.
+      Type: NsBytes
+    pinned_vol_list:
+      Desc: The list of pinned volumes in the pool.
+      Type: NsVolumeList
+    savings_compression:
+      Desc: Space usage savings in the pool due to compression.
+      Type: NsBytes
+    savings_dedupe:
+      Desc: Space usage savings in the pool due to deduplication.
+      Type: NsBytes
+    search_name:
+      Desc: Name of pool used for object search.
+      Type: NsSearchName
+    snap_compression_ratio:
+      Desc: Compression ratio of snapshots in the pool.
+      Type: NsRatio
+    snap_count:
+      Desc: Snapshot count.
+      Type: NsUnsignedLong
+    uncompressed_snap_usage_bytes:
+      Desc: Uncompressed usage of snapshots in the pool.
+      Type: NsBytes
+    uncompressed_vol_usage_bytes:
+      Desc: Uncompressed usage of volumes in the pool.
+      Type: NsBytes
+    unused_reserve:
+      Desc: Unused reserve space of the pool in bytes.
+      Type: NsBytes
+    usage:
+      Desc: Used space of the pool in bytes.
+      Type: NsBytes
+    usage_valid:
+      Desc: Indicate whether the usage of pool is valid.
+      Type: NsBoolean
+    vol_compression_ratio:
+      Desc: Compression ratio of volumes in the pool.
+      Type: NsRatio
+    vol_count:
+      Desc: Number of volumes assigned to the pool.
+      Type: NsUnsignedLong
+    vol_list:
+      Desc: The list of volumes in the pool.
+      Type: NsVolumeList
+NsEncryptionCipher:
+  Desc: Possible values 'none', 'aes_256_xts'.
+  Type: string
+NsKeyValue:
+  Desc: Key-value pair.
+  Type: object
+  Members:
+    key:
+      Desc: Identifier of key-value pair.
+      Type: NsString
+    value:
+      Desc: Value of key-value pair.
+      Type: NsString
+NsISCSISessions:
+  Desc: List of iSCSI initiator sessions information.
+  Type: Array Of NsISCSISession
+NsTimeOfDay:
+  Desc: Non-negative integer in range [0,86399] which is equivalent to [00000 AM, 235959 PM].
+  Type: number
+NsTag:
+  Desc: String of up to 128 printable ASCII characters. Example 'GUI debugger'.
+  Type: string
+NsUserRoles:
+  Desc: Possible values 'administrator', 'poweruser', 'operator', 'guest'.
+  Type: string
+NsScheduleList:
+  Desc: List of snapshot schedules associated with a volume collection or protection template.
+  Type: Array Of NsSchedule
+NsPinnedVolumeInfoList:
+  Desc: List of pinned volumes in a pool.
+  Type: Array Of NsPinnedVolumeInfo
+NsTime:
+  Desc: Seconds since last epoch i.e. 0000 January 1, 1970. Example '3400'.
+  Type: number
+NsTraceLevel:
+  Desc: Possible values 'info', 'warn', 'note', 'error', 'critical'.
+  Type: string
+NsArrayDetailList:
+  Desc: List of arrays' detailed information.
+  Type: Array Of NsArrayDetail
+NsUserGroupNames:
+  Desc: List of Active Directory groups the user belongs to.
+  Type: Array Of NsUserGroupName
+NsRatio:
+  Desc: Fraction expressed as floating point number. Example '9.18'.
+  Type: number
+NsAgentType:
+  Desc: Possible values 'none', 'smis', 'all', 'vvol', 'openstack'.
+  Type: string
+NsAppUuid:
+  Desc: String of up to 255 alphanumeric characters, hyphen, dot and underscore are allowed. Example 'rfc4122.943f7dc1-5853-497c-b530-f689ccf1bf18'.
+  Type: string
+NsAsciiString16:
+  Desc: String of printable ASCII characters, maximum length 16.
+  Type: string
+NsEventTargetType:
+  Desc: Possible values 'anon', 'array', 'controller', 'disk', 'nic', 'temperature', 'service', 'volume', 'protection_set', 'nvram', 'fan', 'power_supply', 'partner', 'raid', 'test', 'iscsi', 'pool', 'group', 'shelf', 'ntb', 'fc', 'initiator_group'.
+  Type: string
+NsDomainPassword:
+  Desc: Active Directory user password. String up to 255 printable characters. Example 'password-91'.
+  Type: string
+NsFcPortList:
+  Desc: List of Fibre Channel ports.
+  Type: Array Of NsFcPortInfo
+NsStatScope:
+  Desc: String of up to 10 alphanumberic characters.  For example 'array'.
+  Type: string
+NsObjectName:
+  Desc: String of up to 64 alphanumeric characters, - and . and  are allowed after first character. Example 'myobject-5'.
+  Type: string
+NsBytes:
+  Desc: Unsigned 64-bit integer. Example '1234'.
+  Type: number
+NsBitMap:
+  Desc: A hexadecimal number with maximum of 8192 characters. Example '0810'.
+  Type: string
+NsFcConfigRegenerateReturn:
+  Desc: Return values of Fibre channel config regeneration.
+  Type: object
+  Members:
+    array_list:
+      Desc: List of array Fibre Channel configs.
+      Type: NsArrayFcConfigList
+    group_leader_array:
+      Desc: Name of the group leader array.
+      Type: NsObjectName
+    id:
+      Desc: Identifier for Fibre Channel configuration.
+      Type: NsObjectID
+NsADReportStatusReturn:
+  Desc: Status of the Active Directory domain.
+  Type: object
+  Members:
+    joined:
+      Desc: Joined the Active Directory group.
+      Type: NsBoolean
+    enabled:
+      Desc: Active Directory group is enabled.
+      Type: NsBoolean
+    local_service_status:
+      Desc: Status of the local service.
+      Type: NsBoolean
+    remote_service_status:
+      Desc: Status of the remote service.
+      Type: NsBoolean
+    trust_valid:
+      Desc: Trust is valid.
+      Type: NsBoolean
+NsPort:
+  Desc: Integer value between 0-65535 representing TCP/IP TCP/IP port. Example 1234.
+  Type: number
+NsIQN:
+  Desc: Alphanumeric, hyphenated, colon or period separated string of up to 255 characters. Example 'iqn.2007-11.com.storagezmytestvol1-v0df0fe6f7dc7bb16.0000016b.70374579'.
+  Type: string
+NsISCSISession:
+  Desc: ISCSI initiator session information.
+  Type: object
+  Members:
+    id:
+      Desc: Unique identifier of the iSCSI session.
+      Type: NsObjectID
+    session_id:
+      Desc: Unique identifier of the iSCSI session.
+      Type: NsObjectID
+      Depricated: Yes
+    initiator_name:
+      Desc: Name of the iSCSI initiator (IQN).
+      Type: NsObjectName
+    num_connections:
+      Desc: Number of connections in iSCSI session.
+      Type: NsUnsignedLong
+    pr_key:
+      Desc: Registered persistent reservation key for the I-T nexus on this LU (if there is no registration, its value will be zero).
+      Type: NsUnsignedLong
+    initiator_ip_addr:
+      Desc: IP address of the iSCSI initiator.
+      Type: NsInitiatorIPAddress
+    target_ip_addr:
+      Desc: Target IP address of the iSCSI initiator.
+      Type: NsInitiatorIPAddress
+    header_digest_enabled:
+      Desc: Indicate whether header digest is enabled.
+      Type: NsBoolean
+    data_digest_enabled:
+      Desc: Indicate whether data digest is enabled.
+      Type: NsBoolean
+NsFcSessionInitiator:
+  Desc: Information of the Fibre Channel Session Initiator.
+  Type: object
+  Members:
+    initiator_alias:
+      Desc: Alias of the Fibre Channel initiator.
+      Type: NsInitiatorAlias
+    initiator_wwpn:
+      Desc: WWPN (World Wide Port Name) of the Fibre Channel initiator.
+      Type: NsWWN
+    initiator_switch_name:
+      Desc: Name of the switch used by the Fibre Channel initiator.
+      Type: NsAsciiString255
+    initiator_switch_port:
+      Desc: Port on the switch used by the Fibre Channel initiator.
+      Type: NsAsciiString16
+    initiator_symbolic_portname:
+      Desc: Symbolic port name associated with the Fibre Channel initiator.
+      Type: NsAsciiString255
+    initiator_symbolic_nodename:
+      Desc: Symbolic node name associated with the Fibre Channel initiator.
+      Type: NsAsciiString255
+    initiator_fcid:
+      Desc: FCID assigned to the Fibre Channel initiator.
+      Type: NsFcId
+NsUserName:
+  Desc: String of up to 80 alphanumeric characters, beginning with a letter. For Active Directory users, it can include backslash (\), dash (-), period (.), underscore (_) and space. Example 'user1', 'companydomain\user1'.
+  Type: string
+NsCtrlrFcConfig:
+  Desc: Controller Fibre Channel configuration.
+  Type: object
+  Members:
+    fc_port_list:
+      Desc: List of Fibre Channel ports.
+      Type: NsFcPortList
+    fc_interface_list:
+      Desc: List of Fibre Channel interfaces.
+      Type: NsFcInterfaceList
+NsPEOpStateType:
+  Desc: Possible values 'normal', 'deprecated'.
+  Type: string
+NsSubnetType:
+  Desc: Possible values 'invalid', 'unconfigured', 'mgmt', 'data', 'mgmt_data'.
+  Type: string
+NsFcSessionTarget:
+  Desc: Information of the Fibre Channel session target.
+  Type: object
+  Members:
+    target_port_array_name:
+      Desc: Name of the array hosting the Fibre Channel target port.
+      Type: NsObjectName
+    target_port_ctrlr_name:
+      Desc: Name (A or B) of the controller to which the port belongs.
+      Type: NsObjectName
+    target_port_interface_name:
+      Desc: Name of the interface hosted on the Fibre Channel target port.
+      Type: NsObjectName
+    target_wwnn:
+      Desc: WWNN (World Wide Node Name) of the Fibre Channel target port.
+      Type: NsWWN
+    target_wwpn:
+      Desc: WWPN (World Wide Port Name) of the Fibre Channel target port.
+      Type: NsWWN
+    target_fcid:
+      Desc: FCID assigned to the Fibre Channel target port.
+      Type: NsFcId
+NsSeconds:
+  Desc: Unsigned 64-bit integer. Example '1234'.
+  Type: number
+NsSubnetConfigs:
+  Desc: List of subnet configs.
+  Type: Array Of NsSubnet
+NsStatsRecord:
+  Desc: One stat record.
+  Type: object
+  Members:
+    create_time:
+      Desc: Creation time of stat sample.
+      Type: NsTime
+    sensors:
+      Desc: Array of stats sensors for this record.
+      Type: NsStatsSensors
+NsVersion:
+  Desc: String of up to 8 alphanumeric characters starting with v. Example 'v1'.
+  Type: string
+NsInitiatorAlias:
+  Desc: String of up to 32 alphanumeric characters, or one of $^-_. cannot begin with non-alphanumeric character. Example 'my_initiator-4'.
+  Type: string
+NsString:
+  Desc: Plain string.
+  Type: string
+NsGroupName:
+  Desc: String of up to 64 alphanumeric characters, - is allowed after first character. Example 'g1-exchange'.
+  Type: string
+NsArrayNet:
+  Desc: Array network config.
+  Type: object
+  Members:
+    name:
+      Desc: Name of the array.
+      Type: NsObjectName
+    member_gid:
+      Desc: GID of member.
+      Type: NsUnsignedLong
+    ctrlr_a_support_ip:
+      Desc: IP address of controller A.
+      Type: NsIPAddress
+    ctrlr_b_support_ip:
+      Desc: IP address of controller B.
+      Type: NsIPAddress
+    nic_list:
+      Desc: List of NICs.
+      Type: NsNICList
+NsCachePolicy:
+  Desc: Possible values 'disabled', 'normal', 'aggressive', 'no_write', 'aggressive_read_no_write'.
+  Type: string
+NsPlatLinkSpeed:
+  Desc: Possible values 'link_speed_unknown', 'link_speed_10M', 'link_speed_100M', 'link_speed_1000M', 'link_speed_10000M'.
+  Type: string
+NsErrorCodeList:
+  Desc: List of error codes.
+  Type: Array Of NsErrorCode
+NsAppIdType:
+  Desc: Possible values 'inval', 'exchange', 'sql2005', 'sql2008', 'sql2012', 'exchange_dag', 'sql2014'.
+  Type: string
+NsOperationStatus:
+  Desc: Possible values 'invalid', 'unknown', 'succeeded', 'failed', 'inprogress'.
+  Type: string
+NsHostName:
+  Desc: String of up to 63 alphanumeric and can include hyphens characters but cannot start with hyphen.
+  Type: string
+NsFCSessions:
+  Desc: List of Fibre Channel initiator sessions information.
+  Type: Array Of NsFCSession
+NsChksumReturn:
+  Desc: Return computed checksum.
+  Type: object
+  Members:
+    NsChksum:
+      Desc: Computed checksum.
+      Type: NsChksum
+NsTargetSubnet:
+  Desc: List of subnet labels.
+  Type: object
+  Members:
+    id:
+      Desc: Subnet ID.
+      Type: NsObjectID
+    label:
+      Desc: Subnet label.
+      Type: NsObjectName
+NsExtendedPrivilege:
+  Desc: Extended privilege info.
+  Type: object
+  Members:
+    object_type:
+      Desc: Object type name associated with this privilege.
+      Type: NsString
+    operation:
+      Desc: Operation associated with the above object for this privilege.
+      Type: NsString
+    allow:
+      Desc: Indicate whether the above operation is allowed for this privilege.
+      Type: NsBoolean
+NsSnapLunInfo:
+  Desc: Snapshot LUN information as presented in the access_control_records object set. This information is only available for Fibre Channel.
+  Type: object
+  Members:
+    id:
+      Desc: Snapshot ID.
+      Type: NsObjectID
+    name:
+      Desc: Snapshot name.
+      Type: NsVolSnapName
+    lun:
+      Desc: Snapshot LUN.
+      Type: NsUnsignedLong
+NsSnapReplStatus:
+  Desc: Possible values 'complete', 'in_progress', 'pending'.
+  Type: string
+NsPlatLinkStatus:
+  Desc: Possible values 'link_status_unknown', 'link_status_down', 'link_status_up'.
+  Type: string
+NsVolumeSummary:
+  Desc: Select fields containing volume info.
+  Type: object
+  Members:
+    id:
+      Desc: ID of volume.
+      Type: NsObjectID
+    vol_id:
+      Desc: ID of volume.
+      Type: NsObjectID
+      Depricated: Yes
+    name:
+      Desc: Name of volume.
+      Type: NsVolSnapName
+    vol_name:
+      Desc: Name of volume.
+      Type: NsVolSnapName
+      Depricated: Yes
+NsDays:
+  Desc: Comma separated list of days of the week or 'all'. Example 'monday,sunday'.
+  Type: string
+NsMac:
+  Desc: Mac address of an interface.
+  Type: string
+NsFibreChannelPortID:
+  Desc: An ID of a Fibre Channel Port. Example '1f01067316132'.
+  Type: string
+NsLogMessage:
+  Desc: String of up to 1024 printable ASCII characters. Example 'Null pointer exception, at line 320'.
+  Type: string
+NsBitMapReturn:
+  Desc: Return bitmap under certain request.
+  Type: object
+  Members:
+    bitmap:
+      Desc: Returned bitmap.
+      Type: NsBitMap
+NsScheduleType:
+  Desc: Possible values 'regular', 'external_trigger'.
+  Type: string
+NsISCSISerialNumber:
+  Desc: A 32 digit hexadecimal number. Example '1234123412341234abcdacbdacbdacbd'.
+  Type: string
+NsLunReturn:
+  Desc: Return LU number.
+  Type: object
+  Members:
+    lun:
+      Desc: LU number.
+      Type: NsUnsignedLong
+NsFCSession:
+  Desc: Fibre Channel initiator session information.
+  Type: object
+  Members:
+    id:
+      Desc: Unique identifier of the Fibre Channel session.
+      Type: NsObjectID
+    session_id:
+      Desc: Unique identifier of the Fibre Channel session.
+      Type: NsObjectID
+      Depricated: Yes
+    alua:
+      Desc: ALUA (Asymmetric Logical Unit Access) value of the Fibre Channel session.
+      Type: NsALUA
+    pr_key:
+      Desc: Registered persistent reservation key for this session on associated logical unit (if there is no registration, its value will be zero).
+      Type: NsUnsignedLong
+    initiator_alias:
+      Desc: Alias of the Fibre Channel initiator.
+      Type: NsInitiatorAlias
+    initiator_wwpn:
+      Desc: WWPN (World Wide Port Name) of the Fibre Channel initiator.
+      Type: NsWWN
+    initiator_switch_name:
+      Desc: Name of the switch used by the Fibre Channel initiator.
+      Type: NsAsciiString255
+    initiator_switch_port:
+      Desc: Port on the switch used by the Fibre Channel initiator.
+      Type: NsAsciiString16
+    initiator_symbolic_portname:
+      Desc: Symbolic port name associated with the Fibre Channel initiator.
+      Type: NsAsciiString255
+    initiator_symbolic_nodename:
+      Desc: Symbolic node name associated with the Fibre Channel initiator.
+      Type: NsAsciiString255
+    initiator_fcid:
+      Desc: FCID assigned to the Fibre Channel initiator.
+      Type: NsUnsignedLong
+    target_port_array_name:
+      Desc: Name of the array hosting the Fibre Channel target port.
+      Type: NsObjectName
+    target_port_ctrlr_id:
+      Desc: Identifier of the controller hosting the Fibre Channel target port.
+      Type: NsUnsignedLong
+    target_port_interface_name:
+      Desc: Name of the interface hosted on the Fibre Channel target port.
+      Type: NsObjectName
+    target_wwnn:
+      Desc: WWNN (World Wide Node Name) of the Fibre Channel target port.
+      Type: NsWWN
+    target_wwpn:
+      Desc: WWPN (World Wide Port Name) of the Fibre Channel target port.
+      Type: NsWWN
+    target_fcid:
+      Desc: FCID assigned to the Fibre Channel target port.
+      Type: NsUnsignedLong

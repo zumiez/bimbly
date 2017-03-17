@@ -1,0 +1,2137 @@
+---
+1455:
+  Error_Name: SM_cannot_read_object
+  Error_Desc: Error occurred while reading object '{objectid}'
+  Protocol_Error: SM_http_internal_server_error
+114:
+  Error_Name: SM_ealready
+  Error_Desc: Object is already in requested state
+  Protocol_Error: SM_http_conflict
+1458:
+  Error_Name: SM_invalid_arg_value
+  Error_Desc: Invalid value '{value}' specified for the argument '{arg}'
+  Protocol_Error: SM_http_bad_request
+1472:
+  Error_Name: SM_invalid_path_variable
+  Error_Desc: Invalid value '{value}' specified for path variable '{arg}'
+  Protocol_Error: SM_http_bad_request
+1461:
+  Error_Name: SM_invalid_query_param
+  Error_Desc: Invalid value '{value}' specified for the parameter '{arg}'
+  Protocol_Error: SM_http_bad_request
+4151:
+  Error_Name: SM_iscsi_all_access_not_available
+  Error_Desc: iSCSI all-access is not available in current group configuration
+  Protocol_Error: SM_http_method_not_allowed
+4143:
+  Error_Name: SM_iscsi_svc_not_available
+  Error_Desc: iSCSI service is not available in current group configuration
+  Protocol_Error: SM_http_method_not_allowed
+4405:
+  Error_Name: SM_limit_peacl
+  Error_Desc: Protocol endpoint access control record limit exceeded
+  Protocol_Error: SM_http_conflict
+4400:
+  Error_Name: SM_limit_volacl
+  Error_Desc: Volume access control record limit exceeded
+  Protocol_Error: SM_http_conflict
+1483:
+  Error_Name: SM_malformed_url
+  Error_Desc: Malformed URL
+  Protocol_Error: SM_http_bad_request
+1456:
+  Error_Name: SM_missing_arg
+  Error_Desc: Missing the argument '{arg}' in the request
+  Protocol_Error: SM_http_bad_request
+4123:
+  Error_Name: SM_no_available_lun
+  Error_Desc: All LUNs (Logical Unit Numbers) are in use
+  Protocol_Error: SM_http_conflict
+1453:
+  Error_Name: SM_no_method_for_URL_pattern
+  Error_Desc: URL pattern in the request does not support HTTP method {method}
+  Protocol_Error: SM_http_not_found
+1452:
+  Error_Name: SM_no_operation_found
+  Error_Desc: Unable to find operation '{operation}' for the object set '{objectset}'
+  Protocol_Error: SM_http_not_found
+1454:
+  Error_Name: SM_no_path_found
+  Error_Desc: Unknown path
+  Protocol_Error: SM_http_bad_request
+4174:
+  Error_Name: SM_specified_snapshot_lun
+  Error_Desc: Specified LUN {lun} is needed for snapshot {snap}
+  Protocol_Error: SM_http_bad_request
+1052:
+  Error_Name: SM_too_many
+  Error_Desc: Too many objects of the requested type
+  Protocol_Error: SM_http_conflict
+1457:
+  Error_Name: SM_unexpected_arg
+  Error_Desc: Unexpected argument '{arg}'
+  Protocol_Error: SM_http_bad_request
+1460:
+  Error_Name: SM_unexpected_child
+  Error_Desc: Unexpected json member '{child}' of '{parent}'
+  Protocol_Error: SM_http_bad_request
+1462:
+  Error_Name: SM_unexpected_query_param
+  Error_Desc: Unexpected parameter '{arg}'
+  Protocol_Error: SM_http_bad_request
+1025:
+  Error_Name: SM_unknown
+  Error_Desc: Unknown error
+  Protocol_Error: SM_http_internal_server_error
+1450:
+  Error_Name: SM_version_name
+  Error_Desc: Unsupported version '{version1}'. Supported version name is '{version2}'
+  Protocol_Error: SM_http_not_found
+1110:
+  Error_Name: SM_invalid_volacl_scope
+  Error_Desc: Invalid volume ACL scope
+  Protocol_Error: SM_http_bad_request
+1108:
+  Error_Name: SM_no_vvol_support
+  Error_Desc: Virtual Volumes feature not supported
+  Protocol_Error: SM_http_not_implemented
+1469:
+  Error_Name: SM_complex_type_query_param
+  Error_Desc: Attribute '{arg}' is of a non-primitive type '{type}', which is not supported
+  Protocol_Error: SM_http_bad_request
+1473:
+  Error_Name: SM_start_row_beyond_end_row
+  Error_Desc: The parameter 'startRow' '{startRow}' must not be beyond 'endRow' '{endRow}'
+  Protocol_Error: SM_http_bad_request
+1474:
+  Error_Name: SM_start_row_beyond_total_rows
+  Error_Desc: The parameter 'startRow' '{startRow}' is beyond 'totalRows' '{totalRows}'
+  Protocol_Error: SM_http_bad_request
+1468:
+  Error_Name: SM_unsupported_query_operator
+  Error_Desc: Unsupported filter operator '{op}' specified for the attribute '{field}'
+  Protocol_Error: SM_http_bad_request
+17:
+  Error_Name: SM_eexist
+  Error_Desc: Object exists
+  Protocol_Error: SM_http_conflict
+1451:
+  Error_Name: SM_no_action_found
+  Error_Desc: Unable to find action '{action}' for the object set '{objectset}'
+  Protocol_Error: SM_http_not_found
+2:
+  Error_Name: SM_enoent
+  Error_Desc: No such object
+  Protocol_Error: SM_http_not_found
+1095:
+  Error_Name: SM_invalid_keyvalue
+  Error_Desc: Invalid key-value pair(s)
+  Protocol_Error: SM_http_bad_request
+1499:
+  Error_Name: SM_appserver_in_use
+  Error_Desc: Application Server is used by folder
+  Protocol_Error: SM_http_conflict
+4505:
+  Error_Name: SM_controller_not_active
+  Error_Desc: Controller is not in active state
+  Protocol_Error: SM_http_method_not_allowed
+1051:
+  Error_Name: SM_array_not_reachable
+  Error_Desc: Cannot communicate with specified array
+  Protocol_Error: SM_http_internal_server_error
+4088:
+  Error_Name: SM_invalid_array_name
+  Error_Desc: Invalid array name {array} specified
+  Protocol_Error: SM_http_bad_request
+4046:
+  Error_Name: SM_invalid_ctrlr_name
+  Error_Desc: Only A and B are valid inputs for a controller
+  Protocol_Error: SM_http_bad_request
+4057:
+  Error_Name: SM_array_rename_in_netconfig_failed
+  Error_Desc: Failed to rename array {array} in network configuration {netconfig}
+  Protocol_Error: SM_http_internal_server_error
+4024:
+  Error_Name: SM_missing_array_netconfig
+  Error_Desc: Network configuration {netconfig} is missing array {array}
+  Protocol_Error: SM_http_bad_request
+1:
+  Error_Name: SM_eperm
+  Error_Desc: Operation not permitted
+  Protocol_Error: SM_http_conflict
+1049:
+  Error_Name: SM_array_not_found
+  Error_Desc: Array was not found
+  Protocol_Error: SM_http_not_found
+4145:
+  Error_Name: SM_fc_intf_not_found
+  Error_Desc: Specified Fibre Channel interface {fc_interface_name} was not found in system
+  Protocol_Error: SM_http_not_found
+1515:
+  Error_Name: SM_appserver_not_found
+  Error_Desc: Application server not found
+  Protocol_Error: SM_http_not_found
+4262:
+  Error_Name: SM_deprecated_perfpol
+  Error_Desc: The specified performance policy has been deprecated
+  Protocol_Error: SM_http_method_not_allowed
+28:
+  Error_Name: SM_enospc
+  Error_Desc: Available space insufficient for operation
+  Protocol_Error: SM_http_conflict
+116:
+  Error_Name: SM_epartial
+  Error_Desc: Operation is partially completed
+  Protocol_Error: SM_http_conflict
+1505:
+  Error_Name: SM_folder_needs_limit
+  Error_Desc: SMIS and VVol folders require a size limit
+  Protocol_Error: SM_http_bad_request
+1517:
+  Error_Name: SM_folder_perfpol_agent_type
+  Error_Desc: Performance policy can only be assigned to folder associated with SMIS
+  Protocol_Error: SM_http_conflict
+1488:
+  Error_Name: SM_invalid_folder
+  Error_Desc: Invalid folder path {pool}{path}
+  Protocol_Error: SM_http_bad_request
+1503:
+  Error_Name: SM_only_vvol_folder_appsrvr
+  Error_Desc: Only VVol folder can be associated with an application server
+  Protocol_Error: SM_http_bad_request
+1514:
+  Error_Name: SM_perfpol_not_found
+  Error_Desc: Performance policy not found
+  Protocol_Error: SM_http_not_found
+1059:
+  Error_Name: SM_pool_not_found
+  Error_Desc: Pool not found
+  Protocol_Error: SM_http_not_found
+1447:
+  Error_Name: SM_serial_not_avail
+  Error_Desc: Unable to reserve serial number for new volume/snapshot
+  Protocol_Error: SM_http_internal_server_error
+1121:
+  Error_Name: SM_starter_vol_acl_create
+  Error_Desc: Failed to grant open access to the SMIS starter volume in the folder
+  Protocol_Error: SM_http_conflict
+1120:
+  Error_Name: SM_starter_vol_create
+  Error_Desc: Failed to create the SMIS starter volume in the folder
+  Protocol_Error: SM_http_conflict
+1502:
+  Error_Name: SM_vvol_folder_no_appsrvr
+  Error_Desc: VVol folder {pool}{path} must be associated with a vCenter
+  Protocol_Error: SM_http_bad_request
+1495:
+  Error_Name: SM_folder_not_found
+  Error_Desc: Folder not found
+  Protocol_Error: SM_http_bad_request
+1496:
+  Error_Name: SM_folder_volmv_einprog
+  Error_Desc: Volume move is in progress to the folder
+  Protocol_Error: SM_http_conflict
+1489:
+  Error_Name: SM_remove_nonempty_folder
+  Error_Desc: Remove failed because the folder is not empty
+  Protocol_Error: SM_http_conflict
+1509:
+  Error_Name: SM_folder_limit_inval
+  Error_Desc: Invalid folder limit. Folder limit cannot be reduced below its current usage
+  Protocol_Error: SM_http_conflict
+1508:
+  Error_Name: SM_space_info_unavail
+  Error_Desc: Space usage information unavailable. Try again
+  Protocol_Error: SM_http_service_unavailable
+4156:
+  Error_Name: SM_conflicting_initiator_alias_with_args
+  Error_Desc: Fibre Channel initiator alias {alias} is already associated with {wwpn}
+  Protocol_Error: SM_http_conflict
+4100:
+  Error_Name: SM_duplicate_initiator
+  Error_Desc: Initiator already exists
+  Protocol_Error: SM_http_conflict
+4132:
+  Error_Name: SM_duplicate_initiator_with_args
+  Error_Desc: Initiator with {name} {value} already exists
+  Protocol_Error: SM_http_conflict
+4137:
+  Error_Name: SM_fc_initiatorgrp_subnet_not_supported
+  Error_Desc: Fibre Channel initiator group does not support subnet
+  Protocol_Error: SM_http_not_implemented
+4185:
+  Error_Name: SM_in_use_app_uuid
+  Error_Desc: Specified application uuid is already in use
+  Protocol_Error: SM_http_conflict
+4122:
+  Error_Name: SM_insufficient_fc_initiator_input
+  Error_Desc: Fibre Channel initiator WWPN is required
+  Protocol_Error: SM_http_bad_request
+4184:
+  Error_Name: SM_invalid_app_uuid
+  Error_Desc: Invalid application uuid
+  Protocol_Error: SM_http_bad_request
+4116:
+  Error_Name: SM_invalid_initiator_alias
+  Error_Desc: Invalid initiator alias specified
+  Protocol_Error: SM_http_bad_request
+4113:
+  Error_Name: SM_invalid_initiator_ip
+  Error_Desc: Invalid Initiator IP specified
+  Protocol_Error: SM_http_bad_request
+4098:
+  Error_Name: SM_invalid_initiator_iqn
+  Error_Desc: Invalid Initiator iqn specified
+  Protocol_Error: SM_http_bad_request
+4112:
+  Error_Name: SM_invalid_initiator_label
+  Error_Desc: Invalid Initiator label specified
+  Protocol_Error: SM_http_bad_request
+4117:
+  Error_Name: SM_invalid_initiator_wwpn
+  Error_Desc: Invalid initiator WWPN specified
+  Protocol_Error: SM_http_bad_request
+4120:
+  Error_Name: SM_invalid_initiatorgrp_access_protocol
+  Error_Desc: Invalid initiator group access protocol specified
+  Protocol_Error: SM_http_bad_request
+4094:
+  Error_Name: SM_invalid_initiatorgrp_name
+  Error_Desc: Invalid initiator group name
+  Protocol_Error: SM_http_bad_request
+16:
+  Error_Name: SM_ebusy
+  Error_Desc: Resource busy
+  Protocol_Error: SM_http_conflict
+4097:
+  Error_Name: SM_no_initiatorgrp
+  Error_Desc: Initiator group {group} does not exist
+  Protocol_Error: SM_http_not_found
+4134:
+  Error_Name: SM_not_fc_initiatorgrp
+  Error_Desc: Access protocol for initiator group is not Fibre Channel
+  Protocol_Error: SM_http_conflict
+4121:
+  Error_Name: SM_incompatible_initiator_access_protocol
+  Error_Desc: Incompatible access protocol between initiator and initiator group
+  Protocol_Error: SM_http_conflict
+4119:
+  Error_Name: SM_invalid_initiator_access_protocol
+  Error_Desc: Invalid initiator access protocol {protocol} specified
+  Protocol_Error: SM_http_bad_request
+4250:
+  Error_Name: SM_perfpol_invalid_app_category
+  Error_Desc: Invalid application category specified
+  Protocol_Error: SM_http_bad_request
+4251:
+  Error_Name: SM_perfpol_oob
+  Error_Desc: Pre-defined performance policies cannot be modified
+  Protocol_Error: SM_http_method_not_allowed
+1096:
+  Error_Name: SM_array_flash_mismatch
+  Error_Desc: Array flash characteristics do not match
+  Protocol_Error: SM_http_conflict
+1060:
+  Error_Name: SM_array_not_assigned
+  Error_Desc: Array is not part of pool
+  Protocol_Error: SM_http_not_found
+1061:
+  Error_Name: SM_pool_exists
+  Error_Desc: Pool already exists
+  Protocol_Error: SM_http_conflict
+1500:
+  Error_Name: SM_pool_has_folder
+  Error_Desc: Pool has a folder
+  Protocol_Error: SM_http_conflict
+1501:
+  Error_Name: SM_pool_has_pe
+  Error_Desc: Pool has a protocol endpoint
+  Protocol_Error: SM_http_conflict
+1040:
+  Error_Name: SM_repl_enabled
+  Error_Desc: Replication is enabled
+  Protocol_Error: SM_http_conflict
+1116:
+  Error_Name: SM_ddup_folder_merge
+  Error_Desc: Pool merge cannot be completed due to the presence of deduplicated volumes
+  Protocol_Error: SM_http_method_not_allowed
+1481:
+  Error_Name: SM_limit_hret_snap_pool
+  Error_Desc: Snapshot limit for high retention volumes exceeded for pool
+  Protocol_Error: SM_http_conflict
+1478:
+  Error_Name: SM_limit_hret_snap_retention_pool
+  Error_Desc: Snapshot retention parameters for high retention volumes exceed limit for pool
+  Protocol_Error: SM_http_conflict
+4175:
+  Error_Name: SM_not_enough_cache
+  Error_Desc: Not enough cache in the pool for the pinned volumes
+  Protocol_Error: SM_http_conflict
+1098:
+  Error_Name: SM_pool_flash_mismatch
+  Error_Desc: Pool flash characteristics do not match
+  Protocol_Error: SM_http_conflict
+1442:
+  Error_Name: SM_pool_volmv_einprog
+  Error_Desc: Volume move in progress on source pool
+  Protocol_Error: SM_http_conflict
+1102:
+  Error_Name: SM_array_member_orphan
+  Error_Desc: Specified array is pending removal from group
+  Protocol_Error: SM_http_conflict
+1097:
+  Error_Name: SM_array_pool_flash_mismatch
+  Error_Desc: Array does not match pool flash characteristics
+  Protocol_Error: SM_http_conflict
+4260:
+  Error_Name: SM_dedupe_single_array
+  Error_Desc: Pools containing deduplicated volumes cannot be expanded beyond a single array
+  Protocol_Error: SM_http_method_not_allowed
+1087:
+  Error_Name: SM_pool_last_array
+  Error_Desc: Cannot remove last array from a pool
+  Protocol_Error: SM_http_conflict
+1414:
+  Error_Name: SM_usage_unavailable
+  Error_Desc: Space usage currently unavailable, try again later
+  Protocol_Error: SM_http_service_unavailable
+22:
+  Error_Name: SM_einval
+  Error_Desc: Invalid argument
+  Protocol_Error: SM_http_bad_request
+1440:
+  Error_Name: SM_ext_trig_sched_already_present
+  Error_Desc: Externally triggered schedule is already present for volume collection
+  Protocol_Error: SM_http_conflict
+1441:
+  Error_Name: SM_ext_trig_sched_attrib
+  Error_Desc: Invalid attributes specified for externally triggered schedule
+  Protocol_Error: SM_http_bad_request
+1425:
+  Error_Name: SM_limit_freq_sched_group
+  Error_Desc: High frequency protection schedule limit exceeded for group
+  Protocol_Error: SM_http_conflict
+1424:
+  Error_Name: SM_limit_snap_retention_group
+  Error_Desc: Snapshot retention parameters exceed limit for group
+  Protocol_Error: SM_http_conflict
+1423:
+  Error_Name: SM_limit_snap_retention_pool
+  Error_Desc: Snapshot retention parameters exceed limit for pool
+  Protocol_Error: SM_http_conflict
+1422:
+  Error_Name: SM_limit_snap_retention_volcoll
+  Error_Desc: Snapshot retention parameters exceed limit for volume collection
+  Protocol_Error: SM_http_conflict
+1041:
+  Error_Name: SM_no_such_partner
+  Error_Desc: No such partner
+  Protocol_Error: SM_http_not_found
+1043:
+  Error_Name: SM_not_owner
+  Error_Desc: Object is not owned by this group
+  Protocol_Error: SM_http_not_found
+2028:
+  Error_Name: SM_repl_handover_busy
+  Error_Desc: Handover in progress on volume collection
+  Protocol_Error: SM_http_conflict
+1400:
+  Error_Name: SM_repl_rename_notsup
+  Error_Desc: Rename of this replicated object not supported
+  Protocol_Error: SM_http_not_implemented
+2008:
+  Error_Name: SM_repl_cant_connect
+  Error_Desc: Cannot connect to partner
+  Protocol_Error: SM_http_internal_server_error
+110:
+  Error_Name: SM_etimedout
+  Error_Desc: Timed out
+  Protocol_Error: SM_http_request_timeout
+1027:
+  Error_Name: SM_no_support
+  Error_Desc: Operation not supported
+  Protocol_Error: SM_http_not_implemented
+2022:
+  Error_Name: SM_repl_edit_partner_name_not_paused
+  Error_Desc: Partner should be paused before editing its name
+  Protocol_Error: SM_http_conflict
+6019:
+  Error_Name: SM_shelf_connected_only_one_side
+  Error_Desc: Shelf appear only on one side of host controller
+  Protocol_Error: SM_http_internal_server_error
+6005:
+  Error_Name: SM_shelf_create_rfail
+  Error_Desc: Could not create raid device on shelf
+  Protocol_Error: SM_http_internal_server_error
+6018:
+  Error_Name: SM_shelf_ctrlr_loop
+  Error_Desc: Shelf SAS loop detected
+  Protocol_Error: SM_http_internal_server_error
+6021:
+  Error_Name: SM_shelf_disconnected
+  Error_Desc: Shelf is disconnected
+  Protocol_Error: SM_http_internal_server_error
+6015:
+  Error_Name: SM_shelf_disk_sas_link_degraded
+  Error_Desc: SAS link of this shelf slot is degraded
+  Protocol_Error: SM_http_internal_server_error
+6001:
+  Error_Name: SM_shelf_ebusy
+  Error_Desc: Shelf is already active and running
+  Protocol_Error: SM_http_conflict
+6022:
+  Error_Name: SM_shelf_expander_err
+  Error_Desc: SAS expander has a hardware error
+  Protocol_Error: SM_http_internal_server_error
+6033:
+  Error_Name: SM_shelf_expr_fw_ver_inval
+  Error_Desc: SAS expander firmware version of this shelf is not valid
+  Protocol_Error: SM_http_internal_server_error
+6013:
+  Error_Name: SM_shelf_expr_mfg_ver_inval
+  Error_Desc: SAS expander manufacturer version of this shelf is not valid
+  Protocol_Error: SM_http_bad_request
+6034:
+  Error_Name: SM_shelf_expr_rev_incompatible
+  Error_Desc: SAS expander firmware revision is incompatible
+  Protocol_Error: SM_http_internal_server_error
+6010:
+  Error_Name: SM_shelf_foreign_disk
+  Error_Desc: It is a foreign disk, Use the force option to add this foreign disk
+  Protocol_Error: SM_http_bad_request
+6031:
+  Error_Name: SM_shelf_hdds_in_afs
+  Error_Desc: All-Flash Shelf should not have HDDs
+  Protocol_Error: SM_http_method_not_allowed
+6030:
+  Error_Name: SM_shelf_invalid_afs
+  Error_Desc: This array does not support All-Flash Shelf
+  Protocol_Error: SM_http_not_implemented
+6029:
+  Error_Name: SM_shelf_invalid_afs_count
+  Error_Desc: This array does not support more than one All-Flash Shelf
+  Protocol_Error: SM_http_not_implemented
+6028:
+  Error_Name: SM_shelf_invalid_count
+  Error_Desc: This array exceeds maximum supported expansion shelves
+  Protocol_Error: SM_http_conflict
+6004:
+  Error_Name: SM_shelf_invalid_csz
+  Error_Desc: Invalid chunk size, does not support expansion shelfs
+  Protocol_Error: SM_http_bad_request
+6003:
+  Error_Name: SM_shelf_invalid_disk_count
+  Error_Desc: Shelf does not have enough disks
+  Protocol_Error: SM_http_method_not_allowed
+6016:
+  Error_Name: SM_shelf_invalid_eeprom
+  Error_Desc: System cannot read the serial number from this shelf
+  Protocol_Error: SM_http_internal_server_error
+6012:
+  Error_Name: SM_shelf_invalid_loc
+  Error_Desc: This shelf location is not valid
+  Protocol_Error: SM_http_bad_request
+6032:
+  Error_Name: SM_shelf_invalid_model
+  Error_Desc: Shelf model unknown
+  Protocol_Error: SM_http_internal_server_error
+6009:
+  Error_Name: SM_shelf_loc_order
+  Error_Desc: Shelf controller order are different from the two host controllers
+  Protocol_Error: SM_http_internal_server_error
+6000:
+  Error_Name: SM_shelf_no_eloc_id
+  Error_Desc: No expansion shelf exists with the given enclosure
+  Protocol_Error: SM_http_not_found
+6006:
+  Error_Name: SM_shelf_no_rserial
+  Error_Desc: System is still discovering the real serial number from the shelf
+  Protocol_Error: SM_http_service_unavailable
+6011:
+  Error_Name: SM_shelf_not_inuse
+  Error_Desc: This shelf is either not used or inactive
+  Protocol_Error: SM_http_bad_request
+6002:
+  Error_Name: SM_shelf_not_ready
+  Error_Desc: shelf is not in ready state, try again
+  Protocol_Error: SM_http_service_unavailable
+6026:
+  Error_Name: SM_shelf_pmd_state
+  Error_Desc: Array not in active-standby mode
+  Protocol_Error: SM_http_internal_server_error
+6027:
+  Error_Name: SM_shelf_preactivation_io_err
+  Error_Desc: Shelf pre-activation I/O test failed
+  Protocol_Error: SM_http_internal_server_error
+6008:
+  Error_Name: SM_shelf_sas_lanes_degraded
+  Error_Desc: SAS links between the shelves are degraded
+  Protocol_Error: SM_http_internal_server_error
+6023:
+  Error_Name: SM_shelf_ses_device_not_ready
+  Error_Desc: SES device of this shelf is not ready
+  Protocol_Error: SM_http_conflict
+6020:
+  Error_Name: SM_shelf_ses_mship_err
+  Error_Desc: Cannot access shelf SES device
+  Protocol_Error: SM_http_internal_server_error
+6025:
+  Error_Name: SM_shelf_ssd_degraded
+  Error_Desc: Array is running with one active SSD, ssd removal will bring down the services
+  Protocol_Error: SM_http_internal_server_error
+6014:
+  Error_Name: SM_shelf_wrong_ctrlr_side
+  Error_Desc: Shelf controller is connected to the wrong side of host controller
+  Protocol_Error: SM_http_internal_server_error
+6017:
+  Error_Name: SM_shelf_wrong_sas_port
+  Error_Desc: SAS cable connected to wrong port
+  Protocol_Error: SM_http_internal_server_error
+1486:
+  Error_Name: SM_duplicate_vol
+  Error_Desc: Duplicate volume name specified
+  Protocol_Error: SM_http_conflict
+115:
+  Error_Name: SM_einprogress
+  Error_Desc: Operation is in progress
+  Protocol_Error: SM_http_accepted
+1439:
+  Error_Name: SM_ext_trig_sched_not_present
+  Error_Desc: Externally triggered schedule is not present for volume collection
+  Protocol_Error: SM_http_not_found
+1107:
+  Error_Name: SM_invalid_agent_type
+  Error_Desc: Invalid agent type
+  Protocol_Error: SM_http_bad_request
+1487:
+  Error_Name: SM_invalid_vol_assoc
+  Error_Desc: Volume not associated with volume collection
+  Protocol_Error: SM_http_conflict
+1480:
+  Error_Name: SM_limit_hret_snap_group
+  Error_Desc: Snapshot limit for high retention volumes exceeded for group
+  Protocol_Error: SM_http_conflict
+1420:
+  Error_Name: SM_limit_snapcoll_volcoll
+  Error_Desc: Snapshot collection limit exceeded for volume collection
+  Protocol_Error: SM_http_conflict
+1032:
+  Error_Name: SM_no_assoc_vols
+  Error_Desc: No associated volumes found
+  Protocol_Error: SM_http_not_found
+2025:
+  Error_Name: SM_repl_no_partner_avail
+  Error_Desc: No replication partner available for this volume collection
+  Protocol_Error: SM_http_not_found
+1072:
+  Error_Name: SM_repl_object_busy
+  Error_Desc: Replication is busy with this object
+  Protocol_Error: SM_http_service_unavailable
+1033:
+  Error_Name: SM_lun_mismatch
+  Error_Desc: Associated volumes not found on specified host
+  Protocol_Error: SM_http_not_found
+11:
+  Error_Name: SM_eagain
+  Error_Desc: Try again
+  Protocol_Error: SM_http_service_unavailable
+1419:
+  Error_Name: SM_limit_snap_group
+  Error_Desc: Snapshot limit exceeded for group
+  Protocol_Error: SM_http_conflict
+1418:
+  Error_Name: SM_limit_snap_pool
+  Error_Desc: Snapshot limit exceeded for pool
+  Protocol_Error: SM_http_conflict
+1416:
+  Error_Name: SM_limit_snap_vol
+  Error_Desc: Snapshot limit exceeded for volume
+  Protocol_Error: SM_http_conflict
+1511:
+  Error_Name: SM_snap_has_clone
+  Error_Desc: Snapshot {snap} for volume {vol} has a clone
+  Protocol_Error: SM_http_conflict
+1048:
+  Error_Name: SM_no_action
+  Error_Desc: Operation does not effect a change
+  Protocol_Error: SM_http_ok
+3018:
+  Error_Name: SM_bad_pkg
+  Error_Desc: Bad software update package
+  Protocol_Error: SM_http_bad_request
+1028:
+  Error_Name: SM_auth
+  Error_Desc: Failed to authenticate
+  Protocol_Error: SM_http_unauthorized
+1029:
+  Error_Name: SM_session_create
+  Error_Desc: Failed to establish a session
+  Protocol_Error: SM_http_unauthorized
+1092:
+  Error_Name: SM_reserved_username
+  Error_Desc: Reserved username
+  Protocol_Error: SM_http_conflict
+1091:
+  Error_Name: SM_passwd_same_as_current
+  Error_Desc: New password cannot be the same as existing one
+  Protocol_Error: SM_http_conflict
+111:
+  Error_Name: SM_econnrefused
+  Error_Desc: Connection refused
+  Protocol_Error: SM_http_internal_server_error
+1045:
+  Error_Name: SM_partner_cfg_sync
+  Error_Desc: Failed to synchronize configuration to partner
+  Protocol_Error: SM_http_accepted
+1042:
+  Error_Name: SM_partner_offline
+  Error_Desc: Partner is offline
+  Protocol_Error: SM_http_conflict
+2021:
+  Error_Name: SM_repl_cmpr_version_unsup
+  Error_Desc: Partner does not support the attributes of this volume
+  Protocol_Error: SM_http_method_not_allowed
+2039:
+  Error_Name: SM_repl_eexist
+  Error_Desc: Partner returned 'Object exists'
+  Protocol_Error: SM_http_conflict
+12:
+  Error_Name: SM_enomem
+  Error_Desc: Available memory insufficient for operation
+  Protocol_Error: SM_http_internal_server_error
+4303:
+  Error_Name: SM_encryption_master_key_inactive
+  Error_Desc: Encryption master key is not active
+  Protocol_Error: SM_http_conflict
+4302:
+  Error_Name: SM_encryption_master_key_missing
+  Error_Desc: Encryption master key is not set
+  Protocol_Error: SM_http_bad_request
+1053:
+  Error_Name: SM_root_branch_pinned
+  Error_Desc: Root branch pinned by snapshots
+  Protocol_Error: SM_http_internal_server_error
+1491:
+  Error_Name: SM_vol_not_online
+  Error_Desc: Volume could not be set online
+  Protocol_Error: SM_http_conflict
+2018:
+  Error_Name: SM_repl_remote_paused
+  Error_Desc: Replication is paused on downstream node
+  Protocol_Error: SM_http_conflict
+1034:
+  Error_Name: SM_version_mismatch
+  Error_Desc: Version mismatch
+  Protocol_Error: SM_http_conflict
+1427:
+  Error_Name: SM_empty_vol
+  Error_Desc: volume name not specified
+  Protocol_Error: SM_http_bad_request
+3016:
+  Error_Name: SM_internal
+  Error_Desc: Internal error. Contact Nimble Storage Support
+  Protocol_Error: SM_http_internal_server_error
+3004:
+  Error_Name: SM_nospace
+  Error_Desc: File system is out of space error
+  Protocol_Error: SM_http_conflict
+1430:
+  Error_Name: SM_pool_usage_unavailable
+  Error_Desc: Space usage for pool {pool} is currently unavailable, try again later
+  Protocol_Error: SM_http_service_unavailable
+1429:
+  Error_Name: SM_vol_unknown
+  Error_Desc: Unknown volume {vol}
+  Protocol_Error: SM_http_bad_request
+1431:
+  Error_Name: SM_vol_usage_unavailable
+  Error_Desc: Space usage for volume {vol} is currently unavailable, try again later
+  Protocol_Error: SM_http_service_unavailable
+1438:
+  Error_Name: SM_volmv_abort_ealready
+  Error_Desc: Volume move already aborted for volume {vol}
+  Protocol_Error: SM_http_conflict
+1437:
+  Error_Name: SM_volmv_abort_enomove
+  Error_Desc: Volume move not in progress for volume {vol}
+  Protocol_Error: SM_http_conflict
+1436:
+  Error_Name: SM_volmv_abort_enospace
+  Error_Desc: Insufficient space on source pool {pool} for volume move to be aborted
+  Protocol_Error: SM_http_conflict
+1428:
+  Error_Name: SM_pool_unknown
+  Error_Desc: Unknown pool {pool}
+  Protocol_Error: SM_http_bad_request
+1498:
+  Error_Name: SM_volmv_incompatible_agent_type
+  Error_Desc: Agent type for volume {vol} is incompatible with destination folder
+  Protocol_Error: SM_http_conflict
+4301:
+  Error_Name: SM_encryption_group_cipher_override
+  Error_Desc: Invalid group encryption cipher override
+  Protocol_Error: SM_http_bad_request
+4300:
+  Error_Name: SM_encryption_invalid_cipher
+  Error_Desc: Invalid encryption cipher specified
+  Protocol_Error: SM_http_bad_request
+4304:
+  Error_Name: SM_encryption_invalid_scope
+  Error_Desc: Invalid encryption scope specified
+  Protocol_Error: SM_http_bad_request
+1507:
+  Error_Name: SM_folder_enospace
+  Error_Desc: Insufficient space in folder
+  Protocol_Error: SM_http_conflict
+1497:
+  Error_Name: SM_folder_incompatible_agent_type
+  Error_Desc: Agent type for volume is incompatible with folder
+  Protocol_Error: SM_http_conflict
+1099:
+  Error_Name: SM_pool_cache_pin_notsupp
+  Error_Desc: Pool does not support cache pinning
+  Protocol_Error: SM_http_not_implemented
+4259:
+  Error_Name: SM_pool_dedupe_incapable
+  Error_Desc: The specified pool is not capable of hosting deduplicated volumes
+  Protocol_Error: SM_http_method_not_allowed
+1504:
+  Error_Name: SM_pool_does_not_have_folder
+  Error_Desc: Pool {pool} does not contain folder {folder}
+  Protocol_Error: SM_http_conflict
+4176:
+  Error_Name: SM_swupdate_einprog
+  Error_Desc: Operation not supported during group software update
+  Protocol_Error: SM_http_service_unavailable
+4257:
+  Error_Name: SM_vol_dedupe_encryption_invalid
+  Error_Desc: The volume is encrypted which prevents deduplication to be enabled
+  Protocol_Error: SM_http_method_not_allowed
+1512:
+  Error_Name: SM_vol_assoc_volcoll
+  Error_Desc: Volume {vol} is associated with a volume collection
+  Protocol_Error: SM_http_conflict
+1510:
+  Error_Name: SM_vol_has_clone
+  Error_Desc: Volume {vol} has a clone
+  Protocol_Error: SM_http_conflict
+1513:
+  Error_Name: SM_vol_has_online_snap
+  Error_Desc: Volume {vol} has an online snapshot
+  Protocol_Error: SM_http_conflict
+1490:
+  Error_Name: SM_cache_pinned_notsup
+  Error_Desc: Operation not supported on cache pinned volumes
+  Protocol_Error: SM_http_not_implemented
+2033:
+  Error_Name: SM_repl_agent_type_unsup
+  Error_Desc: Partner does not support the agent type attribute
+  Protocol_Error: SM_http_not_implemented
+2040:
+  Error_Name: SM_repl_openstack_unsup
+  Error_Desc: Partner does not support openstack volumes
+  Protocol_Error: SM_http_not_implemented
+2026:
+  Error_Name: SM_repl_partner_version_unknown
+  Error_Desc: Version number for a downstream partner is unknown
+  Protocol_Error: SM_http_internal_server_error
+2030:
+  Error_Name: SM_repl_vvol_unsup
+  Error_Desc: Partner does not support Virtual Volumes
+  Protocol_Error: SM_http_not_implemented
+1055:
+  Error_Name: SM_too_small
+  Error_Desc: Value is too small
+  Protocol_Error: SM_http_bad_request
+0:
+  Error_Name: SM_ok
+  Error_Desc: Operation succeeded
+  Protocol_Error: SM_http_ok
+4:
+  Error_Name: SM_eintr
+  Error_Desc: Request interrupted. Try again
+  Protocol_Error: SM_http_service_unavailable
+13:
+  Error_Name: SM_eaccess
+  Error_Desc: Permission denied
+  Protocol_Error: SM_http_unauthorized
+30:
+  Error_Name: SM_erofs
+  Error_Desc: Read-only file system
+  Protocol_Error: SM_http_method_not_allowed
+34:
+  Error_Name: SM_erange
+  Error_Desc: Value out of range
+  Protocol_Error: SM_http_bad_request
+61:
+  Error_Name: SM_enodata
+  Error_Desc: No data available
+  Protocol_Error: SM_http_not_found
+66:
+  Error_Name: SM_eremote
+  Error_Desc: Object is remote
+  Protocol_Error: SM_http_not_found
+67:
+  Error_Name: SM_enolink
+  Error_Desc: Link has been severed
+  Protocol_Error: SM_http_internal_server_error
+200:
+  Error_Name: SM_http_ok
+  Error_Desc: The request has succeeded
+  Protocol_Error: SM_http_ok
+201:
+  Error_Name: SM_http_created
+  Error_Desc: The request has succeeded and resulted in a new resource being created
+  Protocol_Error: SM_http_created
+202:
+  Error_Name: SM_http_accepted
+  Error_Desc: The request was accepted and is being processed in the background
+  Protocol_Error: SM_http_accepted
+400:
+  Error_Name: SM_http_bad_request
+  Error_Desc: The request could not be understood by the server
+  Protocol_Error: SM_http_bad_request
+401:
+  Error_Name: SM_http_unauthorized
+  Error_Desc: The request requires user authentication
+  Protocol_Error: SM_http_unauthorized
+403:
+  Error_Name: SM_http_forbidden
+  Error_Desc: The request is forbidden given the credentials
+  Protocol_Error: SM_http_forbidden
+404:
+  Error_Name: SM_http_not_found
+  Error_Desc: Server has not found the requested object
+  Protocol_Error: SM_http_not_found
+405:
+  Error_Name: SM_http_method_not_allowed
+  Error_Desc: The operation specified in the request is not allowed
+  Protocol_Error: SM_http_method_not_allowed
+408:
+  Error_Name: SM_http_request_timeout
+  Error_Desc: The request timed out
+  Protocol_Error: SM_http_request_timeout
+409:
+  Error_Name: SM_http_conflict
+  Error_Desc: The request could not be completed due to a conflict
+  Protocol_Error: SM_http_conflict
+500:
+  Error_Name: SM_http_internal_server_error
+  Error_Desc: Internal server error. Contact Nimble Storage Support
+  Protocol_Error: SM_http_internal_server_error
+501:
+  Error_Name: SM_http_not_implemented
+  Error_Desc: The server does not support the facility required
+  Protocol_Error: SM_http_not_implemented
+503:
+  Error_Name: SM_http_service_unavailable
+  Error_Desc: The server is currently unable to handle the request
+  Protocol_Error: SM_http_service_unavailable
+507:
+  Error_Name: SM_http_insufficient_storage
+  Error_Desc: The server does not have sufficient space to handle the request
+  Protocol_Error: SM_http_internal_server_error
+1024:
+  Error_Name: SM_nimble_base
+  Error_Desc: Wrong error type used
+  Protocol_Error: SM_http_internal_server_error
+1030:
+  Error_Name: SM_session_inval
+  Error_Desc: Invalid or expired session
+  Protocol_Error: SM_http_unauthorized
+1031:
+  Error_Name: SM_no_vss_writer
+  Error_Desc: VSS writer is not present on specified host
+  Protocol_Error: SM_http_not_found
+1035:
+  Error_Name: SM_no_such_family
+  Error_Desc: No such family
+  Protocol_Error: SM_http_not_found
+1036:
+  Error_Name: SM_no_such_volume
+  Error_Desc: No such volume
+  Protocol_Error: SM_http_not_found
+1037:
+  Error_Name: SM_no_such_branch
+  Error_Desc: No such branch
+  Protocol_Error: SM_http_not_found
+1038:
+  Error_Name: SM_no_such_snap
+  Error_Desc: No such snapshot
+  Protocol_Error: SM_http_not_found
+1039:
+  Error_Name: SM_repl_aborted
+  Error_Desc: Replication aborted
+  Protocol_Error: SM_http_internal_server_error
+1044:
+  Error_Name: SM_dsd_unreach
+  Error_Desc: Local array data service unreachable
+  Protocol_Error: SM_http_internal_server_error
+1046:
+  Error_Name: SM_not_downloading_sw
+  Error_Desc: No software downloading is in progress
+  Protocol_Error: SM_http_not_found
+1047:
+  Error_Name: SM_download_sw
+  Error_Desc: Software download failed
+  Protocol_Error: SM_http_internal_server_error
+1050:
+  Error_Name: SM_array_not_member
+  Error_Desc: Specified array is not a member of the group
+  Protocol_Error: SM_http_bad_request
+1054:
+  Error_Name: SM_pinned
+  Error_Desc: Object is pinned
+  Protocol_Error: SM_http_internal_server_error
+1056:
+  Error_Name: SM_branch_frozen
+  Error_Desc: Branch is frozen
+  Protocol_Error: SM_http_internal_server_error
+1057:
+  Error_Name: SM_version_custom
+  Error_Desc: Custom software version detected. Contact Nimble Storage Support
+  Protocol_Error: SM_http_internal_server_error
+1062:
+  Error_Name: SM_array_assign_failed
+  Error_Desc: Failed to assign array {array} to pool {pool}
+  Protocol_Error: SM_http_internal_server_error
+1063:
+  Error_Name: SM_array_gid_mismatch
+  Error_Desc: Failed to contact member array
+  Protocol_Error: SM_http_internal_server_error
+1064:
+  Error_Name: SM_failover_bgl_already
+  Error_Desc: Array already at Backup Group Leader role
+  Protocol_Error: SM_http_conflict
+1066:
+  Error_Name: SM_takeover_role_inval
+  Error_Desc: Array's current role does not support group leader role takeover action
+  Protocol_Error: SM_http_unauthorized
+1067:
+  Error_Name: SM_takeover_eagain
+  Error_Desc: Try role takeover again
+  Protocol_Error: SM_http_service_unavailable
+1068:
+  Error_Name: SM_takeover_gl_up
+  Error_Desc: Role takeover is not possible when group leader is up
+  Protocol_Error: SM_http_conflict
+1069:
+  Error_Name: SM_takeover_timeout
+  Error_Desc: Group leader role takeover timed out
+  Protocol_Error: SM_http_internal_server_error
+1070:
+  Error_Name: SM_takeover_db_fail
+  Error_Desc: Backup config database errors during role takeover
+  Protocol_Error: SM_http_internal_server_error
+1071:
+  Error_Name: SM_group_merge_db_load
+  Error_Desc: Failed to fetch and load group config DB
+  Protocol_Error: SM_http_internal_server_error
+1073:
+  Error_Name: SM_repl_partner_name_mismatch
+  Error_Desc: Partner name does not match
+  Protocol_Error: SM_http_bad_request
+1075:
+  Error_Name: SM_start_fail
+  Error_Desc: Process failed to start
+  Protocol_Error: SM_http_internal_server_error
+1076:
+  Error_Name: SM_group_merge_inprogress
+  Error_Desc: Group merge is in progress
+  Protocol_Error: SM_http_conflict
+1077:
+  Error_Name: SM_group_merge_db_merge
+  Error_Desc: Failed to merge group config DB from other group during group merge
+  Protocol_Error: SM_http_internal_server_error
+1078:
+  Error_Name: SM_group_merge_busy
+  Error_Desc: Another group merge operation is in progress
+  Protocol_Error: SM_http_conflict
+1079:
+  Error_Name: SM_group_merge_aborted
+  Error_Desc: Group merge operation has been aborted by user on source group
+  Protocol_Error: SM_http_service_unavailable
+1081:
+  Error_Name: SM_takeover_db_err
+  Error_Desc: Backup config database records are not consistent to perform takeover
+  Protocol_Error: SM_http_internal_server_error
+1082:
+  Error_Name: SM_migrate_role_inval
+  Error_Desc: Array's current role does not support role migrate action
+  Protocol_Error: SM_http_unauthorized
+1083:
+  Error_Name: SM_migrate_check_err
+  Error_Desc: Group Leader role migrate check error
+  Protocol_Error: SM_http_internal_server_error
+1084:
+  Error_Name: SM_migrate_bgl_unavail
+  Error_Desc: Backup Group Leader Array has not been setup yet
+  Protocol_Error: SM_http_conflict
+1085:
+  Error_Name: SM_migrate_bgl_nonsync
+  Error_Desc: Backup Group Leader Array is not config in-sync. Try role migrate again later
+  Protocol_Error: SM_http_service_unavailable
+1086:
+  Error_Name: SM_multi_array_group
+  Error_Desc: Partner is at version that is not supported
+  Protocol_Error: SM_http_not_implemented
+1088:
+  Error_Name: SM_pool_for_array_not_found
+  Error_Desc: Pool {pool} for array {array} was not found
+  Protocol_Error: SM_http_not_found
+1089:
+  Error_Name: SM_pool_for_array_exists
+  Error_Desc: Pool {pool} for array {array} already exists
+  Protocol_Error: SM_http_conflict
+1090:
+  Error_Name: SM_array_not_found_with_args
+  Error_Desc: Array {array} was not found
+  Protocol_Error: SM_http_not_found
+1094:
+  Error_Name: SM_shutdown
+  Error_Desc: Interrupted by shutdown
+  Protocol_Error: SM_http_service_unavailable
+1100:
+  Error_Name: SM_stats_no_such_object
+  Error_Desc: No such statistics are available for this time period
+  Protocol_Error: SM_http_not_found
+1101:
+  Error_Name: SM_array_not_member_with_args
+  Error_Desc: Specified array {array} is not a member of the group
+  Protocol_Error: SM_http_bad_request
+1103:
+  Error_Name: SM_array_member_orphan_with_args
+  Error_Desc: Specified array {array} is pending removal from group
+  Protocol_Error: SM_http_conflict
+1105:
+  Error_Name: SM_create_pool_failed
+  Error_Desc: Failed to create pool {pool}
+  Protocol_Error: SM_http_internal_server_error
+1106:
+  Error_Name: SM_vvol_limitation
+  Error_Desc: Only single array group allowed with Virtual Volumes support
+  Protocol_Error: SM_http_method_not_allowed
+1109:
+  Error_Name: SM_disable_vvol_with_pe
+  Error_Desc: Cannot disable Virtual Volumes feature as protocol endpoint exists
+  Protocol_Error: SM_http_conflict
+1111:
+  Error_Name: SM_vvol_already_enabled
+  Error_Desc: Virtual Volumes feature is already enabled
+  Protocol_Error: SM_http_conflict
+1112:
+  Error_Name: SM_vvol_already_disabled
+  Error_Desc: Virtual Volumes feature is already disabled
+  Protocol_Error: SM_http_conflict
+1113:
+  Error_Name: SM_volacl_on_vvol
+  Error_Desc: vol --addacl/removeacl is incompatible with Virtual Volumes
+  Protocol_Error: SM_http_bad_request
+1117:
+  Error_Name: SM_obj_id_not_found
+  Error_Desc: Failed to locate object identified by ID {id}
+  Protocol_Error: SM_http_not_found
+1118:
+  Error_Name: SM_group_target_already_enabled
+  Error_Desc: iSCSI group target is already enabled
+  Protocol_Error: SM_http_conflict
+1119:
+  Error_Name: SM_group_target_already_disabled
+  Error_Desc: iSCSI group target is already disabled
+  Protocol_Error: SM_http_conflict
+1401:
+  Error_Name: SM_version_mismatch_with_args
+  Error_Desc: Version mismatch, {entity1} {version1} and {entity2} {version2}
+  Protocol_Error: SM_http_conflict
+1403:
+  Error_Name: SM_array_repl_partner_version_unknown
+  Error_Desc: Version number for a partner {partner} is unknown
+  Protocol_Error: SM_http_bad_request
+1404:
+  Error_Name: SM_array_too_many
+  Error_Desc: Adding new array would exceed the configuration limit of {limit}
+  Protocol_Error: SM_http_conflict
+1405:
+  Error_Name: SM_no_src_array_on_pool
+  Error_Desc: Failed to find a source array on pool {pool}
+  Protocol_Error: SM_http_internal_server_error
+1406:
+  Error_Name: SM_array_key_not_unique
+  Error_Desc: Array {array} public key name {key} is not unique in the group
+  Protocol_Error: SM_http_conflict
+1407:
+  Error_Name: SM_invalid_pool_name
+  Error_Desc: Invalid pool name {pool} for array {array}
+  Protocol_Error: SM_http_bad_request
+1409:
+  Error_Name: SM_array_group_leader
+  Error_Desc: Cannot remove group leader {array} from the group
+  Protocol_Error: SM_http_method_not_allowed
+1410:
+  Error_Name: SM_array_pool_member
+  Error_Desc: Cannot remove array {array} from the group, part of pool {pool}
+  Protocol_Error: SM_http_conflict
+1411:
+  Error_Name: SM_array_not_group_leader
+  Error_Desc: Not on group leader array active controller
+  Protocol_Error: SM_http_method_not_allowed
+1412:
+  Error_Name: SM_resetup_with_multiple_arrays
+  Error_Desc: Resetup not supported on a multiple array group
+  Protocol_Error: SM_http_not_implemented
+1413:
+  Error_Name: SM_add_when_previously_resetup
+  Error_Desc: Cannot add a resetup array to a different group
+  Protocol_Error: SM_http_method_not_allowed
+1415:
+  Error_Name: SM_eula_not_found
+  Error_Desc: License file not available
+  Protocol_Error: SM_http_internal_server_error
+1417:
+  Error_Name: SM_limit_snap_volcoll
+  Error_Desc: Snapshot limit exceeded for volume collection
+  Protocol_Error: SM_http_conflict
+1421:
+  Error_Name: SM_limit_snap_retention_vol
+  Error_Desc: Snapshot retention parameters exceed limit for volume
+  Protocol_Error: SM_http_conflict
+1426:
+  Error_Name: SM_empty_pool
+  Error_Desc: pool name not specified
+  Protocol_Error: SM_http_bad_request
+1432:
+  Error_Name: SM_volmv_vol_einprog
+  Error_Desc: A previous move for volume {vol} is already in progress
+  Protocol_Error: SM_http_conflict
+1433:
+  Error_Name: SM_volmv_vol_ealready
+  Error_Desc: Volume {vol} is already on destination pool
+  Protocol_Error: SM_http_conflict
+1443:
+  Error_Name: SM_limit_group
+  Error_Desc: Per group {object_type} limit would be violated
+  Protocol_Error: SM_http_conflict
+1445:
+  Error_Name: SM_limit_volmv_snap_pool
+  Error_Desc: Per pool snapshot limit would be violated on destination pool {pool}
+  Protocol_Error: SM_http_conflict
+1446:
+  Error_Name: SM_array_repl_partner_nat
+  Error_Desc: Group is behind a Network Address Translated endpoint for partner(s) {partner}
+  Protocol_Error: SM_http_method_not_allowed
+1448:
+  Error_Name: SM_serial_collision
+  Error_Desc: Rejected serial number assignment for new volume/snapshot due to collision
+  Protocol_Error: SM_http_conflict
+1449:
+  Error_Name: SM_info_version
+  Error_Desc: API version is {version}
+  Protocol_Error: SM_http_ok
+1459:
+  Error_Name: SM_malformed_json
+  Error_Desc: Malformed json
+  Protocol_Error: SM_http_bad_request
+1463:
+  Error_Name: SM_missing_advanced_criteria_constructor
+  Error_Desc: Missing the constructor 'AdvancedCriteria'
+  Protocol_Error: SM_http_bad_request
+1464:
+  Error_Name: SM_missing_criteria
+  Error_Desc: Missing filter(s) for the constructor 'AdvancedCriteria'
+  Protocol_Error: SM_http_bad_request
+1465:
+  Error_Name: SM_missing_criteria_fieldName
+  Error_Desc: Missing the filter parameter 'fieldName'
+  Protocol_Error: SM_http_bad_request
+1466:
+  Error_Name: SM_missing_criteria_operator
+  Error_Desc: Missing the filter parameter 'operator'
+  Protocol_Error: SM_http_bad_request
+1467:
+  Error_Name: SM_missing_criteria_param
+  Error_Desc: Missing the filter parameter '{arg}' for the attribute '{field}'
+  Protocol_Error: SM_http_bad_request
+1470:
+  Error_Name: SM_unexpected_object_set_query
+  Error_Desc: Filter for the object search attribute 'object_set' cannot be specified
+  Protocol_Error: SM_http_bad_request
+1475:
+  Error_Name: SM_end_row_beyond_total_rows
+  Error_Desc: The parameter 'endRow' '{endRow}' is beyond 'totalRows' '{totalRows}'
+  Protocol_Error: SM_http_bad_request
+1484:
+  Error_Name: SM_vol_offline
+  Error_Desc: Volume {vol} is offline
+  Protocol_Error: SM_http_conflict
+1485:
+  Error_Name: SM_snapshot_offline
+  Error_Desc: Snapshot {snap} from volume {vol} is offline
+  Protocol_Error: SM_http_conflict
+1493:
+  Error_Name: SM_invalid_container
+  Error_Desc: Invalid container path {pool}{path}
+  Protocol_Error: SM_http_bad_request
+1494:
+  Error_Name: SM_remove_nonempty_container
+  Error_Desc: Remove failed because the container is not empty
+  Protocol_Error: SM_http_conflict
+2000:
+  Error_Name: SM_repl_base
+  Error_Desc: Wrong error type used
+  Protocol_Error: SM_http_bad_request
+2001:
+  Error_Name: SM_repl_no_partner
+  Error_Desc: Partner does not exist
+  Protocol_Error: SM_http_not_found
+2002:
+  Error_Name: SM_repl_hostname
+  Error_Desc: Invalid partner hostname or IP address
+  Protocol_Error: SM_http_bad_request
+2003:
+  Error_Name: SM_repl_no_base_snap
+  Error_Desc: Base snapshot does not exist
+  Protocol_Error: SM_http_not_found
+2004:
+  Error_Name: SM_repl_no_snap
+  Error_Desc: Replicated snapshot does not exist
+  Protocol_Error: SM_http_not_found
+2005:
+  Error_Name: SM_repl_not_ancestor
+  Error_Desc: Base snapshot is not an ancestor of replicated snapshot
+  Protocol_Error: SM_http_conflict
+2006:
+  Error_Name: SM_repl_no_branch
+  Error_Desc: Branch does not exist
+  Protocol_Error: SM_http_not_found
+2007:
+  Error_Name: SM_repl_not_on_disk
+  Error_Desc: Replicated snapshot is not yet on disk
+  Protocol_Error: SM_http_conflict
+2009:
+  Error_Name: SM_repl_disconnected
+  Error_Desc: Replication link was disconnected
+  Protocol_Error: SM_http_internal_server_error
+2010:
+  Error_Name: SM_repl_too_many_streams
+  Error_Desc: Too many streams to a partner
+  Protocol_Error: SM_http_conflict
+2011:
+  Error_Name: SM_repl_stopped
+  Error_Desc: Replication was stopped
+  Protocol_Error: SM_http_internal_server_error
+2012:
+  Error_Name: SM_repl_not_replicating
+  Error_Desc: Not replicating right now
+  Protocol_Error: SM_http_bad_request
+2013:
+  Error_Name: SM_repl_remote_generic
+  Error_Desc: Generic error from partner
+  Protocol_Error: SM_http_internal_server_error
+2014:
+  Error_Name: SM_repl_remote_refused
+  Error_Desc: Partner refused replication request
+  Protocol_Error: SM_http_internal_server_error
+2015:
+  Error_Name: SM_repl_remote_no_base_snap
+  Error_Desc: Base snapshot does not exist on partner
+  Protocol_Error: SM_http_not_found
+2016:
+  Error_Name: SM_repl_remote_no_volume
+  Error_Desc: Replicated_volume does not exist on partner
+  Protocol_Error: SM_http_not_found
+2017:
+  Error_Name: SM_repl_remote_not_ancestor
+  Error_Desc: Base snapshot is not an ancestor of replicated snapshot on partner
+  Protocol_Error: SM_http_conflict
+2019:
+  Error_Name: SM_repl_connected_ping_unsup
+  Error_Desc: Connected, but parter version does not support ping
+  Protocol_Error: SM_http_not_implemented
+2020:
+  Error_Name: SM_repl_hole_unsup
+  Error_Desc: Partner does not support holes
+  Protocol_Error: SM_http_not_implemented
+2023:
+  Error_Name: SM_repl_volattr_version_unsup
+  Error_Desc: Partner does not support the attributes for this volume
+  Protocol_Error: SM_http_method_not_allowed
+2027:
+  Error_Name: SM_repl_partner_misconfiguration
+  Error_Desc: Partner configuration is incorrect
+  Protocol_Error: SM_http_conflict
+2029:
+  Error_Name: SM_repl_encryption_version_unsup
+  Error_Desc: Replication partner does not support encrypted volumes
+  Protocol_Error: SM_http_not_implemented
+2031:
+  Error_Name: SM_repl_app_uuid_unsup
+  Error_Desc: Partner does not support the application UUID attribute
+  Protocol_Error: SM_http_not_implemented
+2032:
+  Error_Name: SM_repl_key_value_unsup
+  Error_Desc: Partner does not support key-value metadata
+  Protocol_Error: SM_http_not_implemented
+2035:
+  Error_Name: SM_repl_api_unsup
+  Error_Desc: Operation incompatible with replication partner
+  Protocol_Error: SM_http_conflict
+2036:
+  Error_Name: SM_repl_encryption_needed
+  Error_Desc: Replicating encrypted volumes requires encryption to be enabled on downstream
+  Protocol_Error: SM_http_conflict
+2037:
+  Error_Name: SM_repl_delete_replica_unsup
+  Error_Desc: Partner does not support deletion of replicas
+  Protocol_Error: SM_http_not_implemented
+2038:
+  Error_Name: SM_repl_vol_name_conflict
+  Error_Desc: Partner detected volume name conflict
+  Protocol_Error: SM_http_conflict
+2041:
+  Error_Name: SM_branchpt_trimmed
+  Error_Desc: Replication is stalled due to space reclamation
+  Protocol_Error: SM_http_internal_server_error
+2042:
+  Error_Name: SM_repl_bandwidth
+  Error_Desc: Cannot specify throttle bandwidth in both megabits and kilobits
+  Protocol_Error: SM_http_conflict
+3000:
+  Error_Name: SM_tmp_nospace
+  Error_Desc: /tmp is out of space
+  Protocol_Error: SM_http_internal_server_error
+3001:
+  Error_Name: SM_var_nospace
+  Error_Desc: /var is out of space
+  Protocol_Error: SM_http_internal_server_error
+3002:
+  Error_Name: SM_scratch_nospace
+  Error_Desc: /scratch is out of space
+  Protocol_Error: SM_http_internal_server_error
+3003:
+  Error_Name: SM_config_nospace
+  Error_Desc: Config file system is out of space
+  Protocol_Error: SM_http_internal_server_error
+3005:
+  Error_Name: SM_usb_nospace
+  Error_Desc: File system on USB flash is out of space
+  Protocol_Error: SM_http_internal_server_error
+3006:
+  Error_Name: SM_write
+  Error_Desc: Failed to write
+  Protocol_Error: SM_http_internal_server_error
+3007:
+  Error_Name: SM_write_cfg
+  Error_Desc: Failed to write config file
+  Protocol_Error: SM_http_internal_server_error
+3008:
+  Error_Name: SM_mkdir
+  Error_Desc: Failed to make directory
+  Protocol_Error: SM_http_internal_server_error
+3009:
+  Error_Name: SM_resolve_proxy
+  Error_Desc: Failed to resolve http proxy
+  Protocol_Error: SM_http_internal_server_error
+3010:
+  Error_Name: SM_connect_spt_server
+  Error_Desc: Failed to connect to support website
+  Protocol_Error: SM_http_internal_server_error
+3011:
+  Error_Name: SM_send_recv
+  Error_Desc: Failed to send/receive data
+  Protocol_Error: SM_http_internal_server_error
+3012:
+  Error_Name: SM_peer_network
+  Error_Desc: Failed to communicate with peer controller
+  Protocol_Error: SM_http_internal_server_error
+3013:
+  Error_Name: SM_update_busy
+  Error_Desc: Software update is already in progress
+  Protocol_Error: SM_http_conflict
+3014:
+  Error_Name: SM_update_vers_notsup
+  Error_Desc: Upgrade to the version is not supported
+  Protocol_Error: SM_http_not_implemented
+3015:
+  Error_Name: SM_rollback_notsup
+  Error_Desc: Rollback to the version is not supported
+  Protocol_Error: SM_http_not_implemented
+3017:
+  Error_Name: SM_no_pkg
+  Error_Desc: Software update package is not found
+  Protocol_Error: SM_http_not_found
+3019:
+  Error_Name: SM_wrong_sig
+  Error_Desc: Software update package has wrong signature
+  Protocol_Error: SM_http_internal_server_error
+3020:
+  Error_Name: SM_wrong_cksum
+  Error_Desc: Checksum of software update package is wrong
+  Protocol_Error: SM_http_internal_server_error
+3021:
+  Error_Name: SM_unpack
+  Error_Desc: Failed to unpack software update package
+  Protocol_Error: SM_http_internal_server_error
+3022:
+  Error_Name: SM_update_precheck
+  Error_Desc: Update pre-check failed
+  Protocol_Error: SM_http_internal_server_error
+3023:
+  Error_Name: SM_update_net_degrade
+  Error_Desc: Network connectivity is degraded. Verify network links
+  Protocol_Error: SM_http_method_not_allowed
+3024:
+  Error_Name: SM_update_conn_grplead
+  Error_Desc: Failed to get update package from group leader
+  Protocol_Error: SM_http_internal_server_error
+3026:
+  Error_Name: SM_update_start_check
+  Error_Desc: System cannot perform the requested upgrade as start checks failed
+  Protocol_Error: SM_http_internal_server_error
+3028:
+  Error_Name: SM_update_failed
+  Error_Desc: Software update failed
+  Protocol_Error: SM_http_internal_server_error
+3029:
+  Error_Name: SM_update_currvers_notfound
+  Error_Desc: Cannot find current software version to update from
+  Protocol_Error: SM_http_not_found
+3030:
+  Error_Name: SM_update_partner_vers_notsup
+  Error_Desc: Partner software version is not valid
+  Protocol_Error: SM_http_bad_request
+3032:
+  Error_Name: SM_update_grpconfig_invalid
+  Error_Desc: Group configuration is not valid
+  Protocol_Error: SM_http_bad_request
+3033:
+  Error_Name: SM_update_interposer
+  Error_Desc: Sysfs interposer node not found
+  Protocol_Error: SM_http_not_found
+3034:
+  Error_Name: SM_update_interposer_fw
+  Error_Desc: Detected failed disk or interposer firmware version not valid
+  Protocol_Error: SM_http_bad_request
+3035:
+  Error_Name: SM_update_nimmodel_check
+  Error_Desc: Nimble model health check failed
+  Protocol_Error: SM_http_internal_server_error
+3036:
+  Error_Name: SM_update_not_active_solo
+  Error_Desc: Update can be initiated only on active/solo controller
+  Protocol_Error: SM_http_method_not_allowed
+3037:
+  Error_Name: SM_update_connect_grplead
+  Error_Desc: Copying package failed
+  Protocol_Error: SM_http_internal_server_error
+3038:
+  Error_Name: SM_update_nextvers_notfound
+  Error_Desc: Cannot find next software version to update to
+  Protocol_Error: SM_http_not_found
+3039:
+  Error_Name: SM_update_nimmodel_db
+  Error_Desc: NimModel database check failed
+  Protocol_Error: SM_http_internal_server_error
+3040:
+  Error_Name: SM_update_nimmodel_cpu
+  Error_Desc: NimModel CPU model check failed
+  Protocol_Error: SM_http_internal_server_error
+3041:
+  Error_Name: SM_update_nimmodel_mem
+  Error_Desc: NimModel memory missing
+  Protocol_Error: SM_http_internal_server_error
+3042:
+  Error_Name: SM_update_nimmodel_nic
+  Error_Desc: NimModel NIC count error
+  Protocol_Error: SM_http_internal_server_error
+3043:
+  Error_Name: SM_update_nimmodel_hdd
+  Error_Desc: NimModel HDD count error
+  Protocol_Error: SM_http_internal_server_error
+3044:
+  Error_Name: SM_update_nimmodel_ssd
+  Error_Desc: NimModel SSD count error
+  Protocol_Error: SM_http_internal_server_error
+3046:
+  Error_Name: SM_update_multi_error
+  Error_Desc: Software update encountered errors
+  Protocol_Error: SM_http_internal_server_error
+3047:
+  Error_Name: SM_update_fail_eula_extract
+  Error_Desc: Failed to extract eula files from downloaded package
+  Protocol_Error: SM_http_internal_server_error
+3048:
+  Error_Name: SM_usb_absent
+  Error_Desc: The USB device is either absent or already mounted
+  Protocol_Error: SM_http_conflict
+3050:
+  Error_Name: SM_update_pkg_downloading
+  Error_Desc: Software download is in progress
+  Protocol_Error: SM_http_internal_server_error
+4000:
+  Error_Name: SM_invalid_route
+  Error_Desc: Invalid route for subnet {network}/{netmask} to gateway {gateway}
+  Protocol_Error: SM_http_bad_request
+4001:
+  Error_Name: SM_no_matching_subnet
+  Error_Desc: Specified IP {ipaddr} is not hosted by a subnet
+  Protocol_Error: SM_http_bad_request
+4002:
+  Error_Name: SM_missing_subnet
+  Error_Desc: Required subnet not specified
+  Protocol_Error: SM_http_bad_request
+4003:
+  Error_Name: SM_too_many_subnets
+  Error_Desc: Specified subnet count {num_ports} exceeds available ports
+  Protocol_Error: SM_http_conflict
+4004:
+  Error_Name: SM_duplicate_ip
+  Error_Desc: Duplicate IP address {ipaddr} specified
+  Protocol_Error: SM_http_conflict
+4005:
+  Error_Name: SM_missing_mgmt_ip
+  Error_Desc: Required management IP not specified
+  Protocol_Error: SM_http_bad_request
+4006:
+  Error_Name: SM_invalid_ip
+  Error_Desc: Invalid IP address {ipaddr} specified
+  Protocol_Error: SM_http_bad_request
+4007:
+  Error_Name: SM_change_mgmt_ip_eperm
+  Error_Desc: Changing management IP not permitted in post management setup
+  Protocol_Error: SM_http_conflict
+4008:
+  Error_Name: SM_invalid_data_ip
+  Error_Desc: Missing or invalid data IP address {ipaddr} for array {array} NIC {nic}
+  Protocol_Error: SM_http_bad_request
+4009:
+  Error_Name: SM_duplicate_nic
+  Error_Desc: Interface {nic} specified for multiple data IPs
+  Protocol_Error: SM_http_conflict
+4010:
+  Error_Name: SM_nic_not_found
+  Error_Desc: Specified interface {nic} not found in system
+  Protocol_Error: SM_http_not_found
+4011:
+  Error_Name: SM_invalid_subnet
+  Error_Desc: Invalid subnet {network}/{netmask} specified
+  Protocol_Error: SM_http_bad_request
+4012:
+  Error_Name: SM_too_many_support_ips
+  Error_Desc: Too many support IPs ({num_ips}) specified
+  Protocol_Error: SM_http_bad_request
+4013:
+  Error_Name: SM_invalid_netconfig_name
+  Error_Desc: Invalid network configuration name
+  Protocol_Error: SM_http_bad_request
+4014:
+  Error_Name: SM_invalid_netmask
+  Error_Desc: Invalid network mask {netmask} specified
+  Protocol_Error: SM_http_bad_request
+4015:
+  Error_Name: SM_invalid_data_subnet
+  Error_Desc: Data subnet {label} {network}/{netmask} must allow iscsi and/or group traffic
+  Protocol_Error: SM_http_conflict
+4016:
+  Error_Name: SM_mismatching_duplicate_subnet
+  Error_Desc: Found duplicate of subnet {label} {network}/{netmask} with different types
+  Protocol_Error: SM_http_conflict
+4017:
+  Error_Name: SM_array_subnet_mismatch
+  Error_Desc: Subnets configured on array {array1} and array {array2} do not match
+  Protocol_Error: SM_http_conflict
+4019:
+  Error_Name: SM_no_data_ip_specified
+  Error_Desc: No Data IP specified for array {array}
+  Protocol_Error: SM_http_bad_request
+4020:
+  Error_Name: SM_no_mgmt_subnet_specified
+  Error_Desc: No valid management subnet specified for array {array}
+  Protocol_Error: SM_http_bad_request
+4023:
+  Error_Name: SM_mgmt_ip_not_on_mgmt
+  Error_Desc: Management IP {ipaddr} must be on the Mgmt or Mgmt+Data subnet
+  Protocol_Error: SM_http_conflict
+4027:
+  Error_Name: SM_invalid_netconfig_to_delete
+  Error_Desc: Network configuration {netconfig} cannot be deleted
+  Protocol_Error: SM_http_internal_server_error
+4028:
+  Error_Name: SM_route_exists
+  Error_Desc: Route for subnet {network}/{netmask} exists
+  Protocol_Error: SM_http_conflict
+4029:
+  Error_Name: SM_route_does_not_exist
+  Error_Desc: Route to {gateway} for subnet {label} {network}/{netmask} does not exist
+  Protocol_Error: SM_http_not_found
+4030:
+  Error_Name: SM_no_route_to_network
+  Error_Desc: Route to network {network}/{netmask} does not exist
+  Protocol_Error: SM_http_not_found
+4032:
+  Error_Name: SM_data_ip_missing_subnet
+  Error_Desc: NIC {nic} of Array {array} has data IP {ipaddr} but no subnet configured
+  Protocol_Error: SM_http_bad_request
+4035:
+  Error_Name: SM_netconfig_already_active
+  Error_Desc: Network Configuration is already active
+  Protocol_Error: SM_http_conflict
+4036:
+  Error_Name: SM_nic_subnet_does_not_exist
+  Error_Desc: Subnet {label} is not configured on any array in the group
+  Protocol_Error: SM_http_not_found
+4037:
+  Error_Name: SM_netconfig_does_not_exist
+  Error_Desc: Network configuration {netconfig} does not exist
+  Protocol_Error: SM_http_not_found
+4038:
+  Error_Name: SM_default_route_missing
+  Error_Desc: Network Configuration is missing the default route
+  Protocol_Error: SM_http_bad_request
+4039:
+  Error_Name: SM_invalid_subnet_type
+  Error_Desc: Invalid type specified with subnet {network}/{netmask}
+  Protocol_Error: SM_http_bad_request
+4040:
+  Error_Name: SM_subnet_does_not_exist
+  Error_Desc: Subnet {label} {network}/{netmask} with {type_str} does not exist
+  Protocol_Error: SM_http_not_found
+4041:
+  Error_Name: SM_array_not_found_in_netconfig
+  Error_Desc: Array {array} does not exist in network configuration {netconfig}
+  Protocol_Error: SM_http_not_found
+4043:
+  Error_Name: SM_invalid_ip_type
+  Error_Desc: Invalid type specified for IP address {ipaddr}
+  Protocol_Error: SM_http_bad_request
+4044:
+  Error_Name: SM_mgmt_ip_already_exists
+  Error_Desc: Group management IP address {ipaddr} already exists
+  Protocol_Error: SM_http_conflict
+4045:
+  Error_Name: SM_discovery_ip_already_exists_deprecated
+  Error_Desc: Group discovery IP address {ipaddr} already exists
+  Protocol_Error: SM_http_conflict
+4047:
+  Error_Name: SM_support_ip_already_exists
+  Error_Desc: Controller {ctrlr} is already configured with support IP address {ipaddr}
+  Protocol_Error: SM_http_conflict
+4048:
+  Error_Name: SM_data_ip_already_exists
+  Error_Desc: NIC {nic} on Array {array} is already configured with data IP address {ipaddr}
+  Protocol_Error: SM_http_conflict
+4054:
+  Error_Name: SM_mgmt_ip_invalid
+  Error_Desc: Group Management IP address {ipaddr} is invalid
+  Protocol_Error: SM_http_bad_request
+4055:
+  Error_Name: SM_discovery_ip_invalid
+  Error_Desc: Discovery IP address {ipaddr} is invalid
+  Protocol_Error: SM_http_bad_request
+4056:
+  Error_Name: SM_discovery_ip_not_in_subnet
+  Error_Desc: Discovery IP address {ipaddr} must be on one of the configured subnets
+  Protocol_Error: SM_http_not_found
+4058:
+  Error_Name: SM_missing_data_subnet
+  Error_Desc: No data subnet specified
+  Protocol_Error: SM_http_bad_request
+4059:
+  Error_Name: SM_gateway_not_in_subnets
+  Error_Desc: Gateway IP {gateway} must be in a configured subnets
+  Protocol_Error: SM_http_not_found
+4060:
+  Error_Name: SM_second_mgmt_ip_found
+  Error_Desc: Found Management IP {ipaddr} while one already exists
+  Protocol_Error: SM_http_conflict
+4061:
+  Error_Name: SM_second_disc_ip_found
+  Error_Desc: Found Discovery IP {ipaddr} while one already exists
+  Protocol_Error: SM_http_conflict
+4062:
+  Error_Name: SM_require_two_support_ips
+  Error_Desc: Support IPs for both controllers must be specified
+  Protocol_Error: SM_http_bad_request
+4063:
+  Error_Name: SM_default_gateway_not_in_mgmt_subnet
+  Error_Desc: The default gateway {gateway} must be in the management subnet
+  Protocol_Error: SM_http_not_found
+4064:
+  Error_Name: SM_at_least_one_iscsi_cluster
+  Error_Desc: Must configure at least one iSCSI and at least one group enabled subnet
+  Protocol_Error: SM_http_bad_request
+4065:
+  Error_Name: SM_partner_subnet_does_not_exist
+  Error_Desc: Subnet {label} referenced by replication partner {partner} does not exist
+  Protocol_Error: SM_http_not_found
+4068:
+  Error_Name: SM_connection_rebalancing_without_automatic_method
+  Error_Desc: Connection rebalancing must be disabled when automatic method is disabled
+  Protocol_Error: SM_http_conflict
+4071:
+  Error_Name: SM_no_data_ip_on_mgmt_plus_data
+  Error_Desc: No Data IP specified for Mgmt+Data subnet on array {array}
+  Protocol_Error: SM_http_bad_request
+4072:
+  Error_Name: SM_backup_netconfig_readonly
+  Error_Desc: Network configuration backup cannot be edited
+  Protocol_Error: SM_http_method_not_allowed
+4073:
+  Error_Name: SM_netconfig_exist_no_force
+  Error_Desc: Draft configuration already exists
+  Protocol_Error: SM_http_conflict
+4076:
+  Error_Name: SM_invalid_discovery_ip
+  Error_Desc: Invalid Discovery IP {discovery_ip} for subnet {label} {network}/{netmask}
+  Protocol_Error: SM_http_bad_request
+4078:
+  Error_Name: SM_discovery_ip_not_found
+  Error_Desc: Discovery IP address {ipaddr} does not match any configured subnets
+  Protocol_Error: SM_http_bad_request
+4082:
+  Error_Name: SM_no_subnet_with_label
+  Error_Desc: Subnet with label {label} does not exist
+  Protocol_Error: SM_http_not_found
+4083:
+  Error_Name: SM_invalid_subnet_label
+  Error_Desc: Invalid subnet label specified
+  Protocol_Error: SM_http_bad_request
+4084:
+  Error_Name: SM_invalid_netzone_type
+  Error_Desc: Invalid Network Affinity Zone type specified
+  Protocol_Error: SM_http_bad_request
+4085:
+  Error_Name: SM_duplicate_subnet_label
+  Error_Desc: A subnet with label {label} already exists
+  Protocol_Error: SM_http_conflict
+4086:
+  Error_Name: SM_invalid_vlan_id
+  Error_Desc: Subnet {subnet} has an invalid VLAN ID {vlan_id}
+  Protocol_Error: SM_http_bad_request
+4087:
+  Error_Name: SM_invalid_nic
+  Error_Desc: Invalid NIC name {nic} specified
+  Protocol_Error: SM_http_bad_request
+4089:
+  Error_Name: SM_subnet_already_assigned_on_nic
+  Error_Desc: Subnet {label} is already assigned on the NIC {nic} of array {array}
+  Protocol_Error: SM_http_conflict
+4090:
+  Error_Name: SM_second_untagged_assignment
+  Error_Desc: NIC {nic} of array {array} has more than one untagged subnet assignment
+  Protocol_Error: SM_http_conflict
+4092:
+  Error_Name: SM_action_failure_during_state
+  Error_Desc: Failed to {action} as the array has - {state}. Try again later
+  Protocol_Error: SM_http_service_unavailable
+4093:
+  Error_Name: SM_zero_vlan_id_for_tagged_assignment
+  Error_Desc: Subnet {label} with VLAN ID 0 cannot have tagged assignment
+  Protocol_Error: SM_http_method_not_allowed
+4095:
+  Error_Name: SM_invalid_initiatorgrp_desc
+  Error_Desc: Invalid initiator group description
+  Protocol_Error: SM_http_bad_request
+4096:
+  Error_Name: SM_duplicate_initiatorgrp
+  Error_Desc: Initiator group already exists
+  Protocol_Error: SM_http_conflict
+4099:
+  Error_Name: SM_insufficient_initiator_input
+  Error_Desc: An initiator name or IP address must be specified
+  Protocol_Error: SM_http_bad_request
+4103:
+  Error_Name: SM_duplicate_subnet
+  Error_Desc: Found duplicate of subnet {label} {network}/{netmask}
+  Protocol_Error: SM_http_conflict
+4105:
+  Error_Name: SM_vlan_subnet_in_manual
+  Error_Desc: Subnet {label} has VLAN Id configured in manual connection mode
+  Protocol_Error: SM_http_internal_server_error
+4106:
+  Error_Name: SM_no_discovery_ip_in_manual_mode
+  Error_Desc: At least one discovery IP is required in manual connection mode
+  Protocol_Error: SM_http_bad_request
+4107:
+  Error_Name: SM_mismatching_subnet
+  Error_Desc: Subnet '{label}' entries {entries} do not match
+  Protocol_Error: SM_http_conflict
+4108:
+  Error_Name: SM_no_iscsi_subnet
+  Error_Desc: Cannot add non-iSCSI subnet to the initiator group
+  Protocol_Error: SM_http_conflict
+4109:
+  Error_Name: SM_initiatorgrp_subnet_does_not_exist
+  Error_Desc: Subnet {label} referenced by initiatorgroup {initiatorgrp} does not exist
+  Protocol_Error: SM_http_not_found
+4110:
+  Error_Name: SM_invalid_netconfig
+  Error_Desc: Network configuration {netconfig} invalid
+  Protocol_Error: SM_http_bad_request
+4111:
+  Error_Name: SM_peer_network_degraded
+  Error_Desc: Standby unable to reach IP address {ipaddr} on active from NIC {nic}
+  Protocol_Error: SM_http_internal_server_error
+4114:
+  Error_Name: SM_subnet_not_assigned_on_nic
+  Error_Desc: Subnet {label} is not assigned on the NIC {nic} of array {array}
+  Protocol_Error: SM_http_conflict
+4115:
+  Error_Name: SM_duplicate_subnet_vlan_id
+  Error_Desc: Multiple subnets with the same VLAN ID {vlan_id}
+  Protocol_Error: SM_http_conflict
+4131:
+  Error_Name: SM_duplicate_initiatorgrp_subnet
+  Error_Desc: Subnet already exists in the initiator group
+  Protocol_Error: SM_http_conflict
+4133:
+  Error_Name: SM_fc_driver_error
+  Error_Desc: Fibre Channel driver internal error was encountered
+  Protocol_Error: SM_http_internal_server_error
+4136:
+  Error_Name: SM_at_least_one_group_subnet
+  Error_Desc: Must configure at least one group enabled subnet
+  Protocol_Error: SM_http_bad_request
+4138:
+  Error_Name: SM_initiator_label_not_supported
+  Error_Desc: Initiator label is not supported for Fibre Channel initiator
+  Protocol_Error: SM_http_not_implemented
+4140:
+  Error_Name: SM_luc_update_error
+  Error_Desc: LU Cache update error was encountered
+  Protocol_Error: SM_http_internal_server_error
+4141:
+  Error_Name: SM_fc_group_merge_not_supported
+  Error_Desc: Group merge not supported for Fibre Channel
+  Protocol_Error: SM_http_not_implemented
+4142:
+  Error_Name: SM_fc_single_array_pool
+  Error_Desc: Only one array allowed in Fibre Channel pools
+  Protocol_Error: SM_http_conflict
+4146:
+  Error_Name: SM_peer_fc_connectivity_degraded
+  Error_Desc: Standby Fibre Channel connectivity worse than active
+  Protocol_Error: SM_http_internal_server_error
+4147:
+  Error_Name: SM_fc_driver_diag_test_failure
+  Error_Desc: Fibre Channel driver reported diag test failure
+  Protocol_Error: SM_http_internal_server_error
+4148:
+  Error_Name: SM_fc_ping_no_response
+  Error_Desc: Fibre Channel ping operation received no response from remote port
+  Protocol_Error: SM_http_internal_server_error
+4149:
+  Error_Name: SM_fc_ping_wwpn_not_found
+  Error_Desc: Fibre Channel ping operation could not find specified WWPN {wwpn}
+  Protocol_Error: SM_http_not_found
+4150:
+  Error_Name: SM_fc_ping_payload_mismatched
+  Error_Desc: Fibre Channel ping operation detected payload mismatch
+  Protocol_Error: SM_http_conflict
+4152:
+  Error_Name: SM_fc_add_to_nonfc_group
+  Error_Desc: Trying to add Fibre Channel array to non-Fibre Channel group
+  Protocol_Error: SM_http_conflict
+4153:
+  Error_Name: SM_add_nonfc_to_fc_group
+  Error_Desc: Trying to add non-Fibre Channel array to Fibre Channel group
+  Protocol_Error: SM_http_conflict
+4154:
+  Error_Name: SM_fc_vol_move
+  Error_Desc: Moving volumes is currently not supported in Fibre Channel groups
+  Protocol_Error: SM_http_not_implemented
+4155:
+  Error_Name: SM_invalid_initiatorgrp_access_protocol_with_args
+  Error_Desc: Invalid initiator group access protocol {protocol} specified
+  Protocol_Error: SM_http_bad_request
+4157:
+  Error_Name: SM_empty_fc_config
+  Error_Desc: Empty Fibre Channel configuration
+  Protocol_Error: SM_http_bad_request
+4165:
+  Error_Name: SM_duplicate_wwpn
+  Error_Desc: Detected duplicate WWPN {duplicate_wwpn}
+  Protocol_Error: SM_http_conflict
+4169:
+  Error_Name: SM_invalid_fc_config
+  Error_Desc: Invalid Fibre Channel config
+  Protocol_Error: SM_http_bad_request
+4170:
+  Error_Name: SM_asymmetric_fc_ports_deprecated
+  Error_Desc: Asymmetric Fibre Channel hardware detected
+  Protocol_Error: SM_http_internal_server_error
+4171:
+  Error_Name: SM_fc_svc_not_available
+  Error_Desc: Fibre Channel service is not available in current group configuration
+  Protocol_Error: SM_http_conflict
+4172:
+  Error_Name: SM_invalid_non_iscsi_data_subnet
+  Error_Desc: Data subnet {label} {network}/{netmask} must allow group traffic
+  Protocol_Error: SM_http_method_not_allowed
+4178:
+  Error_Name: SM_invalid_initiator_alias_with_args
+  Error_Desc: Invalid initiator alias {alias} specified
+  Protocol_Error: SM_http_bad_request
+4179:
+  Error_Name: SM_invalid_initiator_wwpn_with_args
+  Error_Desc: Invalid initiator WWPN {wwpn} specified
+  Protocol_Error: SM_http_bad_request
+4190:
+  Error_Name: SM_netconfig_create_draft_only
+  Error_Desc: Can create only a 'draft' network configuration
+  Protocol_Error: SM_http_conflict
+4193:
+  Error_Name: SM_no_suitable_pe
+  Error_Desc: Unable to find suitable Protocol Endpoint
+  Protocol_Error: SM_http_not_found
+4194:
+  Error_Name: SM_acl_deprecated_pe
+  Error_Desc: Unable to create new ACL to deprecated Protocol Endpoint
+  Protocol_Error: SM_http_bad_request
+4195:
+  Error_Name: SM_incompatible_volumes
+  Error_Desc: Volumes or snapshots are incompatible
+  Protocol_Error: SM_http_bad_request
+4263:
+  Error_Name: SM_dedupe_bulk_enable
+  Error_Desc: Enabling deduplication failed for volumes {volumes}
+  Protocol_Error: SM_http_bad_request
+4264:
+  Error_Name: SM_dedupe_bulk_disable
+  Error_Desc: Disabling deduplication failed for volumes {volumes}
+  Protocol_Error: SM_http_bad_request
+4305:
+  Error_Name: SM_encryption_group_scope_override
+  Error_Desc: Invalid group encryption scope override
+  Protocol_Error: SM_http_bad_request
+4306:
+  Error_Name: SM_encryption_invalid_mode
+  Error_Desc: Invalid encryption mode specified
+  Protocol_Error: SM_http_bad_request
+4307:
+  Error_Name: SM_passphrase_inval
+  Error_Desc: Invalid master key passphrase
+  Protocol_Error: SM_http_bad_request
+4308:
+  Error_Name: SM_passphrase_auth
+  Error_Desc: Failed to authenticate master key passphrase
+  Protocol_Error: SM_http_unauthorized
+4309:
+  Error_Name: SM_encryption_needed
+  Error_Desc: Group merge requires encryption to be enabled on this group
+  Protocol_Error: SM_http_conflict
+4310:
+  Error_Name: SM_encryption_enc_vol_exists
+  Error_Desc: Encrypted volume exists
+  Protocol_Error: SM_http_conflict
+4311:
+  Error_Name: SM_encryption_slow
+  Error_Desc: Access to encrypted volumes on this hardware may be slow
+  Protocol_Error: SM_http_ok
+4312:
+  Error_Name: SM_encryption_must_be_enabled
+  Error_Desc: Encryption must be enabled in order to change encryption settings
+  Protocol_Error: SM_http_conflict
+4313:
+  Error_Name: SM_encryption_key_conflict
+  Error_Desc: Volume encryption key conflict found during group merge
+  Protocol_Error: SM_http_conflict
+4500:
+  Error_Name: SM_proc_has_running_dependents
+  Error_Desc: Process has running dependents
+  Protocol_Error: SM_http_service_unavailable
+4501:
+  Error_Name: SM_proc_incompatible_state
+  Error_Desc: Process cannot be run in current controller state
+  Protocol_Error: SM_http_conflict
+4502:
+  Error_Name: SM_proc_einval
+  Error_Desc: Process does not exist or is not managed by pmd
+  Protocol_Error: SM_http_not_found
+4503:
+  Error_Name: SM_proc_changed_state
+  Error_Desc: Process state changed before completing operation
+  Protocol_Error: SM_http_service_unavailable
+4504:
+  Error_Name: SM_proc_unknown_states
+  Error_Desc: Unknown controller states
+  Protocol_Error: SM_http_internal_server_error
+4506:
+  Error_Name: SM_array_not_active_standby
+  Error_Desc: Array is not in redundant controller (active/standby) mode
+  Protocol_Error: SM_http_method_not_allowed
+5000:
+  Error_Name: SM_asup_base
+  Error_Desc: Wrong error type used
+  Protocol_Error: SM_http_bad_request
+5001:
+  Error_Name: SM_asup_disabled
+  Error_Desc: Autosupport needs to be enabled for requested operation
+  Protocol_Error: SM_http_conflict
+5002:
+  Error_Name: SM_asup_failed
+  Error_Desc: Failed to run requested command
+  Protocol_Error: SM_http_internal_server_error
+5003:
+  Error_Name: SM_asup_ebusy
+  Error_Desc: Autosupport already initiated
+  Protocol_Error: SM_http_conflict
+5004:
+  Error_Name: SM_asup_error
+  Error_Desc: Failed to start sending autosupport information on array {arrayname}
+  Protocol_Error: SM_http_internal_server_error
+5200:
+  Error_Name: SM_asup_nsdiag_base
+  Error_Desc: Wrong error type used
+  Protocol_Error: SM_http_bad_request
+5201:
+  Error_Name: SM_asup_nsdiag_inval
+  Error_Desc: Autosupport configuration invalid
+  Protocol_Error: SM_http_bad_request
+6036:
+  Error_Name: SM_vvolsnap_online
+  Error_Desc: Either Virtual Volumes or Snapshots are online
+  Protocol_Error: SM_http_conflict
+6037:
+  Error_Name: SM_afs_disconnected
+  Error_Desc: afs is disconnected
+  Protocol_Error: SM_http_internal_server_error
+7000:
+  Error_Name: SM_alarm_array_unreachable
+  Error_Desc: Array {array} is unreachable. May affect {numvols} volumes in pool {pool}
+  Protocol_Error: SM_http_internal_server_error
+7002:
+  Error_Name: SM_alarm_array_in_solo
+  Error_Desc: Controller {ctrlr} of array {array} is offline
+  Protocol_Error: SM_http_internal_server_error
+7101:
+  Error_Name: SM_alarm_shelf_A_SHELF_SES_ERR
+  Error_Desc: SES device not ready for shelf serial {enc_serial} location {enc_loc_id}
+  Protocol_Error: SM_http_conflict
+7104:
+  Error_Name: SM_alarm_shelf_A_SHELF_INVALID_EEPROM
+  Error_Desc: System cannot read the serial number from shelf at location {enc_loc_id}
+  Protocol_Error: SM_http_internal_server_error
+8001:
+  Error_Name: SM_info_async_job_id
+  Error_Desc: A job has been created, use ID {job_id} to track its status
+  Protocol_Error: SM_http_accepted
+9201:
+  Error_Name: SM_stats_no_reply
+  Error_Desc: No reply from server
+  Protocol_Error: SM_http_not_found
+9202:
+  Error_Name: SM_stats_no_sensors
+  Error_Desc: No sensors found for this stat
+  Protocol_Error: SM_http_not_found
+9203:
+  Error_Name: SM_stats_send_failed
+  Error_Desc: Failed to communicate with member array
+  Protocol_Error: SM_http_not_found
+9204:
+  Error_Name: SM_stats_frequency_invalid
+  Error_Desc: Invalid frequency
+  Protocol_Error: SM_http_not_found
+9205:
+  Error_Name: SM_stats_start_time_seek_failed
+  Error_Desc: Stat records unavailable for specified start time. Specify a later start time
+  Protocol_Error: SM_http_not_found

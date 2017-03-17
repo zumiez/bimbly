@@ -1,0 +1,97 @@
+require 'webmock/rspec'
+require 'rspec'
+require_relative '../../lib/meraki_provisions'
+
+describe MerakiProvisions do
+  before :all do
+    @meraki = MerakiProvisions.new
+    @device = JSON.parse(File.read("#{File.dirname(__FILE__)}/support/fixtures/device.json"))
+    @devices = JSON.parse(File.read("#{File.dirname(__FILE__)}/support/fixtures/devices.json"))
+    @network = JSON.parse(File.read("#{File.dirname(__FILE__)}/support/fixtures/network.json"))
+    @networks = JSON.parse(File.read("#{File.dirname(__FILE__)}/support/fixtures/networks.json"))
+  end
+
+  describe '::getDevice' do
+    it 'should grab a device from a given network and serial' do
+      dev = @device
+      allow(@meraki).to receive(:get_device).and_return(dev)
+
+      response = @meraki.get_device(network_id: :net_id, serial: :serial)
+
+      expect(response).to eq dev
+    end
+  end
+
+  describe '::getDevices' do
+    it 'should grab a list of devices from a given network' do
+      dev_list = @devices
+      allow(@meraki).to receive(:get_devices).and_return(dev_list)
+
+      response = @meraki.get_devices(network_id: :net_id)
+
+      expect(response).to eq dev_list
+    end
+  end
+
+  describe '::updateDevice' do
+    it 'should update the attributes of a device' do
+      orig_dev = @device
+
+      orig_dev_hash = orig_dev.to_hash
+      orig_dev_hash[:name] = "Updated AP"
+      new_dev = orig_dev_hash.to_json
+
+      allow(@meraki).to receive(:update_device).and_return(new_dev)
+
+      response = @meraki.update_device(network_id: :net_id, serial: :serial)
+
+      expect(response).not_to eq orig_dev
+      expect(response).to eq new_dev
+    end
+  end
+
+  describe '::updateDevice with JSON' do
+    it 'should update the attributes of a device with JSON passed as parameter' do
+      orig_dev = @device
+
+      orig_dev_hash = orig_dev.to_hash
+      orig_dev_hash[:name] = "Updated AP"
+      new_dev = orig_dev_hash.to_json
+
+      allow(@meraki).to receive(:update_device).and_return(new_dev)
+
+      response = @meraki.update_device(network_id: :net_id, serial: :serial, json: new_dev)
+
+      expect(response).not_to eq orig_dev
+      expect(response).to eq new_dev
+    end
+  end
+
+  describe '::claimDevice' do
+    it 'should add a device to a network' do
+      network = @network
+
+      json = JSON.generate( {serial: "NEWS-ERIA-L!!!"} )
+
+      allow(@meraki).to receive(:claim_device).and_return(201)
+
+      response = @meraki.claim_device(network_id: network, json: json)
+
+      expect(response).to eq 201
+    end
+  end
+
+  describe '::removeDevice' do
+    it 'should remove a device from a network' do
+      dev_list = @devices
+
+      rem_dev_list = dev_list[0]
+
+      allow(@meraki).to receive(:remove_device).and_return(rem_dev_list)
+
+      response = @meraki.remove_device(network_id: :net_id, serial: dev_list[1]["serial"])
+
+      expect(response).to eq rem_dev_list
+    end
+  end
+end

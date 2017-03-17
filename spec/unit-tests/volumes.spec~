@@ -1,0 +1,54 @@
+require 'webmock/rspec'
+require 'rspec'
+require_relative '../../lib/nimble_provisions'
+
+describe NimbleProvisions do
+  before :all do
+    @nimble = NimbleProvisions.new
+#    @volume = JSON.parse(File.read("#{File.dirname(__FILE__)}/../support/fixtures/volume.json"))
+#    @volumes = JSON.parse(File.read("#{File.dirname(__FILE__)}/../support/fixtures/volumes.json"))
+  end
+
+  describe '::createVolume' do
+    it 'should create a volume' do
+      volume = @volume
+      allow(@nimble).to receive(:create_volume).and_return()
+
+      response = @meraki.create_volume()
+
+      expect(response).to eq volume
+    end
+  end
+  
+  describe '::readVolumes' do
+    it 'should retrieve volume details' do
+      volumes = @volumes
+      allow(@nimble).to receive(:read_volumes).and_return(volumes)
+
+      response = @nimble.read_volumes()
+
+      expect(response).to eq volumes
+    end
+  end
+
+  describe '::restoreVolume' do
+    it 'should restore a volume from a snapshot' do
+      
+    end
+  end
+
+  describe '::updateVolume' do
+    it 'should restore a volume from a snapshot' do
+
+    end
+  end
+
+  
+  describe '::deleteVolume' do
+    it 'should remove a volume' do
+
+         
+
+    end
+  end
+end

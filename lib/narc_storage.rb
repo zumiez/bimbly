@@ -104,7 +104,7 @@ class NarcStorage
     )
 
     token = response['session_token']
-    @headers = { X-Auth-Token: token }
+    @headers = { 'X-Auth-Token': token }
   end
 
 =begin  

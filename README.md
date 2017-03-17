@@ -1,4 +1,4 @@
-Nimble Interactive Shell and ReST Client (NaRC)
+Nimble Interactive Shell and ReST Client (NaRC-Storage)
 ===================
 
 A Ruby library for interacting with Nimble Storage devices using ReST and RPC calls, as well as navigating the API documentation
@@ -26,27 +26,27 @@ How to Use
 Most of the methods in the library are generated at run-time, but they are based off of the underlying API documentation. To use the library in its current form, you load the library either in a script or using irb with the line:
 
 ```
-require "./lib/narc.rb"
+require "./lib/narc_storage.rb"
 ```
 
 You can either put the connection information in the /lib/client_data.yml file which will be loaded at start up, or you can input the information yourself either by:
 
 ```
-nimble = Narc.new( array:    'array_name',
-                   cert:     'cert_name',
-                   port:     'port',	   #default - 5392
-                   user:     'username',
-                   password: 'password' )
+narc = NarcStorage.new( array:    'array_name',
+                        cert:     'cert_name',
+                        port:     'port',	   #default - 5392
+                        user:     'username',
+                        password: 'password' )
 ```
 
 OR
 
 ```
-nimble.new_connection( array:    'array_name',
-       	               cert:     'cert_name',
-                       port:     'port',	   #default - 5392
-                       user:     'username',
-                       password: 'password' )
+narc.new_connection( array:    'array_name',
+     	             cert:     'cert_name',
+                     port:     'port',	   #default - 5392
+                     user:     'username',
+                     password: 'password' )
 ```
 
 the `new_connection` method can be used at any time to switch between devices as well
@@ -54,14 +54,14 @@ the `new_connection` method can be used at any time to switch between devices as
 Once a connection is set up, then the available methods can be seen by using:
 
 ```
-nimble.available_methods
+narc.available_methods
 ```
 
 Or narrowed down with
 
 ```
-nimble.available_methods.grep /volumes/
-nimble.available_methods.grep /read/
+narc.available_methods.grep /volumes/
+narc.available_methods.grep /read/
 ```
 
 (I plan on fleshing out this piece a bit more)
@@ -69,12 +69,12 @@ nimble.available_methods.grep /read/
 Once an apropriate method has been selected, you can then call it on the `nimble` Object
 
 ```
-nimble.read_volumes
+narc.read_volumes
 => get
 => https://domain.something.com:12345/v1/volumes
 
 params = { 'startRow': '0', 'endRow': '5' }
-nimble.read_volumes(params: params)
+narc.read_volumes(params: params)
 => get
 => https://domain.something.com:12345/v1/volumes?startRow=0&endRow=5
 

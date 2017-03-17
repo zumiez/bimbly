@@ -12,30 +12,25 @@ class NarcStorage
   def initialize(opts = {})
     # Read in setup files
     conn_file = opts[:conn_file]
-    if conn_file
-      connection_data = YAML.load(File.read("#{File.dirname(__FILE__)}/#{conn_file}"))
-    else
-      @error_codes = YAML.load(File.read("#{File.dirname(__FILE__)}/errors_by_code.yml"))
-      @error_names = YAML.load(File.read("#{File.dirname(__FILE__)}/errors_by_name.yml"))
-      @obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets.yml"))
-      @data_types = YAML.load(File.read("#{File.dirname(__FILE__)}/data_types.yml"))
-    end
+    connection_data = YAML.load(File.read("#{File.dirname(__FILE__)}/#{conn_file}")) if conn_file
+    @error_codes = YAML.load(File.read("#{File.dirname(__FILE__)}/errors_by_code.yml"))
+    @error_names = YAML.load(File.read("#{File.dirname(__FILE__)}/errors_by_name.yml"))
+    @obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets.yml"))
+    @data_types = YAML.load(File.read("#{File.dirname(__FILE__)}/data_types.yml"))
+
+    puts opts[:array]
+    puts opts[:array].nil?
     
     #@doc_pointer = @obj_sets
-    opts[:array] ? array = opts[:array] : array = connection_data['array']
-    opts[:cert] ? cert = opts[:cert] : cert = connection_data['cert']
-    opts[:port] ? port = opts[:port] : port = connection_data['port']
-    opts[:user] ? user = opts[:user] : user = connection_data['user']
-    opts[:password] ? password = opts[:password] : password = connection_data['password']
+    opts[:array].nil? ? array = connection_data['array'] : array = opts[:array]
+    opts[:cert].nil? ? @cert = connection_data['cert'] : @cert = opts[:cert]
+    opts[:port].nil? ? port = connection_data['port'] : port = opts[:port]
+    opts[:user].nil? ? user = connection_data['user'] : user = opts[:user]
+    opts[:password].nil? ? password = connection_data['password'] : password = opts[:password]
 
-    port = "5392" unless port
+    #Temp here until new_connection is tested
     
-    port = connection_data['port']
-    user = connection_data['user']
-    password = connection_data['password']
-    @cert = connection_data['cert']
-    
-    @base_url = "https://#{connection_data['array']}:#{connection_data['port']}"
+    @base_url = "https://#{array}:#{port}"
 
 =begin    
     new_connection(array: array,
@@ -45,7 +40,6 @@ class NarcStorage
                    cert: @cert)
 =end
     
-#    gen_method_names
     gen_methods
   end
 
@@ -61,14 +55,12 @@ class NarcStorage
     # Check if url is valid
     raise ArgumentError, "Invalid URL: #{uri}" unless uri =~ /\A#{URI::regexp}\z/
     
-# Uncomment this line to check what URL is being sent with call
-#    puts url
 =begin
     begin
       response =  RestClient::Request.execute(
-        method: method,
-        url: url,
-        headers: @headers,
+        method: verb,
+        url: uri,
+        headers: @headers.to_json,
         payload: payload
       )
     rescue RestClient::ExceptionWithResponse => e
@@ -97,7 +89,7 @@ class NarcStorage
     uri = "#{@base_url}/v1/tokens"
 
     # Get initial connection credentials
-    creds = { 'data': {
+    creds = { data: {
                          username: user,
                          password: password
                        }
@@ -112,7 +104,7 @@ class NarcStorage
     )
 
     token = response['session_token']
-    @headers = { 'X-Auth-Token': token }
+    @headers = { X-Auth-Token: token }
   end
 
 =begin  

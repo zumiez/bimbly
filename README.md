@@ -29,6 +29,8 @@ Most of the methods in the library are generated at run-time, but they are based
 require "./lib/narc_storage.rb"
 ```
 
+(Gem version will be done when I've got a valid version of the code)
+
 You can either put the connection information in the /lib/client_data.yml file which will be loaded at start up, or you can input the information yourself either by:
 
 ```
@@ -66,7 +68,7 @@ narc.available_methods.grep /read/
 
 (I plan on fleshing out this piece a bit more)
 
-Once an apropriate method has been selected, you can then call it on the `narc` Object
+Once an appropriate method has been selected, you can then call it on the `narc` Object
 
 ```
 narc.read_volumes

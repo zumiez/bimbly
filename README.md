@@ -26,7 +26,7 @@ How to Use
 Most of the methods in the library are generated at run-time, but they are based off of the underlying API documentation. To use the library in its current form, you load the library either in a script or using irb with the line:
 
 ```
-require "narc"
+require "./lib/narc.rb"
 ```
 
 You can either put the connection information in the /lib/client_data.yml file which will be loaded at start up, or you can input the information yourself either by:

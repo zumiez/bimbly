@@ -7,7 +7,7 @@ require 'json'
 
 class NarcStorage
   attr_reader :data_types, :error_codes, :error_names, :obj_sets
-  attr_accessor :base_url, :cert, :creds, :pointer
+  attr_accessor :base_url, :cert, :creds, :header, :pointer
 
   def initialize(opts = {})
     # Read in setup files
@@ -31,14 +31,13 @@ class NarcStorage
     #Temp here until new_connection is tested
     
     @base_url = "https://#{array}:#{port}"
-
-=begin    
+   
     new_connection(array: array,
                    port: port,
                    user: user,
                    password: password,
                    cert: @cert)
-=end
+
     
     gen_methods
   end
@@ -80,10 +79,10 @@ class NarcStorage
 
   def new_connection(opts = {})
     array = opts[:array]
-    @cert = opts[:cert]
+    #@cert = opts[:cert]
     port = opts[:port] || "5392"
     user = opts[:user]
-    password = opts[:port]
+    password = opts[:password]
 
     @base_url = "https://#{array}:#{port}"
     uri = "#{@base_url}/v1/tokens"
@@ -94,17 +93,29 @@ class NarcStorage
                          password: password
                        }
              }
-    
-    response = RestClient::Request.execute(
-      method: :post,
-      url: uri,
-      payload: creds.to_json,
-      ssl_ca_file: @cert,
-      ssl_ciphers: 'AESGCM:!aNULL'      
-    )
+  
+    puts creds.to_json
+ 
+    begin    
+      response = RestClient::Request.execute(
+        method: :post,
+        url: uri,
+        payload: creds.to_json,
+        ssl_ca_file: @cert,
+        ssl_ciphers: 'AESGCM:!aNULL'      
+      )
+    rescue RestClient::ExceptionWithResponse => e
+      puts "Response Code: #{e.response.code}"
+      puts "Response Headers: #{e.response.headers}"
+      puts "Response Body: #{e.response.body}"
+      puts "Response Object: #{e.response.request.inspect}"
+    end
 
-    token = response['session_token']
-    @headers = { 'X-Auth-Token': token }
+    puts response
+
+    token = JSON.parse(response)
+    puts token["data"]["session_token"]
+    @headers = { 'X-Auth-Token' => token["data"]["session_token"] }
   end
 
 =begin  

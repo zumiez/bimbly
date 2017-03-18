@@ -7,7 +7,7 @@ require 'json'
 
 class NarcStorage
   attr_reader :data_types, :error_codes, :error_names, :obj_sets
-  attr_accessor :base_url, :cert, :creds, :header, :pointer
+  attr_accessor :base_url, :cert, :creds, :headers, :pointer
 
   def initialize(opts = {})
     # Read in setup files
@@ -54,11 +54,11 @@ class NarcStorage
     # Check if url is valid
     raise ArgumentError, "Invalid URL: #{uri}" unless uri =~ /\A#{URI::regexp}\z/
     
-=begin
     begin
       response =  RestClient::Request.execute(
-        method: verb,
+        method: verb.to_sym,
         url: uri,
+        ssl_ca_file: @cert,
         headers: @headers.to_json,
         payload: payload
       )
@@ -74,7 +74,7 @@ class NarcStorage
     rescue JSON::ParserError => e
       puts e
     end
-=end
+
   end
 
   def new_connection(opts = {})

@@ -59,7 +59,7 @@ class NarcStorage
         method: verb.to_sym,
         url: uri,
         ssl_ca_file: @cert,
-        headers: @headers.to_json,
+        headers: @headers,
         payload: payload
       )
     rescue RestClient::ExceptionWithResponse => e

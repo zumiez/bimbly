@@ -4,40 +4,21 @@ $LOAD_PATH.unshift("#{File.dirname(__FILE__)}/../bin")
 require 'rest_client'
 require 'yaml'
 require 'json'
+require 'pathname'
 
-class NarcStorage
+class Bimbly
   attr_reader :data_types, :error_codes, :error_names, :obj_sets
-  attr_accessor :base_url, :cert, :creds, :headers, :pointer
+  attr_accessor :array, :base_url, :cert, :file, :headers, :password, :pointer, :port, :user
 
   def initialize(opts = {})
     # Read in setup files
-    conn_file = opts[:conn_file]
-    connection_data = YAML.load(File.read("#{File.dirname(__FILE__)}/#{conn_file}")) if conn_file
     @error_codes = YAML.load(File.read("#{File.dirname(__FILE__)}/errors_by_code.yml"))
     @error_names = YAML.load(File.read("#{File.dirname(__FILE__)}/errors_by_name.yml"))
     @obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets.yml"))
     @data_types = YAML.load(File.read("#{File.dirname(__FILE__)}/data_types.yml"))
-
-    puts opts[:array]
-    puts opts[:array].nil?
     
     #@doc_pointer = @obj_sets
-    opts[:array].nil? ? array = connection_data['array'] : array = opts[:array]
-    opts[:cert].nil? ? @cert = connection_data['cert'] : @cert = opts[:cert]
-    opts[:port].nil? ? port = connection_data['port'] : port = opts[:port]
-    opts[:user].nil? ? user = connection_data['user'] : user = opts[:user]
-    opts[:password].nil? ? password = connection_data['password'] : password = opts[:password]
-
-    #Temp here until new_connection is tested
-    
-    @base_url = "https://#{array}:#{port}"
-   
-    new_connection(array: array,
-                   port: port,
-                   user: user,
-                   password: password,
-                   cert: @cert)
-
+    new_connection(opts)
     
     gen_methods
   end
@@ -74,15 +55,35 @@ class NarcStorage
     rescue JSON::ParserError => e
       puts e
     end
-
   end
 
   def new_connection(opts = {})
-    array = opts[:array]
-    #@cert = opts[:cert]
-    port = opts[:port] || "5392"
-    user = opts[:user]
-    password = opts[:password]
+    @file = opts[:file]
+    @file_option = opts[:file_option]
+    @array = opts[:array]
+    @cert = opts[:cert]
+    @port = opts[:port]
+    @user = opts[:user]
+    @password = opts[:password]
+    
+    puts file
+    puts file_option
+    
+    return if opts.empty?
+    
+    if file
+      conn_data = YAML.load(File.read(File.expand_path(file)))
+      conn_data = conn_data[opts[:file_option]] if opts[:file_option]
+      @array = conn_data[:array]
+      @cert = conn_data[:cert]
+      @user = conn_data[:user]
+      @password = conn_data[:password]
+    end
+
+    raise ArgumentError, "You must provide an array" if array.nil?
+    raise ArgumentError, "You must provide a CA cert" if @cert.nil?
+    raise ArgumentError, "You must provide a user" if user.nil?
+    raise ArgumentError, "You must provide a password" if password.nil?    
 
     @base_url = "https://#{array}:#{port}"
     uri = "#{@base_url}/v1/tokens"
@@ -93,8 +94,6 @@ class NarcStorage
                          password: password
                        }
              }
-  
-    puts creds.to_json
  
     begin    
       response = RestClient::Request.execute(
@@ -111,11 +110,8 @@ class NarcStorage
       puts "Response Object: #{e.response.request.inspect}"
     end
 
-    puts response
-
-    token = JSON.parse(response)
-    puts token["data"]["session_token"]
-    @headers = { 'X-Auth-Token' => token["data"]["session_token"] }
+    token = JSON.parse(response)["data"]["session_token"]
+    @headers = { 'X-Auth-Token' => token }
   end
 
 =begin  
@@ -131,9 +127,6 @@ class NarcStorage
 
   # Resets the instance variables to the original settings
   # Maybe resets the pointer variable
-  def reset
-    @avail_methods = self.methods - Object.methods
-  end
 
   # Displays the info at given pointer location
   def doc
@@ -162,11 +155,13 @@ class NarcStorage
       }
     }
   end
-
+  
   def available_methods
     self.methods - Object.methods
   end
 
+  alias_method :menu, :available_methods
+  
   def data_type(type = nil)
     if type
       @doc_pointer = @data_types[type]

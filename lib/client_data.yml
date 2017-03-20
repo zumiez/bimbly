@@ -1,8 +1,0 @@
----
-nimble: 
-  name: "Nimble API"
-  cert: "change me"
-  user: "56914242908998887"
-  password: "51116"
-  array: "domain.something.com"
-  port: "12345"

@@ -1,4 +1,5 @@
-Nimble Interactive Shell and ReST Client (NaRC-Storage)
+Bimbly
+(Nimble Interactive Shell and ReST Client)
 ===================
 
 A Ruby library for interacting with Nimble Storage devices using ReST and RPC calls, as well as navigating the API documentation
@@ -26,29 +27,29 @@ How to Use
 Most of the methods in the library are generated at run-time, but they are based off of the underlying API documentation. To use the library in its current form, you load the library either in a script or using irb with the line:
 
 ```
-require "./lib/narc_storage.rb"
+require "./lib/bimbly.rb"
 ```
 
 (Gem version will be done when I've got a valid version of the code)
 
-You can either put the connection information in the /lib/client_data.yml file which will be loaded at start up, or you can input the information yourself either by:
+You can either put the connection information in a Yaml file which will be loaded at start up using the :file option, or you can input the information yourself either by:
 
 ```
-narc = NarcStorage.new( array:    'array_name',
-                        cert:     'cert_name',
-                        port:     'port',	   #default - 5392
-                        user:     'username',
-                        password: 'password' )
+array = Bimbly.new( array:    'array_name',
+                    cert:     'cert_name',
+                    port:     'port',	   #default - 5392
+                    user:     'username',
+                    password: 'password' )
 ```
 
 OR
 
 ```
-narc.new_connection( array:    'array_name',
-     	             cert:     'cert_name',
-                     port:     'port',	   #default - 5392
-                     user:     'username',
-                     password: 'password' )
+array.new_connection( array:    'array_name',
+                      cert:     'cert_name',
+                      port:     'port',	   #default - 5392
+                      user:     'username',
+                      password: 'password' )
 ```
 
 the `new_connection` method can be used at any time to switch between devices as well
@@ -56,14 +57,14 @@ the `new_connection` method can be used at any time to switch between devices as
 Once a connection is set up, then the available methods can be seen by using:
 
 ```
-narc.available_methods
+array.menu
 ```
 
 Or narrowed down with
 
 ```
-narc.available_methods.grep /volumes/
-narc.available_methods.grep /read/
+array.menu.grep /volumes/
+array.menu.grep /read/
 ```
 
 (I plan on fleshing out this piece a bit more)
@@ -71,7 +72,7 @@ narc.available_methods.grep /read/
 Once an appropriate method has been selected, you can then call it on the `narc` Object
 
 ```
-narc.read_volumes
+array.read_volumes
 => get
 => https://domain.something.com:12345/v1/volumes
 

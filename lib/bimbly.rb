@@ -8,7 +8,8 @@ require 'pathname'
 
 class Bimbly
   attr_reader :data_types, :error_codes, :error_names, :obj_sets
-  attr_accessor :array, :base_url, :cert, :file, :headers, :password, :pointer, :port, :user
+  attr_accessor :array, :base_url, :cert, :file, :file_select, :headers, :menu, :password,
+                :pointer, :port, :user
 
   def initialize(opts = {})
     # Read in setup files
@@ -16,6 +17,8 @@ class Bimbly
     @error_names = YAML.load(File.read("#{File.dirname(__FILE__)}/errors_by_name.yml"))
     @obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets.yml"))
     @data_types = YAML.load(File.read("#{File.dirname(__FILE__)}/data_types.yml"))
+
+    @menu = []
     
     #@doc_pointer = @obj_sets
     new_connection(opts)
@@ -66,24 +69,25 @@ class Bimbly
     @user = opts[:user]
     @password = opts[:password]
     
-    puts file
-    puts file_option
-    
     return if opts.empty?
     
-    if file
-      conn_data = YAML.load(File.read(File.expand_path(file)))
-      conn_data = conn_data[opts[:file_option]] if opts[:file_option]
-      @array = conn_data[:array]
-      @cert = conn_data[:cert]
-      @user = conn_data[:user]
-      @password = conn_data[:password]
+    if @file
+      conn_data = YAML.load(File.read(File.expand_path(@file)))
+      puts File.expand_path(@file)
+      puts conn_data
+      conn_data = conn_data[@file_option] if @file_option
+      @array = conn_data["array"]
+      @cert = conn_data["cert"]
+      @user = conn_data["user"]
+      @password = conn_data["password"]
     end
 
-    raise ArgumentError, "You must provide an array" if array.nil?
+    @port = "5392" if @port.nil?
+                        
+    raise ArgumentError, "You must provide an array" if @array.nil?
     raise ArgumentError, "You must provide a CA cert" if @cert.nil?
-    raise ArgumentError, "You must provide a user" if user.nil?
-    raise ArgumentError, "You must provide a password" if password.nil?    
+    raise ArgumentError, "You must provide a user" if @user.nil?
+    raise ArgumentError, "You must provide a password" if @password.nil?    
 
     @base_url = "https://#{array}:#{port}"
     uri = "#{@base_url}/v1/tokens"
@@ -159,8 +163,6 @@ class Bimbly
   def available_methods
     self.methods - Object.methods
   end
-
-  alias_method :menu, :available_methods
   
   def data_type(type = nil)
     if type
@@ -213,6 +215,7 @@ class Bimbly
 
           name = "#{op_key}_#{obj_key}#{method_suffix}"
           method_hash[name.to_sym] = hash
+          @menu.push name
         }
       }
     }

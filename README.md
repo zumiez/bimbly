@@ -35,27 +35,41 @@ Then you can load the library either in a script or using irb with the line:
 require 'bimbly'
 ```
 
-You can either put the connection information in a Yaml file which will be loaded at start up using the :file option, or you can input the information yourself either by:
+You can either pass the connection information when you instantiate the class or when 
 
 ```
-nimble = Bimbly.new( array:    'array_name',
-                     cert:     'cert_name',
-                     port:     'port',	   #default - 5392
-                     user:     'username',
-                     password: 'password' )
+nimble = Bimbly.new( array:    array_name,
+                     cert      cert_name,
+                     port:     port,	   #default - 5392
+                     user:     username,
+                     password: password )
 ```
 
 OR
 
 ```
-nimble.new_connection( array:    'array_name',
-                       cert:     'cert_name',
-                       port:     'port',	   #default - 5392
-                       user:     'username',
-                       password: 'password' )
+nimble = Bimbly.new
+nimble.new_connection( array:    array_name,
+                       cert:     cert_name,
+                       port:     port,	
+                       user:     username,
+                       password: password )
 ```
 
-the `new_connection` method can be used at any time to switch between devices as well
+The `new_connection` method can be used at any time to switch between devices as well.
+
+Connection information can also be loaded with a yaml file using the :file option.
+
+```
+nimble.new_connection(file: 'array_info.yml')
+```
+
+If you'd like to have one file with a bunch of arrays information, you can set up connections based on a selection from the file using :file_select
+
+```
+nimble = Bimbly.new(file: 'array_info.yml')
+nimble.new_connection(file_select: 'array1')
+```
 
 Once a connection is set up, then the available methods can be seen by using:
 
@@ -69,8 +83,6 @@ Or narrowed down with
 nimble.menu.grep /volumes/
 nimble.menu.grep /read/
 ```
-
-(I plan on fleshing out this piece a bit more)
 
 Once an appropriate method has been selected, you can then call it on the `nimble` Object
 

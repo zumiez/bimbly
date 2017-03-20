@@ -1,5 +1,4 @@
 Bimbly
-(Nimble Interactive Shell and ReST Client)
 ===================
 
 A Ruby library for interacting with Nimble Storage devices using ReST and RPC calls, as well as navigating the API documentation
@@ -24,32 +23,36 @@ This is what lead me to parse the API docs into 4 yaml files that could be used 
 How to Use
 -------------
 
-Most of the methods in the library are generated at run-time, but they are based off of the underlying API documentation. To use the library in its current form, you load the library either in a script or using irb with the line:
+Most of the methods in the library are generated at run-time, but they are based off of the underlying API documentation. To use the library in its current form, you can install the gem with:
 
 ```
-require "./lib/bimbly.rb"
+gem install bimbly
 ```
 
-(Gem version will be done when I've got a valid version of the code)
+Then you can load the library either in a script or using irb with the line:
+
+```
+require 'bimbly'
+```
 
 You can either put the connection information in a Yaml file which will be loaded at start up using the :file option, or you can input the information yourself either by:
 
 ```
-array = Bimbly.new( array:    'array_name',
-                    cert:     'cert_name',
-                    port:     'port',	   #default - 5392
-                    user:     'username',
-                    password: 'password' )
+nimble = Bimbly.new( array:    'array_name',
+                     cert:     'cert_name',
+                     port:     'port',	   #default - 5392
+                     user:     'username',
+                     password: 'password' )
 ```
 
 OR
 
 ```
-array.new_connection( array:    'array_name',
-                      cert:     'cert_name',
-                      port:     'port',	   #default - 5392
-                      user:     'username',
-                      password: 'password' )
+nimble.new_connection( array:    'array_name',
+                       cert:     'cert_name',
+                       port:     'port',	   #default - 5392
+                       user:     'username',
+                       password: 'password' )
 ```
 
 the `new_connection` method can be used at any time to switch between devices as well
@@ -57,27 +60,27 @@ the `new_connection` method can be used at any time to switch between devices as
 Once a connection is set up, then the available methods can be seen by using:
 
 ```
-array.menu
+nimble.menu
 ```
 
 Or narrowed down with
 
 ```
-array.menu.grep /volumes/
-array.menu.grep /read/
+nimble.menu.grep /volumes/
+nimble.menu.grep /read/
 ```
 
 (I plan on fleshing out this piece a bit more)
 
-Once an appropriate method has been selected, you can then call it on the `narc` Object
+Once an appropriate method has been selected, you can then call it on the `nimble` Object
 
 ```
-array.read_volumes
+nimble.read_volumes
 => get
 => https://domain.something.com:12345/v1/volumes
 
 params = { 'startRow': '0', 'endRow': '5' }
-narc.read_volumes(params: params)
+nimble.read_volumes(params: params)
 => get
 => https://domain.something.com:12345/v1/volumes?startRow=0&endRow=5
 

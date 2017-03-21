@@ -15,7 +15,9 @@ A Ruby library for interacting with Nimble Storage devices using ReST and RPC ca
     * [Reset](#reset)
     * [Doc](#doc)
     * [Parameters](#parameters)
-
+    * [Data Types](#data-types)
+    * [Call](#call)
+    
 # Mission Statement
 ------------------
 
@@ -48,15 +50,24 @@ Then you can load the library either in a script or using irb with the line:
 require 'bimbly'
 ```
 
+The rest of this documentaiton will be focused on the *interactive* aspect of this library to show the extent of its usefullness. To remove some unwanted clutter in `irb` that happens because of the returned objects during use, you can turn off the echo in `irb` with:
+
+```
+conf.echo = false
+```
+
 # Available Methods
 ---------------------------
 
-The rest of this documentaiton will be focused on the *interactive* aspect of this library to show the extent of its usefullness. 
+Most of the available methods are generated at runtime based one information pulled from the API docs. These methods are the ones used to prep the library for a call to the nimble array. The remaining methods are used to initialize the connection, navigate the documentation or to see what the library is capable of on top of the ReST calls.
+
+## New Connection
+------------------
 
 You can either pass the connection information when you instantiate the class or when 
 
 ```
-nimbly = Bimbly.new( array:    array_name,
+nimble = Bimbly.new( array:    array_name,
                      cert      cert_name,
                      port:     port,	   #default - 5392
                      user:     username,
@@ -66,8 +77,8 @@ nimbly = Bimbly.new( array:    array_name,
 OR
 
 ```
-nimbly = Bimbly.new
-nimbly.new_connection( array:    array_name,
+nimble = Bimbly.new
+nimble.new_connection( array:    array_name,
                        cert:     cert_name,
                        port:     port,	
                        user:     username,
@@ -79,44 +90,122 @@ The `new_connection` method can be used at any time to switch between devices as
 Connection information can also be loaded with a yaml file using the :file option.
 
 ```
-nimbly.new_connection(file: 'array_info.yml')
+nimble.new_connection(file: 'array_info.yml')
 ```
 
 If you'd like to have one file with a bunch of arrays information, you can set up connections based on a selection from the file using :file_select
 
 ```
-nimbly = Bimbly.new(file: 'array_info.yml')
-nimbly.new_connection(file_select: 'array1')
+nimble = Bimbly.new(file: 'array_info.yml')
+nimble.new_connection(file_select: 'array1')
 ```
 
-Once a connection is set up, then the available methods can be seen by using:
+A sample configuration .yml file can be set up as follows:
 
 ```
-nimbly.menu
+---
+nimble1: 
+  name: "Nimble API"
+  cert: "CA.crt"
+  user: "username"
+  password: "password"
+  array: "array_name"
+  port: "5392"
+```
+
+## Menu
+----------
+
+Methods that are generated at runtime store their names in an array that can be accessed with:
+
+```
+nimble.menu
 ```
 
 Or narrowed down with
 
 ```
-nimbly.menu.grep /volumes/
-nimbly.menu.grep /read/
+nimble.menu.grep /volumes/
+nimble.menu.grep /read/
 ```
 
-I have menu returning the underlying Array data structure so that it can be operated on. If you'd like it more readable you can print it cleanly using `puts`
+I have menu returning the underlying Array data structure so that it can be operated on. If you'd like it more readable you can print it cleanly using `puts` in front.
 
-Once an appropriate method has been selected, you can then call it on the `nimbly` Object
+Each method that has been generated will load information about the call into the `nimble' object. We can inspect the information loaded before making a call to the Nimble device using the following methods.
+
+## Doc
+-----------
+
+If you'd like to see the actual documentation about the ReST call that's been selected you use the `doc` method to produce a YaML formatted version of it.
 
 ```
-nimbly.read_volumes
+nimble.read_volumes.doc
 ```
 
-When one of rest methods are called it loads the necessary instance variables to be operated on. If you'd like to see the details of what
+OR
 
-params = { 'startRow': '0', 'endRow': '5' }
-nimbly.read_volumes(params: params)
-=> get
-=> https://domain.something.com:12345/v1/volumes?startRow=0&endRow=5
+```
+nimble.read_volumes
+nimble.doc
+```
 
+## Parameters
+------------
+
+Nimble allows a great deal of parameters to be available for its ReST calls. To see what parameters are available for a particular call you can use:
+
+```
+nimble.read_volumes.parameters
+```
+
+## Data Types
+------------------
+
+Each parameter has a data type associated with it. Information about each data type is available using:
+
+```
+nimble.read_volumes.data_types
+```
+
+OR inspected individually with:
+
+```
+nimble.data_type('NsTime')
+```
+
+## Details
+------------------
+
+Details about the ReST variables that have been generated can be viewed using the `details` method
+
+```
+params = { 'startRow' = '0', 'endRow' = '5' }
+nimble.read_volumes(params: params)
+nimble.details
+=>
+  URI: https://ARRAY:5392/v1/volumes?startRow=0&endRow=5
+  Verb: get
+  Payload:
+```
+
+## Reset
+------------
+
+If you don't like the method that's been loaded you can `reset` it.
+
+```
+nimble.reset
+```
+
+This method is called after each use of `call` and clears the environment
+
+## Call
+-------------
+
+This is the method that tells the library to send the ReST call to the
+
+```
+nimble.read_volumes_by_id(id: 'id_of_volume').call
 ```
 
 This Code is Still Under Heavy Construction
@@ -125,8 +214,8 @@ This Code is Still Under Heavy Construction
 Right now it only prints out the information it will send to a Nimble Storage device, but once I've got a good testing environment I will make sure this portion works as well. 
 
 TODO
-- [ ] Finish way to navigate documentation
-- [ ] Implement parameter querying
+- [x] Finish way to navigate documentation
+- [x] Implement parameter querying
 - [ ] Implement error querying
-- [ ] Implement data type querying
+- [x] Implement data type querying
 - [ ] Finish the Interactive Shell portion

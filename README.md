@@ -9,7 +9,7 @@ A Ruby library for interacting with Nimble Storage devices using ReST and RPC ca
 * [Mission Statement](#mission-statement)
 * [How to Install](#how-to-install)
 * [Available Methods](#available-methods)
-    * [New Connection(#new-connection)
+    * [New Connection](#new-connection)
     * [Menu](#menu)
     * [Details](#details)
     * [Reset](#reset)
@@ -104,7 +104,7 @@ A sample configuration .yml file can be set up as follows:
 
 ```
 ---
-nimble1: 
+array1: 
   name: "Nimble API"
   cert: "CA.crt"
   user: "username"

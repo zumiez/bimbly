@@ -3,7 +3,7 @@ Bimbly
 
 A Ruby library for interacting with Nimble Storage devices using ReST and RPC calls, as well as navigating the API documentation
 
-# Table of Contents
+n# Table of Contents
 ------------------------------
 
 * [Mission Statement](#mission-statement)
@@ -23,7 +23,7 @@ A Ruby library for interacting with Nimble Storage devices using ReST and RPC ca
 
 When first searching through the API docs before setting down to write the code, I realized just how vast and thorough the docs were. And then I realized I could leverage this. As a user of my own library, I wanted a way to ask the library what my options were when interacting with a Nimble Storage device rather than just try to memorize all of my options.
 
-Imagine sitting at a Nimble Storage restaurant wanting to order something to do with a device:
+Imagine sitting at a Nimble Storage restaurant wanting to order...something to do with a device:
 
 A waiter/waitress comes by and hands you a menu.
 
@@ -50,7 +50,7 @@ Then you can load the library either in a script or using irb with the line:
 require 'bimbly'
 ```
 
-The rest of this documentaiton will be focused on the *interactive* aspect of this library to show the extent of its usefullness. To remove some unwanted clutter in `irb` that happens because of the returned objects during use, you can turn off the echo in `irb` with:
+The rest of this documentation will be focused on the *interactive* aspect of this library to show the extent of its usefullness, though the library is just as powerful in scripts as well. To remove some unwanted clutter in `irb` that happens because of the returned objects during use, you can turn off the echo in `irb` with:
 
 ```
 conf.echo = false
@@ -59,7 +59,7 @@ conf.echo = false
 # Available Methods
 ---------------------------
 
-Most of the available methods are generated at runtime based one information pulled from the API docs. These methods are the ones used to prep the library for a call to the nimble array. The remaining methods are used to initialize the connection, navigate the documentation or to see what the library is capable of on top of the ReST calls.
+Most of the available methods are generated at runtime based on information pulled from the API docs. These methods are the ones used to prep the library for a call to the nimble array. The remaining methods are used to initialize the connection, navigate the documentation or to see what the library is capable of on top of the ReST calls.
 
 ## New Connection
 ------------------
@@ -202,10 +202,18 @@ This method is called after each use of `call` and clears the environment
 ## Call
 -------------
 
-This is the method that tells the library to send the ReST call to the
+This is the method that tells the library to send the ReST call to the Nimble device. 
 
 ```
 nimble.read_volumes_by_id(id: 'id_of_volume').call
+```
+
+There are 3 types of options that can be passed to a ReST method.
+
+```
+id:      This is substituted into the URI when a `_by_id` method is called
+params:  This is a hash variable that is attached to the end of the URI for the call
+payload: Either a hash or json object to be passed with POST or PUT calls to the device
 ```
 
 This Code is Still Under Heavy Construction
@@ -217,5 +225,6 @@ TODO
 - [x] Finish way to navigate documentation
 - [x] Implement parameter querying
 - [ ] Implement error querying
+- [ ] Check parameters passed to those that are available for the method
 - [x] Implement data type querying
 - [ ] Finish the Interactive Shell portion

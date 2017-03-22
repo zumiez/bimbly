@@ -3,7 +3,7 @@ Bimbly
 
 A Ruby library for interacting with Nimble Storage devices using ReST and RPC calls, as well as navigating the API documentation
 
-n# Table of Contents
+# Table of Contents
 ------------------------------
 
 * [Mission Statement](#mission-statement)
@@ -234,8 +234,6 @@ payload: Either a hash or json object to be passed with POST or PUT calls to the
 
 This Code is Still Under Heavy Construction
 --------------------------------
-
-Right now it only prints out the information it will send to a Nimble Storage device, but once I've got a good testing environment I will make sure this portion works as well. 
 
 TODO
 - [x] Finish way to navigate documentation

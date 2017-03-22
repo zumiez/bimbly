@@ -38,7 +38,7 @@ This is what lead me to parse the API docs into 4 yaml files that could be used 
 # How to Install
 -------------
 
-Most of the methods in the library are generated at run-time, but they are based off of the underlying API documentation. To use the library in its current form, you can install the gem with:
+Bimbly generates 164 methods when instantiated, all of which are based off of data parsed from the API documentation. These methods can be seen with the `.menu` method as described below. The methods that are generated are used to prep the library for ReST calls to a nimble device. To use the library, you can install the gem with:
 
 ```
 gem install bimbly
@@ -131,7 +131,7 @@ nimble.menu.grep /read/
 
 I have menu returning the underlying Array data structure so that it can be operated on. If you'd like it more readable you can print it cleanly using `puts` in front.
 
-Each method that has been generated will load information about the call into the `nimble' object. We can inspect the information loaded before making a call to the Nimble device using the following methods.
+Each method that has been generated will load information about the call into the `nimble` object. We can inspect the information loaded before making a call to the Nimble device using the following methods.
 
 ## Doc
 -----------

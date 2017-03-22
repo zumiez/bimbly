@@ -120,12 +120,28 @@ Methods that are generated at runtime store their names in an array that can be 
 
 ```
 nimble.menu
+=> puts nimble.menu
+create_access_control_records
+delete_access_control_records_by_id
+read_access_control_records
+read_access_control_records_detailed
+read_access_control_records_by_id
+create_active_directory_memberships
+read_active_directory_memberships
+read_active_directory_memberships_detailed
+read_active_directory_memberships_by_id
+remove_active_directory_memberships_by_id
+report_status_active_directory_memberships_by_id
+test_group_active_directory_memberships_by_id
+test_user_active_directory_memberships_by_id
+update_active_directory_memberships_by_id
+...
 ```
 
 Or narrowed down with
 
 ```
-nimble.menu.grep /volumes/
+nimble.menu.grep /volume/
 nimble.menu.grep /read/
 ```
 

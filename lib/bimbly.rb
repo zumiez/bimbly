@@ -289,11 +289,13 @@ class Bimbly
             opts[:payload].keys.to_s.include?(ele)
         }
 
-        opts[:payload].keys.each { |key|
-          raise ArgumentError,
-                "The attribute \'#{key}\' is not an available attribute for #{method_name}" unless
-            hash[:request].keys.include?(key.to_s)
-        }
+        if not opts[:payload].nil?
+          opts[:payload].keys.each { |key|
+            raise ArgumentError,
+                  "The attribute \'#{key}\' is not an available attribute for #{method_name}" unless
+              hash[:request].keys.include?(key.to_s)
+          }
+        end
         
         self
       }

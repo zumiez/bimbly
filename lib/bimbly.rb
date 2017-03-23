@@ -6,20 +6,26 @@ require 'pp'
 
 class Bimbly
   attr_reader :data_type, :error_codes, :error_names, :obj_sets
-  attr_accessor :array, :base_url, :cert, :doc_pointer, :file, :file_select, :headers, :menu,
-                :param_pointer, :password, :pointer, :port, :user, :verb
+  attr_accessor :array, :base_url, :cert, :doc_pointer, :file, :file_select, :headers, :meth_name,
+                :menu, :param_pointer, :password, :pointer, :port, :req_pointer, :user, :verb
 
   def initialize(opts = {})
     # Read in setup files
-    @error_codes = YAML.load(File.read("#{File.dirname(__FILE__)}/errors_by_code.yml"))
-    @error_names = YAML.load(File.read("#{File.dirname(__FILE__)}/errors_by_name.yml"))
-    @obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets.yml"))
+    #@error_codes = YAML.load(File.read("#{File.dirname(__FILE__)}/errors_by_code.yml"))
+    #@error_names = YAML.load(File.read("#{File.dirname(__FILE__)}/errors_by_name.yml"))
+    @error_codes = YAML.load(File.read("#{File.dirname(__FILE__)}/error_codes.yml"))
+    #@obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets.yml"))
+    @obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets_v2.yml"))
     @data_type = YAML.load(File.read("#{File.dirname(__FILE__)}/data_types.yml"))
 
+    @meth_name = nil
+    
     @base_url = "NotConnected"
     @menu = []
     @param_pointer = @obj_sets
     @doc_pointer = @obj_sets
+    @req_pointer = @obj_sets
+    
     gen_methods
     new_connection(opts)
   end
@@ -52,9 +58,9 @@ class Bimbly
       puts "Response Headers:"
       pp e.response.headers
       puts "Response Body:"
-      pp e.response.body
+      pp error_format(e.response.body)
       puts "Response Object:"
-      pp e.response.request.inspect
+      puts e.response.request.inspect
     end
     
     begin
@@ -62,6 +68,16 @@ class Bimbly
     rescue JSON::ParserError => e
       puts e
     end
+  end
+
+  def error_format(messages)
+    message_array = []
+    JSON.parse(messages)["messages"].each { |message|
+      message.merge!(@error_names[message["code"]])
+      message.delete("Error_Desc")
+      message_array << message
+    }
+    message_array
   end
 
   def new_connection(opts = {})
@@ -126,14 +142,22 @@ class Bimbly
     @verb = nil
     @payload = nil
     @uri = nil
+    @meth_name = nil
     @doc_pointer = @obj_sets
     @param_pointer = @obj_sets
   end
   
   def details
+    puts "Method Selected: #{@meth_name}"
     puts "URI: #{@uri}"
     puts "Verb: #{@verb}"
-    puts "Payload: #{@payload}"
+    if not @payload.nil?
+      puts "Payload:"
+      pp @payload
+    else
+      puts "Payload: n/a"
+    end
+    return
   end
 
   def doc
@@ -142,6 +166,10 @@ class Bimbly
 
   def parameters
     @param_pointer
+  end
+
+  def request
+    puts @req_pointer.to_yaml
   end
   
   def available_methods
@@ -202,6 +230,7 @@ class Bimbly
           hash[:verb] = verb.downcase.to_sym
           hash[:url_suffix] = url_suffix
           hash[:avail_params] = value
+          hash[:request] = @obj_sets[obj_key][op_key]["Request"]
           hash[:object] = obj_key
           hash[:op] = op_key
 
@@ -218,20 +247,54 @@ class Bimbly
     method_hash = gen_method_hash
     method_hash.each { |method_name, hash|
       define_singleton_method(method_name) { |opts = {}|
+        @param_pointer = hash[:avail_params]
+        @doc_pointer = @obj_sets[hash[:object]][hash[:op]]
+        @req_pointer = @obj_sets[hash[:object]][hash[:op]]["Request"]        
+        @meth_name = method_name
+        
         raise ArgumentError, "Please provide id" if method_name.match(/id/) and opts[:id].nil?
         url_suffix = hash[:url_suffix]
         url_suffix = url_suffix.gsub(/\/id/, "/#{opts[:id]}") if method_name.match(/id/)
 
-        @param_pointer = hash[:avail_params]
-        
         uri = gen_uri(url_suffix: url_suffix,
                       params: opts[:params])
 
         @uri = uri
         @verb = hash[:verb]
-        @payload = opts[:payload]
-        @doc_pointer = @obj_sets[hash[:object]][hash[:op]]
+        @payload = opts[:payload]        
+        
+        if not opts[:params].nil?
+          opts[:params].each { |key, value|
+            raise ArgumentError,
+                  "Invalid parameter for #{method_name}: #{key}" unless hash[:avail_params].include?(key) 
+          }
+        end
 
+        # Maybe pull this out into its own method
+        # Check for mandatory payload info
+        mando_array = []
+        if not hash[:request].nil?
+          hash[:request].each { |key, value|
+            mando_array << key
+          }
+        end
+
+        raise ArgumentError,
+              "Must supply :payload with attributes #{mando_array} on #{method_name}" if
+          not mando_array.empty? and opts[:payload].nil?
+        
+        mando_array.each { |ele|
+          raise ArgumentError,
+                "\'#{ele}\' is a mandatory attribute in the payload for #{method_name}: Please supply these attributes #{mando_array}" unless
+            opts[:payload].keys.to_s.include?(ele)
+        }
+
+        opts[:payload].keys.each { |key|
+          raise ArgumentError,
+                "The attribute \'#{key}\' is not an available attribute for #{method_name}" unless
+            hash[:request].keys.include?(key.to_s)
+        }
+        
         self
       }
     }

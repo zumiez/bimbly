@@ -3,7 +3,7 @@ Bimbly
 
 A Ruby library for interacting with Nimble Storage devices using ReST and RPC calls, as well as navigating the API documentation
 
-n# Table of Contents
+# Table of Contents
 ------------------------------
 
 * [Mission Statement](#mission-statement)
@@ -11,17 +11,18 @@ n# Table of Contents
 * [Available Methods](#available-methods)
     * [New Connection](#new-connection)
     * [Menu](#menu)
-    * [Details](#details)
-    * [Reset](#reset)
     * [Doc](#doc)
     * [Parameters](#parameters)
+    * [Request](#request)
     * [Data Types](#data-types)
+    * [Details](#details)
+    * [Reset](#reset)    
     * [Call](#call)
     
 # Mission Statement
 ------------------
 
-When first searching through the API docs before setting down to write the code, I realized just how vast and thorough the docs were. And then I realized I could leverage this. As a user of my own library, I wanted a way to ask the library what my options were when interacting with a Nimble Storage device rather than just try to memorize all of my options.
+nnWhen first searching through the API docs before setting down to write the code, I realized just how vast and thorough the docs were. And then I realized I could leverage this. As a user of my own library, I wanted a way to ask the library what my options were when interacting with a Nimble Storage device rather than just try to memorize all of my options.
 
 Imagine sitting at a Nimble Storage restaurant wanting to order...something to do with a device:
 
@@ -135,6 +136,7 @@ report_status_active_directory_memberships_by_id
 test_group_active_directory_memberships_by_id
 test_user_active_directory_memberships_by_id
 update_active_directory_memberships_by_id
+
 ...
 ```
 
@@ -174,6 +176,18 @@ Nimble allows a great deal of parameters to be available for its ReST calls. To 
 nimble.read_volumes.parameters
 ```
 
+## Request
+----------------
+
+The `request` method will return the documentation on all of the available attributes and their details for the method that's been selected. This is a good resource for when you are sending a PUT or POST and want to know what you can change and what default values are. Mandatory attributes will be alerted when you try to load a method, but you can see the details of those attributes here as well.
+
+```
+nimble.update_users_by_id(id: 'USER_ID', payload: payload)
+
+nimble.request
+=> [Lots of data available about each possible attribute]
+```
+
 ## Data Types
 ------------------
 
@@ -199,9 +213,9 @@ params = { 'startRow' = '0', 'endRow' = '5' }
 nimble.read_volumes(params: params)
 nimble.details
 =>
-  URI: https://ARRAY:5392/v1/volumes?startRow=0&endRow=5
+  URI: https://NIMBLE_ARRAY:5392/v1/volumes?startRow=0&endRow=5
   Verb: get
-  Payload:
+  Payload: n/a
 ```
 
 ## Reset
@@ -232,6 +246,98 @@ params:  This is a hash variable that is attached to the end of the URI for the 
 payload: Either a hash or json object to be passed with POST or PUT calls to the device
 ```
 
+Examples of what each type of call look like:
+
+```
+GET
+
+nimble.menu.grep /read/
+=> [Array of 'read' options]
+
+nimble.read_volumes.details
+=>
+Method Selected: read_volumes
+URI: https://NIMBLE_ARRAY:5392/v1/volumes
+Verb: get
+Payload: n/a
+
+nimble.call
+=> [Metric butt-load of information]
+```
+
+```
+POST
+
+nimble.menu.grep /create/
+=> [Array of 'create' options]
+
+nimble.create_users
+=>
+ArgumentError: Must supply :payload with attributes ["name", "description", "role", "password", "inactivity_timeout", "full_name", "email_addr", "disabled"] on create_users
+
+nimble.doc
+=> [To check out the sweet, sweet options]
+
+payload = { 'name' => 'hello' }
+=> {"name"=>"hello"}
+
+nimble.create_users(payload: payload)
+=>
+ArgumentError: 'description' is a mandatory attribute in the payload for create_users: Please supply ["name", "description", "role", "password", "inactivity_timeout", "full_name", "email_addr", "disabled"]
+
+nimble.details
+=>
+Method Selected: create_users
+URI: https://NIMBLE_ARRAY:5392/v1/users
+Verb: post
+Payload: {"name"=>"hello"}
+
+(When payload is set up correctly)
+nimble.call
+```
+
+```
+PUT
+
+nimble.menu.grep /update/
+...
+
+nimble.update_users_by_id(id: 'USER_ID')
+=>
+ArgumentError: Must supply :payload with attributes ["id", "name", "description", "role", "password", "auth_password", "inactivity_timeout", "full_name", "email_addr", "disabled"] on update_users_by_id
+
+payload = { id: 'id', name: 'name', description: 'desc', role: 'role', password: 'pass', auth_password: 'auth_pass', inactivity_timeout: "out_time", full_name: 'nimbly', email_addr: 'nimbly@bimbly.org', disabled: 'nope' }
+
+nimble.update_users_by_id(id: 'USER_ID', payload: payload)
+
+nimble.details
+=>
+Method Selected: update_users_by_id
+URI: https://NIMBLE_ARRAY:5392/v1/users/USER_ID
+Verb: put
+Payload:
+{:id=>"id",
+ :name=>"name",
+ :description=>"desc",
+ :role=>"role",
+ :password=>"pass",
+ :auth_password=>"auth_pass",
+ :inactivity_timeout=>"out_time",
+ :full_name=>"nimbly",
+ :email_addr=>"nimbly@bimbly.org",
+ :disabled=>"nope"}
+```
+
+```
+DELETE
+
+irb(main):014:0> nimble.details
+Method Selected: delete_users_by_id
+URI: https://NIMBLE_ARRAY:5392/v1/users/NEW_ID
+Verb: delete
+Payload: n/a
+```
+
 This Code is Still Under Heavy Construction
 --------------------------------
 
@@ -240,7 +346,10 @@ Right now it only prints out the information it will send to a Nimble Storage de
 TODO
 - [x] Finish way to navigate documentation
 - [x] Implement parameter querying
-- [ ] Implement error querying
-- [ ] Check parameters passed to those that are available for the method
+- [x] Implement error querying
+- [x] Check parameters passed to those that are available for the method
 - [x] Implement data type querying
+- [x] Check payload against mandatory attributes
+- [x] Check payload against available attributes
 - [ ] Finish the Interactive Shell portion
+- [ ] Update library to load API docs v4.1 and be interchangeable

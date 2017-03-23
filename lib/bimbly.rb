@@ -6,8 +6,8 @@ require 'pp'
 
 class Bimbly
   attr_reader :data_type, :error_codes, :error_names, :obj_sets
-  attr_accessor :array, :base_url, :cert, :doc_pointer, :file, :file_select, :headers, :menu,
-                :param_pointer, :password, :pointer, :port, :req_pointer, :user, :verb
+  attr_accessor :array, :base_url, :cert, :doc_pointer, :file, :file_select, :headers, :meth_name,
+                :menu, :param_pointer, :password, :pointer, :port, :req_pointer, :user, :verb
 
   def initialize(opts = {})
     # Read in setup files
@@ -18,10 +18,14 @@ class Bimbly
     @obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets_v2.yml"))
     @data_type = YAML.load(File.read("#{File.dirname(__FILE__)}/data_types.yml"))
 
+    @meth_name = nil
+    
     @base_url = "NotConnected"
     @menu = []
     @param_pointer = @obj_sets
     @doc_pointer = @obj_sets
+    @req_pointer = @obj_sets
+    
     gen_methods
     new_connection(opts)
   end
@@ -138,14 +142,22 @@ class Bimbly
     @verb = nil
     @payload = nil
     @uri = nil
+    @meth_name = nil
     @doc_pointer = @obj_sets
     @param_pointer = @obj_sets
   end
   
   def details
+    puts "Method Selected: #{@meth_name}"
     puts "URI: #{@uri}"
     puts "Verb: #{@verb}"
-    puts "Payload: #{@payload}"
+    if not @payload.nil?
+      puts "Payload:"
+      pp @payload
+    else
+      puts "Payload: n/a"
+    end
+    return
   end
 
   def doc
@@ -157,7 +169,7 @@ class Bimbly
   end
 
   def request
-    @request
+    puts @req_pointer.to_yaml
   end
   
   def available_methods
@@ -235,12 +247,22 @@ class Bimbly
     method_hash = gen_method_hash
     method_hash.each { |method_name, hash|
       define_singleton_method(method_name) { |opts = {}|
+        @param_pointer = hash[:avail_params]
+        @doc_pointer = @obj_sets[hash[:object]][hash[:op]]
+        @req_pointer = @obj_sets[hash[:object]][hash[:op]]["Request"]        
+        @meth_name = method_name
+        
         raise ArgumentError, "Please provide id" if method_name.match(/id/) and opts[:id].nil?
         url_suffix = hash[:url_suffix]
         url_suffix = url_suffix.gsub(/\/id/, "/#{opts[:id]}") if method_name.match(/id/)
 
-        @param_pointer = hash[:avail_params]
+        uri = gen_uri(url_suffix: url_suffix,
+                      params: opts[:params])
 
+        @uri = uri
+        @verb = hash[:verb]
+        @payload = opts[:payload]        
+        
         if not opts[:params].nil?
           opts[:params].each { |key, value|
             raise ArgumentError,
@@ -263,35 +285,17 @@ class Bimbly
         
         mando_array.each { |ele|
           raise ArgumentError,
-                "#{ele} is a mandatory attribute in the payload for #{method_name}: Please supply #{mando_array}" unless
-            opts[:payload].keys.include?(ele)
+                "\'#{ele}\' is a mandatory attribute in the payload for #{method_name}: Please supply these attributes #{mando_array}" unless
+            opts[:payload].keys.to_s.include?(ele)
         }
-=begin
-            raise ArgumentError, "Must include #{key} in payload for #{method_name}" if
-              value["mandatory"] == "true" and opts[:payload].nil?
-            raise ArgumentError, "Must include #{key} in payload for #{method_name}" if
-              value["mandatory"] == "true" and not opts[:payload].keys.include?(key)
-=end
 
+        opts[:payload].keys.each { |key|
+          raise ArgumentError,
+                "The attribute \'#{key}\' is not an available attribute for #{method_name}" unless
+            hash[:request].keys.include?(key.to_s)
+        }
         
-#        if not opts[:payload].nil?
-#          opts[:payload].each { |key, value|
-            
-#          }
-#        end
-        
-#        @request = hash[:request]
-        
-        uri = gen_uri(url_suffix: url_suffix,
-                      params: opts[:params])
-
-        @uri = uri
-        @verb = hash[:verb]
-        @payload = opts[:payload]
-        @doc_pointer = @obj_sets[hash[:object]][hash[:op]]
-        @req_pointer = @obj_sets[hash[:object]][hash[:op]]["Request"]
-
-#        self
+        self
       }
     }
   end

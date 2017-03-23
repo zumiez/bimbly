@@ -263,7 +263,11 @@ class Bimbly
                       params: opts[:params])
 
         payload = opts[:payload]
-        payload = JSON.parse(payload) if payload.class == String
+        # Unwrap the payload data if it is json or wrapped in 'data' so we can inspect the attrs
+        if not payload.nil?
+          payload = JSON.parse(payload) if payload.class == String
+          payload = payload["data"] if payload.keys.include?("data")
+        end
         
         @uri = uri
         @verb = hash[:verb]

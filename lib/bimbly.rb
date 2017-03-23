@@ -43,6 +43,8 @@ class Bimbly
     # Check if url is valid
     raise ArgumentError, "Invalid URL: #{uri}" unless uri =~ /\A#{URI::regexp}\z/
 
+    # Do some payload stuff to wrap with 'data' and make sure it's usable
+    
     payload = payload.to_json if payload.class == Hash
     
     begin

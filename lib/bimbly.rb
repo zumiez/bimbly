@@ -11,8 +11,6 @@ class Bimbly
 
   def initialize(opts = {})
     # Read in setup files
-    #@error_codes = YAML.load(File.read("#{File.dirname(__FILE__)}/errors_by_code.yml"))
-    #@error_names = YAML.load(File.read("#{File.dirname(__FILE__)}/errors_by_name.yml"))
     @error_codes = YAML.load(File.read("#{File.dirname(__FILE__)}/error_codes.yml"))
     #@obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets.yml"))
     @obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets_v2.yml"))
@@ -44,6 +42,11 @@ class Bimbly
     raise ArgumentError, "Invalid URL: #{uri}" unless uri =~ /\A#{URI::regexp}\z/
 
     # Do some payload stuff to wrap with 'data' and make sure it's usable
+    if not payload.nil?
+#      payload = payload["data"] if payload.keys.size == 1 and payload.keys.include?("data")
+
+      payload = { data: payload }
+    end
     
     payload = payload.to_json if payload.class == Hash
     
@@ -95,8 +98,6 @@ class Bimbly
     
     if @file
       conn_data = YAML.load(File.read(File.expand_path(@file)))
-      puts File.expand_path(@file)
-      puts conn_data
       conn_data = conn_data[@file_select] if @file_select
       @array = conn_data["array"]
       @cert = conn_data["cert"]
@@ -261,9 +262,12 @@ class Bimbly
         uri = gen_uri(url_suffix: url_suffix,
                       params: opts[:params])
 
+        payload = opts[:payload]
+        payload = JSON.parse(payload) if payload.class == String
+        
         @uri = uri
         @verb = hash[:verb]
-        @payload = opts[:payload]        
+        @payload = payload
         
         if not opts[:params].nil?
           opts[:params].each { |key, value|
@@ -283,16 +287,16 @@ class Bimbly
 
         raise ArgumentError,
               "Must supply :payload with attributes #{mando_array} on #{method_name}" if
-          not mando_array.empty? and opts[:payload].nil?
+          not mando_array.empty? and payload.nil?
         
         mando_array.each { |ele|
           raise ArgumentError,
                 "\'#{ele}\' is a mandatory attribute in the payload for #{method_name}: Please supply these attributes #{mando_array}" unless
-            opts[:payload].keys.to_s.include?(ele)
+            payload.keys.to_s.include?(ele)
         }
 
-        if not opts[:payload].nil?
-          opts[:payload].keys.each { |key|
+        if not payload.nil?
+          payload.keys.each { |key|
             raise ArgumentError,
                   "The attribute \'#{key}\' is not an available attribute for #{method_name}" unless
               hash[:request].keys.include?(key.to_s)

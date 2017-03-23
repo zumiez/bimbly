@@ -179,7 +179,7 @@ nimble.read_volumes.parameters
 ## Request
 ----------------
 
-The `request` method will return the documentation on all of the available attributes and their details for the method that's been selected. This is a good resource for when you are sending a PUT or POST and want to know what you can change and what default values are. Mandatory attributes will be alerted when you try to load a method, but you can see the details of those attributes here as well.
+The `request` method will return the documentation on all of the available attributes for `:payload` and their details for the method that's been selected. This is a good resource for when you are sending a PUT or POST and want to know what you can change and what default values are. Mandatory attributes will be alerted when you try to load a method, but you can see the details of those attributes here as well.
 
 ```
 nimble.update_users_by_id(id: 'USER_ID', payload: payload)
@@ -331,7 +331,7 @@ Payload:
 ```
 DELETE
 
-irb(main):014:0> nimble.details
+nimble.details
 Method Selected: delete_users_by_id
 URI: https://NIMBLE_ARRAY:5392/v1/users/NEW_ID
 Verb: delete
@@ -340,6 +340,8 @@ Payload: n/a
 
 This Code is Still Under Heavy Construction
 --------------------------------
+
+Right now it only prints out the information it will send to a Nimble Storage device, but once I've got a good testing environment I will make sure this portion works as well. 
 
 TODO
 - [x] Finish way to navigate documentation

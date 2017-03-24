@@ -349,10 +349,8 @@ Verb: delete
 Payload: n/a
 ```
 
-This Code is Still Under Heavy Construction
+This Code Is Ready For Use!
 --------------------------------
-
-Right now it only prints out the information it will send to a Nimble Storage device, but once I've got a good testing environment I will make sure this portion works as well. 
 
 TODO
 - [x] Finish way to navigate documentation
@@ -362,5 +360,5 @@ TODO
 - [x] Implement data type querying
 - [x] Check payload against mandatory attributes
 - [x] Check payload against available attributes
-- [ ] Finish the Interactive Shell portion
+- [x] Finish the Interactive Shell portion
 - [x] Update library to load API docs v4.1 and be interchangeable

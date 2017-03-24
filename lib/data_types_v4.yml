@@ -1,0 +1,860 @@
+---
+NsOperationStatus:
+  desc: 'Possible values: ''invalid'', ''unknown'', ''succeeded'', ''failed'', ''inprogress''.'
+NsPlatNicType:
+  desc: 'Possible values: ''nic_type_unknown'', ''nic_type_tp'', ''nic_type_sfp''.'
+NsVssResp:
+  desc: Response from VSS app server.
+NsUserRoles:
+  desc: 'Possible values: ''administrator'', ''poweruser'', ''operator'', ''guest''.'
+NsGroupName:
+  desc: 'String of up to 64 alphanumeric characters, - is allowed after first character.
+    Example: ''g1-exchange''.'
+NsUserGroupName:
+  desc: 'String of up to 64 uppercase or lowercase characters excluding ampersand,
+    less than, greater than and ^/\[]:;|=,+*?;. Example: ''admin-group-24''.'
+NsAppSyncType:
+  desc: 'Possible values: ''none'', ''vss'', ''vmware'', ''generic''.'
+NsProxyUserName:
+  desc: HTTP proxy server username, string up to 255 characters, special characters
+    ([, ], `, ;, ampersand, tab, space, newline) are not allowed.
+NsFcInterfaceInfo:
+  desc: Fibre Channel interface information.
+NsDiskState:
+  desc: 'Disk state. Possible values: ''valid'', ''in use'', ''failed'', absent'',
+    ''removed'', ''void'', ''t_fail'', ''foreign''.'
+NsPort:
+  desc: 'Positive integer value up to 65535 representing TCP/IP port. Example: 1234.'
+NsVolAndSnapName:
+  desc: Snapshot name and the belonging volume name.
+NsEulaReturn:
+  desc: Return end-user license information.
+NsDiskSmartAttribute:
+  desc: One Smart attribute of a disk.
+NsObjectIDKV:
+  desc: A key value pair containing an object id as a value.
+NsVolStatus:
+  desc: 'Possible values: ''online'', ''offline'', ''non_writable'', ''read_only'',
+    ''login_only''.'
+NsFolderSummary:
+  desc: Select fields containing folder info.
+NsArrayDetail:
+  desc: Detailed array information.
+NsSnapshotFromVolumes:
+  desc: Snapshot as presented in volumes object set.
+NsFcInterfaceList:
+  desc: List of Fibre Channel interfaces.
+NsBulkVolSettingReturn:
+  desc: Return codes for setting an attribute to a list of items.
+NsVolumeCollectionList:
+  desc: List of volume collections.
+NsShelfSensor:
+  desc: A shelf sensor data.
+NsTargetSubnet:
+  desc: List of subnet labels.
+NsUserName:
+  desc: 'String of up to 80 alphanumeric characters, beginning with a letter. For
+    Active Directory users, it can include backslash (\), dash (-), period (.), underscore
+    (_) and space. Example: ''user1'', ''companydomain\user1''.'
+NsZeroConfIPAddrList:
+  desc: A list of array Zero Conf.
+NsSensorRate:
+  desc: Rate stats for a sensor.
+NsUnsignedInt:
+  desc: 'Unsigned 32-bit integer. Example: 1234.'
+NsSensorRateList:
+  desc: Rate stats for a list of sensors.
+NsDescription:
+  desc: 'String of up to 255 printable ASCII characters. Example: ''99.9999% availability''.'
+NsCRUDOperations:
+  desc: List of CRUD (Create, Read, Update, Delete) operations associated with an
+    object.
+NsZeroConfIPAddr:
+  desc: Zero Conf of array.
+NsShelfCtrlr:
+  desc: A shelf controller information.
+NsControllerSide:
+  desc: 'Possible values: ''A'', ''B''.'
+NsArrayStatus:
+  desc: 'Reachability status of the array in the group, possible values: ''unreachable'',
+    ''reachable''.'
+NsVolFamMigStatus:
+  desc: Data migration status for a group of related volumes.
+NsPoolMergeReturn:
+  desc: Return values of pool merge.
+NsVolumeSummary:
+  desc: Select fields containing volume info.
+NsProxyPort:
+  desc: 'Integer value between 0-65535 representing TCP/IP port. Example: 1234.'
+NsISCSISessions:
+  desc: List of iSCSI initiator sessions information.
+NsEncryptionScope:
+  desc: 'Possible values: ''none'', ''volume'', ''pool'', ''group''.'
+NsLunConflictPair:
+  desc: LUN number conflict.
+NsUnsignedLong:
+  desc: 'Unsigned 64-bit integer. Example: 1234.'
+NsSoftwareVersion:
+  desc: Software version of storage array or group.
+NsPoolMigrate:
+  desc: 'Possible values: ''none'', ''in'', ''out''.'
+NsPrKey:
+  desc: 'A hexadecimal number with maximum of 16 characters. Example: ''0810''.'
+NsSnapLunInfo:
+  desc: Snapshot LUN information as presented in the access_control_records object
+    set. This information is only available for Fibre Channel.
+NsEventCategory:
+  desc: 'Possible values: ''unknown'', ''hardware'', ''service'', ''replication'',
+    ''volume'', ''update'', ''configuration'', ''test'', ''security''.'
+NsPoolRebalanceMigStatusList:
+  desc: Status of data rebalancing operations for a list of pools.
+NsDiskRemoveType:
+  desc: 'Disk remove op type. Possible values: ''remove'', ''perm_fail'', ''ldr_remove'',
+    ''diag_remove'', ''temp_fail''.'
+NsFCInitiators:
+  desc: List of Fibre Channel initiators.
+NsAccessControlRecords:
+  desc: List of access control records associated with a volume or snapshot or protocol
+    endpoint.
+NsFCInitiator:
+  desc: Fibre Channel initiator.
+NsBytes:
+  desc: 'Unsigned 64-bit integer. Example: ''1234''.'
+NsBaseWWN:
+  desc: 'Six bytes expressed in hex separated by colons. Example: ''af:32:f1''.'
+NsSnapVolList:
+  desc: List of snapshots to create.
+NsISCSISession:
+  desc: ISCSI initiator session information.
+NsAuditOperationTypeOrAll:
+  desc: 'Possible values: ''create'', ''read'', ''update'', ''delete'', ''other'',
+    ''all''.'
+NsCtrlrFcConfig:
+  desc: Controller Fibre Channel configuration.
+NsPrivilege:
+  desc: Privilege info.
+NsEventTargetName:
+  desc: 'String of up to 400 alphanumeric characters, - and . and : and " " are allowed
+    after first character. Example: ''volumes in performance policy default''.'
+NsReplDirection:
+  desc: 'Possible values: ''none'', ''downstream'', ''upstream'', ''bi_directional''.'
+NsRate:
+  desc: 'Rate of activity, expressed as a floating-point number. Example: ''3.1415''.'
+NsPlatLinkSpeed:
+  desc: 'Possible values: ''link_speed_unknown'', ''link_speed_10M'', ''link_speed_100M'',
+    ''link_speed_1000M'', ''link_speed_10000M''.'
+NsFolderList:
+  desc: List of fully qualified names of folders in a pool.
+NsFibreChannelInterfaceFullName:
+  desc: Fully qualified name information for a Fibre Channel interface (array/controller/interface).
+NsPoolSummary:
+  desc: Object containing pool id and name.
+NsSnapStatus:
+  desc: 'Possible values: ''invalid'', ''okay'', ''failed_delete'', ''deleted'', ''creating'',
+    ''create_retry'', ''force_delete'', ''deferred_delete''.'
+NsArrayAsupDetail:
+  desc: Detailed array asup information.
+NsActiveDirectoryServerList:
+  desc: Comma separated strings of up to 63 characters of hostname and/or ip addresses.
+    Total length cannot exceed 255 characters.
+NsFibreChannelPortID:
+  desc: 'An ID of a Fibre Channel Port. Example: ''1f01067316132''.'
+NsAsciiString255:
+  desc: String of printable ASCII characters, maximum length 255.
+NsEventTargetTypeOrAll:
+  desc: 'Possible values: ''all'', ''anon'', ''array'', ''controller'', ''disk'',
+    ''nic'', ''temperature'', ''service'', ''volume'', ''protection_set'', ''nvram'',
+    ''fan'', ''power_supply'', ''partner'', ''raid'', ''test'', ''iscsi'', ''pool'',
+    ''group'', ''shelf'', ''ntb'', ''fc'', ''initiator_group''.'
+NsObjectIDKVList:
+  desc: A list of key value pairs containing object ids as values.
+NsAuditLogUserName:
+  desc: 'String of up to 32 alphanumeric characters, beginning with a letter. Or _ampersand_amp;lt;system_ampersand_amp;gt;
+    for system user. Example: ''user99''.'
+NsControllerSerialNumber:
+  desc: 'Example: ''AC-109084-C2''.'
+NsAverageStats:
+  desc: Average statistics.
+NsObjectNameListWithType:
+  desc: List of objects of a given type.
+NsArrayAsupDetailList:
+  desc: List of arrays' detailed asup information.
+NsSasAddress:
+  desc: SAS address of a expander/port/disk, or '-' if not connected.
+NsDiscoveredGroupList:
+  desc: List of discovered group details.
+NsApiSeverityLevel:
+  desc: 'Possible values: ''fatal'', ''error'', ''warn'',''info'', ''debug''.'
+NsPeriodUnit:
+  desc: 'Possible values: ''minutes'', ''hours'', ''days'', ''weeks''.'
+NsVolumeSnapshotAttributeList:
+  desc: List of volumes with per snapshot attributes.
+NsReplPriorityType:
+  desc: 'Possible values: ''normal'', ''high''.'
+NsObjectCount:
+  desc: Number of objects of a type in a given scope.
+NsChapPassword:
+  desc: 'String of 12 to 16 printable ASCII characters excluding ampersand and ^[];`.
+    Example: ''password_25-24''.'
+NsShelfSesMasterSwState:
+  desc: 'Shelf SES device mastership software state. Possible values: ''unknown'',
+    ''master'', ''want master'', ''not master'', ''release master''.'
+NsEulaFormat:
+  desc: 'Possible values: ''text'', ''html''.'
+NsDiscoveredGroupInfo:
+  desc: Discovered group details.
+NsAccessProtocolList:
+  desc: List of access protocols.
+NsArrayMigStatusList:
+  desc: Data migration status information for a list of arrays.
+NsChksum:
+  desc: 'A 8 digit hexadecimal number. Example: ''ffffffff''.'
+NsNICList:
+  desc: List of NICs.
+NsSnapRetainLimitList:
+  desc: List of snapshot retainment param limit violations.
+NsSnapRetainLimit:
+  desc: Limit for scheduled snapshot retainment params.
+NsSmtpEncryptType:
+  desc: 'Possible values: ''none'', ''starttls'', ''ssl''.'
+NsReplPairList:
+  desc: List of replicated objects.
+NsProtectionPolicyType:
+  desc: 'Possible values: ''protection_template'', ''volume_collection''.'
+NsSeverityLevel:
+  desc: 'Possible values: ''info'', ''notice'', ''warning'', ''critical''.'
+NsVcenterUserName:
+  desc: 'String of up to 80 alphanumeric characters, beginning with a letter. It can
+    include ampersand (@), backslash (\), dash (-), period (.), and underscore (_).
+    Example: ''user1'', ''companydomain\user1'', administrator@vsphere.local.'
+NsWWN:
+  desc: 'Eight bytes expressed in hex separated by colons. Example: ''af:32:f1:20:bc:ba:43:1a''.'
+NsChassisType:
+  desc: 'Type of chassis. Possible values: ''chassis_unknown'', ''chassis_3u16'',
+    ''chassis_4u24''.'
+NsShelfPortInfo:
+  desc: A shelf sas port information.
+NsAlarmCount:
+  desc: List of alarm count for each category.
+NsSensorSampleList:
+  desc: A list of sensor samples.
+NsProxyPassword:
+  desc: HTTP proxy server password, string up to 255 characters, special characters
+    ([, ], `, ;, ampersand, tab, space, newline) are not allowed.
+NsToken:
+  desc: 'String of 31 or 32 alphanumeric characters. Example: ''9f53a789f1e9eae7b9385f4d8873fb1''.'
+NsSnapshotListFromSnapshotCollections:
+  desc: Snapshot list as presented in snapshot collections object set.
+NsVolSnapName:
+  desc: String of up to 215 alphanumeric, hyphenated, colon, or period-separated characters;
+    but cannot begin with hyphen, colon or period. This type is used for object sets
+    containing volumes, snapshots, snapshot collections and protocol endpoints.
+NsErrorWithArgumentsList:
+  desc: List of error codes with details.
+NsShelfCtrlrModel:
+  desc: 'Shelf controller model. Possible values: ''unknown'', ''head_x8'', ''head_x9'',
+    ''es_sc937'', ''head_x9_2u'', ''head_x10_2u'', ''es_4u_24'', ''head_vmware''.'
+NsAccessProtocol:
+  desc: 'Possible values: ''iscsi'', ''fc''.'
+NsNetConfigName:
+  desc: 'Possible values: ''active'', ''backup'', ''draft''.'
+NsBitMap:
+  desc: 'A hexadecimal number with maximum of 8192 characters. Example: ''0810''.'
+NsHostName:
+  desc: String of up to 63 alphanumeric and can include hyphens characters but cannot
+    start with hyphen.
+NsISCSISerialNumber:
+  desc: 'A 32 digit hexadecimal number. Example: ''1234123412341234abcdacbdacbdacbd''.'
+NsEmailList:
+  desc: 'Comma separated email list. Example: bob@wikipedia.com,jason@wiki.com.'
+SmFcInitiatorAliasSource:
+  desc: 'Possible values: ''invalid'', ''user'', ''fabric''.'
+NsActiveDirectoryComputerName:
+  desc: 'Name of the computer account in Active Directory. Example: ''storage-array01''.'
+NsFCSessions:
+  desc: List of Fibre Channel initiator sessions information.
+NsStatIdCompList:
+  desc: A list of domain_ids or set_ids components of stat name.
+NsFqdn:
+  desc: 'String of alphanumeric characters, valid range is from 2 to 255; Each label
+    must be between 1 and 63 characters long; - and . are allowed after the first
+    and before the last character. Example: ''example-1.com''.'
+NsSensorData:
+  desc: A list of samples (in order of sample time) for a sensor.
+NsArraySummaryList:
+  desc: List of arrays' information. Each item contains array_name and array_id for
+    the array name and its ID respectively.
+NsNetConfigRole:
+  desc: 'Possible values: ''active'', ''backup'', ''draft''.'
+NsNetbiosName:
+  desc: 'Netbios name for the Active Directory. Example: ''corp''.'
+NsObjectNameOrAny:
+  desc: 'String of up to 64 alphanumeric characters or standalone wildcard character
+    ''*'' to represent any object name, - and . and : are allowed after first character.
+    Examples: ''myobject-5'', ''*''.'
+NsCRUDOperation:
+  desc: A CRUD (Create, Read, Update, Delete) operation associated with an object.
+NsFcPortList:
+  desc: List of Fibre Channel ports.
+NsFcInterfaceUpdateList:
+  desc: List of Fibre Channel interfaces to update.
+NsVlanId:
+  desc: Positive integer in range [0,4096].
+NsObjectType:
+  desc: 'Possible values: ''active_directory'', ''group'', ''chapuser'', ''initiatorgrp'',
+    ''perfpolicy'', ''snapshot'', ''snapcoll'', ''vol'', ''volcoll'', ''partner'',
+    ''array'', ''pool'', ''initiator'', ''protsched'', ''volacl'', ''throttle'', ''sshkey'',
+    ''user'', ''protpol'', ''prottmpl'', ''branch'', ''route'', ''role'', ''privilege'',
+    ''netconfig'', ''events'', ''session'', ''subnet'', ''array_netconfig'', ''nic'',
+    ''initiatorgrp_subnet'', ''fc_initiator_alias'', ''fc_port'', ''fc_interface_collection'',
+    ''fc'', ''event_dipatcher'', ''fc_target_port_group'', ''encrypt_key'', ''encrypt_config'',
+    ''snapshot_lun'', ''syslog'', ''async_job'', ''application_server'', ''audit_log'',
+    ''ip address'', ''disk'', ''shelf'', ''protocol_endpoint'', ''folder'', ''pe_acl'',
+    ''vvol'', ''vvol_acl'', ''alarm''.'
+NsDomainName:
+  desc: 'Domain name for the Active Directory. Example: ''abc.corp''.'
+NsInitiatorAlias:
+  desc: 'String of up to 32 alphanumeric characters, or one of $^-_.: cannot begin
+    with non-alphanumeric character. Example: ''my_initiator-4''.'
+NsVolumeList:
+  desc: List of volumes.
+NsAuditActivity:
+  desc: 'String of 1-1476 printable characters. Example: ''Created snapshot % of volume
+    %''.'
+NsDiskSetAttr:
+  desc: A shelf logical attributes.
+NsTraceLevel:
+  desc: 'Possible values: ''info'', ''warn'', ''note'', ''error'', ''critical''.'
+NsAliasConflictPair:
+  desc: Alias conflict (same initiator WWPN, but different aliases).
+NsArrayUnassignMigStatusList:
+  desc: Data migration status information for arrays being unassigned from their pool.
+NsMTU:
+  desc: Positive integer in range [576,16000].
+NsSnapshotFromSnapshotCollections:
+  desc: Snapshot as presented in snapshot collections object set.
+NsLogMessage:
+  desc: 'String of up to 1024 printable ASCII characters. Example: ''Null pointer
+    exception, at line 320''.'
+NsISCSIInitiators:
+  desc: List of iSCSI initiators.
+NsUserGroupNames:
+  desc: List of Active Directory groups the user belongs to.
+NsMergeState:
+  desc: 'Possible values: ''none'', ''dest_start'', ''dest_DB'', ''dest_DB_done'',
+    ''dest_reassigned'', ''dest_relinquish'', ''dest_DB_failed'', ''src_start'', ''src_quiesced'',
+    ''src_reassigned'', ''src_quiesce_failed'', ''src_reassign_failed''.'
+NsShelfSwState:
+  desc: 'Shelf software state. Possible values: ''available'', ''online'', ''foreign'',
+    ''unknown''.'
+NsObjectOwnerPairWithTypeList:
+  desc: List of objects of a given type along with their owners.
+NsArrayDetailList:
+  desc: List of arrays' detailed information.
+NsOfflineReason:
+  desc: 'Possible values: ''user'', ''recovery'', ''replica'', ''over_volume_limit'',
+    ''over_snapshot_limit'', ''over_volume_reserve'', ''over_snapshot_reserve'', ''nvram_loss_recovery'',
+    ''serial_number_collision'', ''encryption_inactive'', ''encryption_key_deleted'',
+    ''vvol_unbind'', ''cache_unpin_in_progress''.'
+NsIPAddress:
+  desc: 'Four numbers in the range [0,255] separated by periods. Example: ''128.0.0.1''.'
+NsOnlineStatus:
+  desc: 'Online status based on that of the constituent entities. Possible values:
+    ''online'', ''offline'' or ''partial''.'
+NsObjectLimit:
+  desc: Limits (Max total number of objects) for object of a given type.
+NsAppServerResp:
+  desc: Response from app server.
+NsALUA:
+  desc: 'Possible values: ''active_optimized'', ''active_non_optimized'', ''standby'',
+    ''unavailable'', ''logical_block_dependent'', ''invalid'', ''offline'', ''transitioning''.'
+NsFcLinkInfo:
+  desc: Fibre Channel link information.
+NsTargetSubnets:
+  desc: List of target subnet tables.
+NsBusLocation:
+  desc: 'Platform HBA (Host Bus Adapter) bus location. Example : 0000:81:00.0.'
+NsEmail:
+  desc: 'Case insensitive email address. Example: bob@wikipedia.com.'
+NsStatIdComp:
+  desc: Domain_id and set_id components of stat name.  String of up to 64 alphanumberic
+    characters.  Undercore and hyphen are allowed.  For example "ds".
+NsString:
+  desc: Plain string.
+NsDiskSmartAttributeList:
+  desc: List of Smart attributes.
+NsJobStatus:
+  desc: 'Possible values: ''done'', ''inprogress''.'
+NsObjectNameListWithTypeList:
+  desc: List of replicated objects.
+NsEventTargetType:
+  desc: 'Possible values: ''anon'', ''array'', ''controller'', ''disk'', ''nic'',
+    ''temperature'', ''service'', ''volume'', ''protection_set'', ''nvram'', ''fan'',
+    ''power_supply'', ''partner'', ''raid'', ''test'', ''iscsi'', ''pool'', ''group'',
+    ''shelf'', ''ntb'', ''fc'', ''initiator_group''.'
+NsObjectLimitList:
+  desc: List of limits (Max total number of objects) for object of a given type.
+NsCtrlrHwSensorInfoList:
+  desc: A list of sensor information.
+NsSnapSummary:
+  desc: Select fields containing snapshot information.
+NsShelfCtrlrList:
+  desc: List of controller hardware and software info.
+NsAuditOperationType:
+  desc: 'Possible values: ''create'', ''read'', ''update'', ''delete'', ''other''.'
+NsFcFabricInfo:
+  desc: Fibre Channel fabric information.
+NsADTestUserReturn:
+  desc: Active Directory user details.
+NsObjectIDOrAll:
+  desc: A placeholder for the object id. Currently the only acceptable value for this
+    is '*'.
+NsFullName:
+  desc: 'Alphanumeric string of up to 64 chars, starts with letter, can include space,
+    apostrophe(''), hyphen(-). Example: ''User-13 Peterson''.'
+NsPlatSlot:
+  desc: Slot that is mapped on the PCIe bus.
+NsCachePolicy:
+  desc: 'Possible values: ''disabled'', ''normal'', ''aggressive'', ''no_write'',
+    ''aggressive_read_no_write''.'
+NsSchedule:
+  desc: Protection schedule associated with a volume collection or protection template.
+NsScope:
+  desc: 'Possible values: array serial number, or ''-''. Example: ''AC-109084''.'
+NsTag:
+  desc: 'String of up to 128 printable ASCII characters. Example: ''GUI debugger''.'
+NsEncryptionCipher:
+  desc: 'Possible values: ''none'', ''aes_256_xts''.'
+NsProtectionType:
+  desc: 'Volume Collection or volume is protected locally or remotely or unprotected.
+    Possible values: ''local'', ''remote'' or ''unprotected''.'
+NsShelfPortStatus:
+  desc: 'Shelf SAS port status. Possible values: ''unknown'', ''connected'', ''disconnected'',
+    ''disabled''.'
+NsPassword:
+  desc: 'String of 8 to 255 printable characters excluding ampersand and ;[]`. Example:
+    ''password-91''.'
+NsEncryptionSettings:
+  desc: Group encryption settings.
+NsSnapLunInfoList:
+  desc: Information about the snapshot LUNs as presented in the access_control_records
+    object set. This information is available only for Fibre Channel.
+NsSensorDataList:
+  desc: A list of sensor data objects.
+NsExtUserId:
+  desc: 'String of up to 255 printable ASCII characters. Example: ''S_aba-123''.'
+NsHcfResult:
+  desc: Results from health check of a single element.
+NsAppName:
+  desc: 'String of 0-255 printable ASCII characters. Example: ''GUI''.'
+NsArrayNetConfigs:
+  desc: List of array network configs.
+NsDiscoveredGroupListReturn:
+  desc: Detailed discovered group information.
+NsShelfPortType:
+  desc: 'Shelf SAS port type. Possible values: ''unknown'', ''upstream'', ''downstream''.'
+NsPinnedVolumeInfo:
+  desc: Select fields containing pinned volume info.
+NsObjectID:
+  desc: 'A 42 digit hexadecimal number. Example: ''2a0df0fe6f7dc7bb16000000000000000000004817''.'
+NsAppServerType:
+  desc: 'Possible values: ''vss'', ''vmware''.'
+NsAccessApplyTo:
+  desc: 'Possible values: ''volume'', ''snapshot'', ''both'', ''pe'', ''vvol_volume'',
+    ''vvol_snapshot''.'
+NsObjectNameList:
+  desc: A list of object names.
+NsNetZoneType:
+  desc: 'Possible values: ''none'', ''evenodd'', ''bisect'', ''single''.'
+NsFCSession:
+  desc: Fibre Channel initiator session information.
+NsBanner:
+  desc: String upto 2048 characters.
+NsVersion:
+  desc: 'String of up to 8 alphanumeric characters starting with v. Example: ''v1''.'
+NsShelfPortInfoList:
+  desc: List of SAS port info.
+NsAbsolutePath:
+  desc: 'Absolute path that starts with / and delimited by /. Each component name
+    must conform to NsObjectName type. Example: ''/path/to/folder''.'
+NsTimeOfDay:
+  desc: Non-negative integer in range [0,86399] which is equivalent to [0:00:00 AM,
+    23:59:59 PM].
+NsAlarmSeverityLevel:
+  desc: 'Possible values: ''warning'', ''critical''.'
+NsSnapshotListFromVolumes:
+  desc: Snapshot list as presented in volumes object set.
+NsUpdateState:
+  desc: 'Possible values: ''invalid'', ''normal'', ''updating'', ''timed_out'', ''failed'',
+    ''paused''.'
+NsFcConfigRegenerateReturn:
+  desc: Return values of Fibre channel config regeneration.
+NsIPAddressList:
+  desc: List of IP Addresses.
+NsObjectOwnerPair:
+  desc: Objects and their owners.
+NsDomainPassword:
+  desc: 'Active Directory user password. String up to 255 printable characters. Example:
+    ''password-91''.'
+NsShelfState:
+  desc: 'Shelf overall state. Possible values: ''void'', ''discovering'', ''faulty'',
+    ''disconnected'', ''available'', ''online'', ''foreign'', ''unknown''.'
+NsExtendedPrivilege:
+  desc: Extended privilege info.
+NsIPAddressObject:
+  desc: Object wrapper of IP Address.
+NsVolumesWithAppCategoryList:
+  desc: List of volumes.
+NsPoolRebalanceMigStatus:
+  desc: Status of data rebalance operations in a pool.
+NsErrorCodeList:
+  desc: List of error codes.
+NsDiskRaidState:
+  desc: 'Disk RAID state. Possible values: ''N/A'', ''okay'', ''resynchronizing'',
+    ''spare'', ''faulty''.'
+NsVolumeSnapshotAttribute:
+  desc: Snapshot attributes that could be specified for individual snapshots during
+    snapshot collection creation.
+NsPlatLinkStatus:
+  desc: 'Possible values: ''link_status_unknown'', ''link_status_down'', ''link_status_up''.'
+NsPercent:
+  desc: Percentage as integer from 0 to 100.
+NsLunReturn:
+  desc: Return LU number.
+NsDiskSetAttrList:
+  desc: List of logical shelf attribute.
+NsPlatFcOperationalStatus:
+  desc: 'Possible values: ''plat_fc_operational_status_unknown'', ''plat_fc_operational_status_unconfigured'',
+    ''plat_fc_operational_status_configured'', ''plat_fc_operational_status_operational'',
+    ''plat_fc_operational_status_fault'', ''plat_fc_operational_status_admin_offline'',
+    plat_fc_operational_status_initializing.'
+NsShelfSwType:
+  desc: 'Shelf software type. Possible values: ''unknown shelf software type'', ''Head
+    Shelf'', ''Disk Shelf'', ''All Flash Shelf''.'
+NsPerfPolicyName:
+  desc: 'String of up to 64 alphanumeric characters, - and . and : and space are allowed
+    after first character. Example: ''SQL Server Logs''.'
+NsSignedLong:
+  desc: 'Signed 64-bit integer. Example: -1234.'
+NsArraySummaryInfoList:
+  desc: List of arrays' summary information.
+NsPoolList:
+  desc: List of pools.
+NsShelfSesMasterHwState:
+  desc: 'Shelf SES device mastership hardware state. Possible values: ''unknown'',
+    ''master'', ''not master'', ''failed''.'
+NsEulaPhase:
+  desc: 'Possible values: ''setup'', ''software''.'
+NsSpacePolicy:
+  desc: 'Possible values: ''invalid'', ''offline'', ''non_writable'', ''read_only'',
+    ''login_only''.'
+NsFanStatus:
+  desc: 'Possible values: ''fan_unknown'', ''fan_okay'', ''fan_alerted'', ''fan_failed''.'
+NsCommaSeparatedList:
+  desc: 'Comma separated list of up to 64 non-empty lowercase alphanumeric strings
+    without spaces. Example: ''name,app_id''.'
+NsVolAndSnapNameList:
+  desc: List of snapshots which are online.
+NsInactivityTimeout:
+  desc: User inactivity timeout in second, valid range is from 1 to 43200 (720 minutes).
+NsOptionalObjectID:
+  desc: 'An optional NsObjectID. A 42 digit hexadecimal number or the empty string.
+    Example: ''1234123412341234123412341234123412341234cd'' or ''''.'
+NsPowerSupplyStatus:
+  desc: 'Possible values: ''ps_unknown'', ''ps_okay'', ''ps_alerted'', ''ps_failed''.'
+NsShelfCtrlrAttrSetList:
+  desc: List of logical controller attribute sets.
+NsThrottles:
+  desc: All the throttles for the partner.
+NsFlexiblePassword:
+  desc: 'A password with few constraints. A string of up to 255 characters. Example:
+    ''password_25-24''.'
+NsArrayFcConfigList:
+  desc: List of array Fibre Channel configurations.
+NsEncryptionMode:
+  desc: 'Possible values: ''none'', ''available'', ''secure''.'
+NsOperationType:
+  desc: 'Possible values: ''edit_vol'', ''snap_vol'', ''edit_snap'', ''add_vol_acl'',
+    ''remove_vol_acl'', ''create_initiator_grp'', ''delete_initiator_grp'', ''edit_initiator_grp'',
+    ''add_fc_vol_acl'', ''add_initiator'', ''remove_initiator''.'
+NsControllerId:
+  desc: 'Possible values: ''A'', ''B'', ''independent''.'
+NsTime:
+  desc: 'Seconds since last epoch i.e. 00:00 January 1, 1970. Example: ''3400''.'
+NsMac:
+  desc: Mac address of an interface.
+NsPrivilegeList:
+  desc: List of privileges associated with a role.
+NsObjectCountsList:
+  desc: List of object counts for objects in a scope type.
+NsPlatPort:
+  desc: Port on the HBA (Host Bus Adapter).
+NsHcfContext:
+  desc: 'Possible values: ''sw_update, ''failover'', ''all''.'
+NsPartnerCfgSyncStatus:
+  desc: 'Possible values: ''N/A'', ''Yes'', ''No''.'
+NsErrorWithArguments:
+  desc: Non-negative integer in range [0,9000].
+NsDiskOp:
+  desc: 'Disk operation. Possible values: ''add'', ''remove''.'
+NsSpaceUsageLevel:
+  desc: 'Possible values: ''normal'', ''warning'', ''critical''.'
+NsThrottle:
+  desc: A single throttle for the partner.
+NsArrayFcConfig:
+  desc: Array Fibre Channel configuration.
+NsSdkName:
+  desc: 'Possible values: ''CPP'', ''CSHARP'', ''JAVA'', ''PERL'', ''PYTHON''.'
+NsScheduleList:
+  desc: List of snapshot schedules associated with a volume collection or protection
+    template.
+NsObjectName:
+  desc: 'String of up to 64 alphanumeric characters, - and . and : are allowed after
+    first character. Example: ''myobject-5''.'
+NsBoolean:
+  desc: 'Possible values: ''true'', ''false''.'
+NsTokenReportUserDetailsReturn:
+  desc: Return values of token reporting user details.
+NsObjectIDList:
+  desc: A list of object ids.
+NsSubnet:
+  desc: A subnet configuration.
+NsAlarmRemindEvery:
+  desc: Frequency of alarm notification.
+NsObjectOwnerPairList:
+  desc: List of object names and owners.
+NsSensorState:
+  desc: 'Possible values: ''sensor_missing'', ''sensor_failed'', ''sensor_reading_unavail'',
+    ''sensor_alert_cond'', ''sensor_ok''.'
+NsBitMapReturn:
+  desc: Return bitmap under certain request.
+NsPEOpStateType:
+  desc: 'Possible values: ''normal'', ''deprecated''.'
+NsFcSessionTarget:
+  desc: Information of the Fibre Channel session target.
+NsAuditLogAccessType:
+  desc: 'Possible values: ''GUI'', ''CLI'', ''API''.'
+NsEventType:
+  desc: Non-negative integer in range [0,2147483647].
+NsFcInterfaceUpdateInfo:
+  desc: Fibre Channel interface information to update.
+NsMetadataQueryParam:
+  desc: Metadata query through URL query.
+NsFcId:
+  desc: Unique identifier of the Fibre Channel port in hexadecimal representation.
+NsRoute:
+  desc: Route configuration.
+NsRouteConfigs:
+  desc: List of route configs.
+NsReplPair:
+  desc: Replicated objects (vol/snap/snapcoll), their UIDs are the same.
+NsCtrlrHwSensorInfo:
+  desc: Information on a controller hardware sensor.
+NsAsciiString16:
+  desc: String of printable ASCII characters, maximum length 16.
+NsRatio:
+  desc: 'Fraction expressed as floating point number. Example: ''9.18''.'
+NsAgentType:
+  desc: 'Possible values: ''none'', ''smis'', ''vvol'', ''openstack'', ''openstackv2''.'
+NsArraySummary:
+  desc: Array summary information.
+NsIQN:
+  desc: 'Alphanumeric, hyphenated, colon or period separated string of up to 255 characters
+    or ''*''. Example: ''iqn.2007-11.com.storage:zmytestvol1-v0df0fe6f7dc7bb16.0000016b.70374579''.'
+NsControllerState:
+  desc: 'Possible values: ''none'', ''start_standby'', ''start_active'', ''stale'',
+    ''standby'', ''solo'', ''active''.'
+NsArraySummaryInfo:
+  desc: Array summary information, including version, model, and IP configurations.
+NsVolumeListReturn:
+  desc: Object containing a list of volume names and IDs.
+NsOrganizationalUnit:
+  desc: 'The location where the computer account has to be created. The value should
+    be specified in fully distinguished name (DN) format. Reserved characters - comma,
+    plus sign, double quote, backslash, left angle bracket, right angle bracket, semicolon,
+    linefeed, carriage return, equals sign and forward slash must be escaped. Example:
+    ou=ABC\, San Jose,dc=MY,dc=LOCAL.'
+NsAppIdType:
+  desc: 'Possible values: ''inval'', ''exchange'', ''sql2005'', ''sql2008'', ''sql2012'',
+    ''exchange_dag'', ''sql2014'', ''sql2016'', ''hyperv''.'
+NsProxyServer:
+  desc: 'String of alphanumeric characters, can be an empty string, or valid range
+    must be from 2 to 255; Each label must be between 1 and 63 characters long; -
+    and . are allowed after the first and before the last character. Example: ''example-1.com''.'
+NsPassphrase:
+  desc: 'Encryption passphrase. String with size from 8 to 64 printable characters.
+    Example: ''passphrase-91''.'
+NsStringList:
+  desc: List of plain strings.
+NsAlarmCountSummary:
+  desc: List of alarm count for each category.
+NsAlarmCountSummaryReturn:
+  desc: List of alarm count for each category.
+NsPlatFcLinkStatus:
+  desc: 'Possible values: ''plat_fc_link_status_unknown'', ''plat_fc_link_status_down'',
+    ''plat_fc_link_status_up'', ''plat_fc_link_status_not_connected'', ''plat_fc_link_status_error''.'
+NsPerfPolicySummary:
+  desc: Select fields containing performance policy.
+NsFcSessionInitiator:
+  desc: Information of the Fibre Channel Session Initiator.
+NsISCSIInitiator:
+  desc: ISCSI initiator.
+NsAccessControlRecord:
+  desc: An access control record associated with a volume or snapshot or protocol
+    endpoint.
+NsShelfCtrlrAttrSet:
+  desc: A shelf logical controller attributes.
+NsShelfSensorList:
+  desc: List of sensor readings.
+NsSubnetConfigs:
+  desc: List of subnet configs.
+NsArrayMigStatus:
+  desc: Data migration status for an array.
+NsArraySerialNumber:
+  desc: 'Example: ''AC-109084''.'
+NsNICName:
+  desc: Name for a network card.
+NsVolumeSummaryWithAppCategory:
+  desc: Select fields containing volume info.
+NsIopsMbpsStats:
+  desc: Average and maximum iops and mbps statistics in last 24 hours.
+NsArrayRole:
+  desc: 'Array''s role in the group, possible values: ''invalid'', ''leader'', ''backup_leader'',
+    ''member'', ''non_member'', ''failed''.'
+NsObjectOwnerPairWithType:
+  desc: List of objects of a given type along with their owners.
+NsStatScope:
+  desc: String of up to 10 alphanumberic characters.  For example 'array'.
+NsSnapVolListReturn:
+  desc: Object returned after creating snapshot collection.
+NsUnixDate:
+  desc: Human readable date string matching format of the unix 'date' command (DAY
+    MON DD HH:MM:SS TMZ YEAR).
+NsADReportStatusReturn:
+  desc: Status of the Active Directory domain.
+NsSnapVol:
+  desc: Select fields containing volume info.
+NsPlatFcLinkSpeed:
+  desc: 'Possible values: ''plat_fc_link_speed_unknown'', ''plat_fc_link_speed_2G'',
+    ''plat_fc_link_speed_4G'', ''plat_fc_link_speed_8G'', ''plat_fc_link_speed_16G'',
+    ''plat_fc_link_speed_32G'', ''plat_fc_link_speed_10G'', ''plat_fc_link_speed_40G''.'
+NsCtrlrRaidInfo:
+  desc: Information about a controller's raid configuration.
+NsArrayUnassignMigStatus:
+  desc: Data migration status for array being unassigned from its pool.
+NsInitiatorIPAddress:
+  desc: 'String of four period-separated numbers, each in range [0,255]. Example:
+    ''128.0.0.1'' or ''*''.'
+NsFcPortInfo:
+  desc: Fibre Channel port information.
+NsSeconds:
+  desc: 'Unsigned 64-bit integer. Example: ''1234''.'
+NsSnapcollSummary:
+  desc: Select fields containing snapshot collection information.
+NsShelfSensorState:
+  desc: 'Shelf sensor state. Possible values: ''OK'', ''Alerted'', ''Failed'', ''Missing''.'
+NsIPNetmask:
+  desc: 'A netmask expressed as a 32 bit binary value must have the highest bit set
+    (2^31) and the lowest bit clear (2^0) with the first zero followed by only zeros.
+    Example: ''255.255.255.0''.'
+NsGenericResp:
+  desc: Response from generic app server.
+NsSubnetType:
+  desc: 'Possible values: ''invalid'', ''unconfigured'', ''mgmt'', ''data'', ''mgmt_data''.'
+NsAliasConflictPairList:
+  desc: List of alias conflict (same initiator WWPN, but different aliases).
+NsNIC:
+  desc: Network interface controller.
+NsFibreChannelInterfaceFullNameList:
+  desc: List of Fibre Channel interfaces which are online.
+NsDomainUser:
+  desc: 'Active Directory username. String up to 104 printable characters. Example:
+    ''joe-91''.'
+NsPinnedVolumeInfoList:
+  desc: List of pinned volumes in a pool.
+NsAlarmType:
+  desc: Non-negative integer in range [0,2147483647].
+NsSnapReplStatus:
+  desc: 'Possible values: ''complete'', ''in_progress'', ''pending''.'
+NsVssValidationTimeout:
+  desc: VSS validation timeout in second, valid range is from 1 to 3600 (60 minutes).
+NsChksumReturn:
+  desc: Return computed checksum.
+NsScheduleType:
+  desc: 'Possible values: ''regular'', ''external_trigger''.'
+NsHcfScope:
+  desc: 'Possible values: ''group'', ''array'', ''controller''.'
+NsSearchName:
+  desc: 'Alphanumeric string, up to 64 characters including hyphen, period, colon.
+    Example: ''vol:1''.'
+NsCtrlrRaidInfoList:
+  desc: A list of raid arrays.
+NsEulaLocale:
+  desc: 'Possible value: ''en''.'
+NsObjectIDsCSV:
+  desc: String of up to 10k alphanumeric comma-separated characters. This type is
+    used for volume stat parent object IDs.
+NsLunConflictPairList:
+  desc: List of LUN conflicts.
+NsKeyValues:
+  desc: List of key-value pairs. Keys must be unique and non-empty. When creating
+    an object, values must be non-empty. When updating an object, an empty value causes
+    the corresponding key to be removed.
+NsDiskType:
+  desc: 'Disk type. Possible values: ''hdd'', ''ssd''.'
+NsKeyValue:
+  desc: Key-value pair.
+NsDays:
+  desc: 'Comma separated list of days of the week or ''all''. Example: ''monday,sunday''.'
+NsReplPairListWithObjectType:
+  desc: Replicated objects of the specified type.
+NsShelfHwState:
+  desc: 'Shelf hardware state. Possible values: ''void'', ''discovering'', ''faulty'',
+    ''ready'', ''disconnected''.'
+NsCliUserName:
+  desc: 'String of up to 32 alphanumeric characters, beginning with a letter, which
+    matches the CLI requirements for a user name. Example: ''user1''.'
+NsPerfPolicyNameList:
+  desc: List of Performance Policies.
+NsAuditCategory:
+  desc: 'Possible values: ''data_provisioning'', ''data_protection'', ''data_access'',
+    ''user_access'', ''system_configuration'', ''software_update''.'
+NsErrorCode:
+  desc: Non-negative integer in range [0,9000].
+NsShelfCtrlrSide:
+  desc: 'Shelf controller position in the chassis. Possible values: ''A'', ''B'',
+    ''unknown''.'
+NsAlarmStatus:
+  desc: 'Possible values: ''open'', ''acknowledged''.'
+NsVmwareResp:
+  desc: Response from Vmware app server.
+NsNotificationType:
+  desc: 'Possible values: ''auditlogs'', ''alerts''.'
+NsVolFamMigStatusList:
+  desc: List of data migration status for a group of related volumes.
+NsExtendedPrivilegeList:
+  desc: List of extended privileges associated with a role.
+NsSensorList:
+  desc: 'Comma separated list of up to 64 stat sensor names. Sensor names are non-empty
+    alphanumeric strings without spaces. The underscore ''_'' is allowed. Example:
+    ''reads,scratch_slosh_cur,schedCpuQueueSizeSysHiPrio''.'
+NsAppUuid:
+  desc: 'String of up to 255 alphanumeric characters, hyphen, colon, dot and underscore
+    are allowed. Example: ''rfc4122.943f7dc1-5853-497c-b530-f689ccf1bf18''.'
+NsGroupMergeReturn:
+  desc: Response of group merge validation.
+NsArrayNet:
+  desc: Array network config.
+NsTargetName:
+  desc: The iSCSI Qualified Name (IQN) or the Fibre Channel World Wide Node Name (WWNN)
+    of the target.
+NsTemperatureStatus:
+  desc: 'Possible values: ''temperature_unknown'', ''temperature_okay'', ''temperature_alerted'',
+    ''temperature_failed''.'
+NsShelfSensorType:
+  desc: 'Shelf sensor type. Possible values: ''fan'', ''temperature'', ''power supply'',
+    ''nvram''.'
+NsReplPairListWithObjectTypeList:
+  desc: List of replicated objects.
+NsVolumeCollectionSummary:
+  desc: Select fields of volume collection info.

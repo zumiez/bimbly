@@ -1,0 +1,1546 @@
+SM_folder_conflict:
+  error_code: 1115
+SM_dedupe_volfam_appcat:
+  error_code: 4261
+SM_peer_network:
+  error_code: 3012
+SM_repl_object_busy:
+  error_code: 1072
+SM_group_config_snap_warn_greater_than_limit:
+  error_code: 1131
+SM_asup_nsdiag_base:
+  error_code: 5200
+SM_shelf_invalid_afa_enc_loc_id:
+  error_code: 6039
+SM_http_service_unavailable:
+  error_code: 503
+SM_support_ip_incorrect:
+  error_code: 4051
+SM_invalid_keyvalue:
+  error_code: 1095
+SM_duplicate_wwpn:
+  error_code: 4165
+SM_missing_cursor_in_fields:
+  error_code: 1527
+SM_perfpol_dedupe_unassigned_app_category:
+  error_code: 4252
+SM_repl_partner_misconfiguration:
+  error_code: 2027
+SM_http_not_found:
+  error_code: 404
+SM_limit_snap_retention_pool:
+  error_code: 1423
+SM_pool_volmv_einprog:
+  error_code: 1442
+SM_group_merge_multi_array_grp:
+  error_code: 9414
+SM_shelf_ebusy:
+  error_code: 6001
+SM_update_nimmodel_cpu:
+  error_code: 3040
+SM_pool_for_array_exists:
+  error_code: 1089
+SM_appserver_not_found:
+  error_code: 1515
+SM_stats_no_reply:
+  error_code: 9201
+SM_volmv_abort_enomove:
+  error_code: 1437
+SM_erofs:
+  error_code: 30
+SM_update_start_check:
+  error_code: 3026
+SM_ad_join:
+  error_code: 7200
+SM_invalid_subnet:
+  error_code: 4011
+SM_background_update_queued:
+  error_code: 1080
+SM_repl_agent_type_unsup:
+  error_code: 2033
+SM_invalid_initiator_ip:
+  error_code: 4113
+SM_netconfig_exist_no_force:
+  error_code: 4073
+SM_shelf_disconnected:
+  error_code: 6021
+SM_wrong_sig:
+  error_code: 3019
+SM_route_does_not_exist:
+  error_code: 4029
+SM_vol_reserve_move_invalid:
+  error_code: 4270
+SM_update_nextvers_notfound:
+  error_code: 3038
+SM_invalid_ip:
+  error_code: 4006
+SM_alarm_shelf_miscabled:
+  error_code: 7001
+SM_http_accepted:
+  error_code: 202
+SM_not_owner:
+  error_code: 1043
+SM_limit_snap_vol:
+  error_code: 1416
+SM_discovery_ip_already_exists_deprecated:
+  error_code: 4045
+SM_group_merge_sw_update_inprogress_src_grp:
+  error_code: 9419
+SM_vol_reserve_greater_than_limit:
+  error_code: 1530
+SM_volmv_vol_ealready:
+  error_code: 1433
+SM_pool_update_inval:
+  error_code: 1519
+SM_http_bad_request:
+  error_code: 400
+SM_array_gid_mismatch:
+  error_code: 1063
+SM_root_branch_pinned:
+  error_code: 1053
+SM_repl_base:
+  error_code: 2000
+SM_vol_dedupe_reserve_invalid:
+  error_code: 4258
+SM_encryption_pool_dedupe_all:
+  error_code: 4272
+SM_limit_hret_snap_retention_group:
+  error_code: 1479
+SM_invalid_subnet_label:
+  error_code: 4083
+SM_repl_api_unsup:
+  error_code: 2035
+SM_update_pkg_downloading:
+  error_code: 3050
+SM_missing_array_netconfig:
+  error_code: 4024
+SM_unexpected_child:
+  error_code: 1460
+SM_deprecated_perfpol:
+  error_code: 4262
+SM_vol_dedupe_not_enough_cache:
+  error_code: 1133
+SM_repl_remote_not_ancestor:
+  error_code: 2017
+SM_repl_cmpr_version_unsup:
+  error_code: 2021
+SM_alarm_shelf_A_SHELF_SAS_LINK:
+  error_code: 7105
+SM_subnet_not_assigned_on_nic:
+  error_code: 4114
+SM_dedupe_single_array:
+  error_code: 4260
+SM_group_merge_srl_check_failed:
+  error_code: 9424
+SM_vvol_limitation:
+  error_code: 1106
+SM_encryption_needed:
+  error_code: 4309
+SM_array_member_orphan_with_args:
+  error_code: 1103
+SM_data_ip_missing_subnet:
+  error_code: 4032
+SM_support_ip_already_exists:
+  error_code: 4047
+SM_vol_dedupe_encryption_invalid:
+  error_code: 4257
+SM_no_iscsi_subnet:
+  error_code: 4108
+SM_vol_usage_unavailable:
+  error_code: 1431
+SM_unknown:
+  error_code: 1025
+SM_duplicate_nic:
+  error_code: 4009
+SM_repl_aborted:
+  error_code: 1039
+SM_alarm_shelf_A_SHELF_IPMI_MSHIP_ERR:
+  error_code: 7115
+SM_fc_vol_move:
+  error_code: 4154
+SM_shelf_ses_mship_err:
+  error_code: 6020
+SM_zero_vlan_id_for_tagged_assignment:
+  error_code: 4093
+SM_group_merge_events_pending:
+  error_code: 9000
+SM_group_config_snap_limit_lesser_than_reserve:
+  error_code: 1129
+SM_fc_intf_not_found:
+  error_code: 4145
+SM_mismatching_subnet_mtu:
+  error_code: 4070
+SM_folder_repl_partner:
+  error_code: 1521
+SM_merge_conflict:
+  error_code: 1058
+SM_starter_vol_acl_create:
+  error_code: 1121
+SM_invalid_container:
+  error_code: 1493
+SM_no_common_lun:
+  error_code: 4128
+SM_repl_hostname:
+  error_code: 2002
+SM_repl_bin_slice_mismatch:
+  error_code: 2024
+SM_limit_volacl:
+  error_code: 4400
+SM_repl_no_snap:
+  error_code: 2004
+SM_no_src_array_on_pool:
+  error_code: 1405
+SM_shelf_expr_fw_ver_inval:
+  error_code: 6033
+SM_gl_takeover_high_from_low:
+  error_code: 1537
+SM_initiator_label_not_supported:
+  error_code: 4138
+SM_group_merge_solo_src_grp:
+  error_code: 9420
+SM_no_vvol_support:
+  error_code: 1108
+SM_folder_not_found:
+  error_code: 1495
+SM_config_nospace:
+  error_code: 3003
+SM_econnrefused:
+  error_code: 111
+SM_limit_snap_volcoll:
+  error_code: 1417
+SM_array_not_group_leader:
+  error_code: 1411
+SM_shelf_wrong_sas_port:
+  error_code: 6017
+SM_invalid_wwnn:
+  error_code: 4161
+SM_failover_role_inval:
+  error_code: 1065
+SM_at_least_one_iscsi_cluster:
+  error_code: 4064
+SM_invalid_wwpn:
+  error_code: 4162
+SM_array_pool_flash_mismatch:
+  error_code: 1097
+SM_ext_trig_sched_not_present:
+  error_code: 1439
+SM_duplicate_ip:
+  error_code: 4004
+SM_volacls_out_of_sync:
+  error_code: 4402
+SM_duplicate_mixed_initiator_name_with_args:
+  error_code: 4139
+SM_array_not_member:
+  error_code: 1050
+SM_repl_encryption_version_unsup:
+  error_code: 2029
+SM_stats_send_failed:
+  error_code: 9203
+SM_no_support:
+  error_code: 1027
+SM_end_row_beyond_total_rows:
+  error_code: 1475
+SM_fc_ping_wwpn_not_found:
+  error_code: 4149
+SM_acl_deprecated_pe:
+  error_code: 4194
+SM_array_not_reachable:
+  error_code: 1051
+SM_volmv_abort_enospace:
+  error_code: 1436
+SM_alarm_shelf_A_CTRLR_RAID_ASSEMBLY_ERR:
+  error_code: 7116
+SM_fc_regenerate_invalid_admin_state:
+  error_code: 4508
+SM_repl_volcoll_deletion:
+  error_code: 2034
+SM_asup_pingfrom_ctrlr_error:
+  error_code: 5303
+SM_write_cfg:
+  error_code: 3007
+SM_create_pool_failed:
+  error_code: 1105
+SM_repl_connected_ping_unsup:
+  error_code: 2019
+SM_rollback_notsup:
+  error_code: 3015
+SM_array_repl_partner_version_unknown:
+  error_code: 1403
+SM_vvol_already_disabled:
+  error_code: 1112
+SM_no_initiatorgrp:
+  error_code: 4097
+SM_http_method_not_allowed:
+  error_code: 405
+SM_add_noniscsi_to_iscsi_group:
+  error_code: 4203
+SM_group_merge_partner_named_src_grp:
+  error_code: 9417
+SM_reserved_username:
+  error_code: 1092
+SM_shelf_loc_order:
+  error_code: 6009
+SM_array_assign_failed:
+  error_code: 1062
+SM_takeover_gl_up:
+  error_code: 1068
+SM_shelf_invalid_csz:
+  error_code: 6004
+SM_asup_ebusy:
+  error_code: 5003
+SM_subnet_already_assigned_on_nic:
+  error_code: 4089
+SM_vol_has_online_snap:
+  error_code: 1513
+SM_limit_hret_snap_retention_pool:
+  error_code: 1478
+SM_starter_vol_create:
+  error_code: 1120
+SM_http_conflict:
+  error_code: 409
+SM_group_config_vol_limit_lesser_than_reserve:
+  error_code: 1126
+SM_encryption_slow:
+  error_code: 4311
+SM_pool_has_volume:
+  error_code: 1518
+SM_vvol_folder_no_appsrvr:
+  error_code: 1502
+SM_group_merge_ssh_key_not_unique_src_grp:
+  error_code: 9421
+SM_dsd_unreach:
+  error_code: 1044
+SM_discovery_ip_non_iscsi_deprecated:
+  error_code: 4079
+SM_no_suitable_pe:
+  error_code: 4193
+SM_vf_vol_cache_pinned:
+  error_code: 4189
+SM_encryption_master_key_inactive:
+  error_code: 4303
+SM_netconfig_update_mismatch:
+  error_code: 4191
+SM_fc_regenerate:
+  error_code: 4192
+SM_no_iscsi_hardware:
+  error_code: 4205
+SM_fail_bind_no_pe_acl:
+  error_code: 4182
+SM_operation_cancelled:
+  error_code: 3056
+SM_limit_hret_snap_retention_pool_warn:
+  error_code: 1476
+SM_lun_mismatch:
+  error_code: 1033
+SM_invalid_fc_config_parameter:
+  error_code: 4196
+SM_fc_regenerate_invalid_operation_state:
+  error_code: 4509
+SM_netconfig_create_draft_only:
+  error_code: 4190
+SM_shelf_connected_only_one_side:
+  error_code: 6019
+SM_default_route_missing:
+  error_code: 4038
+SM_perfpol_oob:
+  error_code: 4251
+SM_connection_rebalancing_without_automatic_method:
+  error_code: 4068
+SM_invalid_initiator_alias:
+  error_code: 4116
+SM_unmatched_fc_port:
+  error_code: 4166
+SM_specified_snapshot_lun:
+  error_code: 4174
+SM_passphrase_inval:
+  error_code: 4307
+SM_group_merge_inprogress:
+  error_code: 1076
+SM_vvolsnap_online:
+  error_code: 6036
+SM_volacl_on_vvol:
+  error_code: 1113
+SM_cannot_paginate_with_case_insensitive_sort:
+  error_code: 1544
+SM_disable_vvol_with_pe:
+  error_code: 1109
+SM_limit_peacl:
+  error_code: 4405
+SM_update_failed:
+  error_code: 3028
+SM_pool_assign_limit_decreased:
+  error_code: 1534
+SM_etimedout:
+  error_code: 110
+SM_repl_disconnected:
+  error_code: 2009
+SM_snap_reserve_greater_than_limit:
+  error_code: 1532
+SM_shelf_invalid_afs:
+  error_code: 6030
+SM_einval:
+  error_code: 22
+SM_data_ip_already_exists:
+  error_code: 4048
+SM_netconfig_does_not_exist:
+  error_code: 4037
+SM_fc_intf_already_in_state:
+  error_code: 4507
+SM_mismatch_wwnn:
+  error_code: 4163
+SM_shelf_disk_sas_link_degraded:
+  error_code: 6015
+SM_version_mismatch:
+  error_code: 1034
+SM_invalid_ip_type:
+  error_code: 4043
+SM_duplicate_subnet_vlan_id:
+  error_code: 4115
+SM_group_merge_partner_named_dst_grp:
+  error_code: 9418
+SM_internal:
+  error_code: 3016
+SM_shelf_raid_degraded:
+  error_code: 6024
+SM_invalid_initiatorgrp_name:
+  error_code: 4094
+SM_missing_data_subnet:
+  error_code: 4058
+SM_array_repl_partner_nat:
+  error_code: 1446
+SM_snap_warn_greater_than_limit:
+  error_code: 1533
+SM_shelf_ctrlr_loop:
+  error_code: 6018
+SM_alarm_not_acknowledged:
+  error_code: 9301
+SM_repl_openstack_unsup:
+  error_code: 2040
+SM_no_action_found:
+  error_code: 1451
+SM_perfpol_incompatible_app_category:
+  error_code: 4253
+SM_migrate_bgl_nonsync:
+  error_code: 1085
+SM_pe_already_exported:
+  error_code: 4187
+SM_array_member_orphan:
+  error_code: 1102
+SM_http_internal_server_error:
+  error_code: 500
+SM_fc_group_merge_not_supported:
+  error_code: 4141
+SM_nic_not_found_in_netconfig:
+  error_code: 4042
+SM_pe_igroup_protocol_mismatched:
+  error_code: 4208
+SM_no_such_snap:
+  error_code: 1038
+SM_usage_unavailable:
+  error_code: 1414
+SM_group_merge_same_group_uid:
+  error_code: 9410
+SM_alarm_disabled:
+  error_code: 9300
+SM_obj_id_not_found:
+  error_code: 1117
+SM_nimble_base:
+  error_code: 1024
+SM_data_ip_not_found:
+  error_code: 4052
+SM_group_config_smtp_server_and_port:
+  error_code: 1123
+SM_alarm_shelf_A_SHELF_ORDER:
+  error_code: 7109
+SM_invalid_arg_value:
+  error_code: 1458
+SM_stats_no_sensors:
+  error_code: 9202
+SM_appsrvr_subnet_does_not_exist:
+  error_code: 9206
+SM_ssl_connect:
+  error_code: 3052
+SM_srv_unreach:
+  error_code: 1026
+SM_automatic_connection_method_with_multiple_subnets:
+  error_code: 4066
+SM_limit_hret_snap_group:
+  error_code: 1480
+SM_require_two_support_ips:
+  error_code: 4062
+SM_duplicate_initiatorgrp_subnet:
+  error_code: 4131
+SM_http_created:
+  error_code: 201
+SM_shelf_hdds_in_afs:
+  error_code: 6031
+SM_repl_remote_no_volume:
+  error_code: 2016
+SM_discovery_ip_already_exists:
+  error_code: 4077
+SM_no_available_lun:
+  error_code: 4123
+SM_peer_fc_connectivity_degraded:
+  error_code: 4146
+SM_extraneous_array_netconfig:
+  error_code: 4025
+SM_no_data_ip_specified:
+  error_code: 4019
+SM_update_partner_vers_notsup:
+  error_code: 3030
+SM_pe_fail_acl_removal:
+  error_code: 4183
+SM_mgmt_ip_incorrect:
+  error_code: 4049
+SM_no_fc_hardware:
+  error_code: 4135
+SM_pool_for_array_not_found:
+  error_code: 1088
+SM_branchpt_trimmed:
+  error_code: 2041
+SM_shelf_no_rserial:
+  error_code: 6006
+SM_info_config_sync_inprogress:
+  error_code: 8000
+SM_perfpol_not_in_downstream_partner:
+  error_code: 1522
+SM_limit_snap_retention_group:
+  error_code: 1424
+SM_perfpol_invalid_app_category:
+  error_code: 4250
+SM_repl_remote_paused:
+  error_code: 2018
+SM_proc_has_running_dependents:
+  error_code: 4500
+SM_encryption_key_conflict:
+  error_code: 4313
+SM_group_merge_src_grp_name_too_long:
+  error_code: 9416
+SM_backup_netconfig_readonly:
+  error_code: 4072
+SM_luc_update_error:
+  error_code: 4140
+SM_pool_state_not_normal:
+  error_code: 4515
+SM_passphrase_auth:
+  error_code: 4308
+SM_group_config_vol_warn_greater_than_limit:
+  error_code: 1128
+SM_controller_active:
+  error_code: 4516
+SM_repl_cant_connect:
+  error_code: 2008
+SM_pool_update_inval_arrays:
+  error_code: 1520
+SM_not_enough_cache:
+  error_code: 4175
+SM_remove_nonempty_container:
+  error_code: 1494
+SM_repl_no_partner:
+  error_code: 2001
+SM_invalid_folder:
+  error_code: 1488
+SM_start_row_beyond_end_row:
+  error_code: 1473
+SM_pe_multi_protocol_access_not_supported:
+  error_code: 4180
+SM_shelf_ses_device_not_ready:
+  error_code: 6023
+SM_insufficient_fc_initiator_input:
+  error_code: 4122
+SM_epartial:
+  error_code: 116
+SM_update_conn_grplead:
+  error_code: 3024
+SM_usb_nospace:
+  error_code: 3005
+SM_malformed_json:
+  error_code: 1459
+SM_no_matching_subnet:
+  error_code: 4001
+SM_asup_base:
+  error_code: 5000
+SM_serial_not_avail:
+  error_code: 1447
+SM_invalid_pool_name:
+  error_code: 1407
+SM_invalid_vlan_id:
+  error_code: 4086
+SM_alarm_shelf_A_SHELF_DISK_COUNT:
+  error_code: 7103
+SM_update_nsstats_red:
+  error_code: 3031
+SM_invalid_initiator_access_protocol:
+  error_code: 4119
+SM_snapshot_offline:
+  error_code: 1485
+SM_shelf_not_ready:
+  error_code: 6002
+SM_asup_validate_error:
+  error_code: 5300
+SM_shelf_sas_lanes_degraded:
+  error_code: 6008
+SM_invalid_subnet_type:
+  error_code: 4039
+SM_array_flash_mismatch:
+  error_code: 1096
+SM_invalid_array_name:
+  error_code: 4088
+SM_limit_freq_sched_group:
+  error_code: 1425
+SM_invalid_agent_type:
+  error_code: 1107
+SM_alarm_shelf_A_SHELF_WRONG_SAS_PORT:
+  error_code: 7113
+SM_fc_driver_error:
+  error_code: 4133
+SM_openstack2snap_online:
+  error_code: 6040
+SM_invalid_initiator_label:
+  error_code: 4112
+SM_partner_cfg_sync:
+  error_code: 1045
+SM_repl_bandwidth:
+  error_code: 2042
+SM_invalid_fc_intf_name:
+  error_code: 4159
+SM_eula_not_found:
+  error_code: 1415
+SM_version_name:
+  error_code: 1450
+SM_ip_update_no_force:
+  error_code: 4074
+SM_info_version:
+  error_code: 1449
+SM_unexpected_arg:
+  error_code: 1457
+SM_vvol_acl_grp_merge:
+  error_code: 1114
+SM_pool_has_pe:
+  error_code: 1501
+SM_array_not_found_in_netconfig:
+  error_code: 4041
+SM_discovery_ip_not_in_subnet:
+  error_code: 4056
+SM_unsupported_query_operator:
+  error_code: 1468
+SM_update_nimmodel_hdd:
+  error_code: 3043
+SM_shelf_no_eloc_id:
+  error_code: 6000
+SM_missing_mgmt_ip:
+  error_code: 4005
+SM_group_merge_db_load:
+  error_code: 1071
+SM_shelf_expr_rev_incompatible:
+  error_code: 6034
+SM_missing_criteria_fieldName:
+  error_code: 1465
+SM_fc_session_exist:
+  error_code: 4512
+SM_auth:
+  error_code: 1028
+SM_bad_pkg:
+  error_code: 3018
+SM_edit_conflicting_host_type:
+  error_code: 4198
+SM_no_mgmt_subnet_specified:
+  error_code: 4020
+SM_vol_has_clone:
+  error_code: 1510
+SM_duplicate_vol:
+  error_code: 1486
+SM_takeover_db_err:
+  error_code: 1081
+SM_pool_cache_pin_notsupp:
+  error_code: 1099
+SM_complex_type_query_param:
+  error_code: 1469
+SM_shelf_preactivation_mfr_err:
+  error_code: 6035
+SM_update_grpconfig_invalid:
+  error_code: 3032
+SM_asup_nsdiag_inval:
+  error_code: 5201
+SM_encryption_invalid_cipher:
+  error_code: 4300
+SM_invalid_non_iscsi_data_subnet_type:
+  error_code: 4173
+SM_repl_app_uuid_unsup:
+  error_code: 2031
+SM_pool_no_src_array:
+  error_code: 1434
+SM_repl_remote_no_base_snap:
+  error_code: 2015
+SM_version_mismatch_with_args:
+  error_code: 1401
+SM_alarm_shelf_A_SHELF_SAS_EXP_ERR:
+  error_code: 7106
+SM_initiator_having_online_vol:
+  error_code: 4202
+SM_initiatorgrp_subnet_remove_no_force:
+  error_code: 4102
+SM_too_many_range_filters:
+  error_code: 1529
+SM_update_busy:
+  error_code: 3013
+SM_alarm_array_in_solo:
+  error_code: 7002
+SM_alarm_shelf_A_SHELF_MISSING:
+  error_code: 7108
+SM_shelf_not_inuse:
+  error_code: 6011
+SM_eexist:
+  error_code: 17
+SM_repl_volattr_version_unsup:
+  error_code: 2023
+SM_invalid_object_set_query:
+  error_code: 1471
+SM_ok:
+  error_code: 0
+SM_repl_vasa3_api_unsup:
+  error_code: 2043
+SM_update_connect_grplead:
+  error_code: 3037
+SM_action_failure_during_state:
+  error_code: 4092
+SM_array_pool_member:
+  error_code: 1410
+SM_invalid_initiator_wwpn:
+  error_code: 4117
+SM_start_time_beyond_end_time:
+  error_code: 1524
+SM_missing_criteria:
+  error_code: 1464
+SM_repl_encryption_needed:
+  error_code: 2036
+SM_group_merge_src_grp_name_not_unique:
+  error_code: 9415
+SM_too_many_support_ips:
+  error_code: 4012
+SM_pool_exists:
+  error_code: 1061
+SM_dedupe_bulk_disable:
+  error_code: 4264
+SM_no_mixed_case_sorting:
+  error_code: 1545
+SM_ebusy:
+  error_code: 16
+SM_invalid_fc_port_name:
+  error_code: 4158
+SM_vol_warn_greater_than_limit:
+  error_code: 1531
+SM_array_not_member_with_args:
+  error_code: 1101
+SM_encryption_master_key_missing:
+  error_code: 4302
+SM_encryption_must_be_enabled:
+  error_code: 4312
+SM_invalid_ctrlr_name:
+  error_code: 4046
+SM_repl_handover_busy:
+  error_code: 2028
+SM_fc_ping_no_response:
+  error_code: 4148
+SM_invalid_initiatorgrp_access_protocol:
+  error_code: 4120
+SM_write:
+  error_code: 3006
+SM_fc_add_to_nonfc_group:
+  error_code: 4152
+SM_group_merge_db_merge:
+  error_code: 1077
+SM_repl_hole_unsup:
+  error_code: 2020
+SM_perfpol_not_found:
+  error_code: 1514
+SM_repl_not_on_disk:
+  error_code: 2007
+SM_no_route_to_network:
+  error_code: 4030
+SM_asup_disabled:
+  error_code: 5001
+SM_missing_fc_bus_loc:
+  error_code: 4160
+SM_shelf_preactivation_io_err:
+  error_code: 6027
+SM_target_ip_on_mgmt_only:
+  error_code: 4104
+SM_duplicate_mixed_initiator_name:
+  error_code: 4197
+SM_pe_conflicting_acl_lun:
+  error_code: 4186
+SM_takeover_eagain:
+  error_code: 1067
+SM_group_merge_grp_limit_type_lower:
+  error_code: 9425
+SM_unexpected_object_set_query:
+  error_code: 1470
+SM_stats_frequency_invalid:
+  error_code: 9204
+SM_insufficient_initiator_input:
+  error_code: 4099
+SM_disabled_protocol_artifacts:
+  error_code: 4206
+SM_group_merge_diff_version:
+  error_code: 9413
+SM_version_custom:
+  error_code: 1057
+SM_space_info_unavail:
+  error_code: 1508
+SM_netconfig_already_active:
+  error_code: 4035
+SM_upload_in_progress:
+  error_code: 3054
+SM_group_config_smtp_change_username_password_encryption:
+  error_code: 1125
+SM_invalid_data_ip:
+  error_code: 4008
+SM_asup_heartbeat_error:
+  error_code: 5304
+SM_invalid_initiator_wwpn_with_args:
+  error_code: 4179
+SM_passwd_same_as_current:
+  error_code: 1091
+SM_in_use_lun:
+  error_code: 4124
+SM_http_forbidden:
+  error_code: 403
+SM_repl_sync:
+  error_code: 2044
+SM_fc_initiatorgrp_subnet_not_supported:
+  error_code: 4137
+SM_array_not_assigned:
+  error_code: 1060
+SM_empty_vol:
+  error_code: 1427
+SM_volmv_vvol:
+  error_code: 1492
+SM_alarm_shelf_A_SHELF_SES_MSHIP_ERR:
+  error_code: 7114
+SM_array_rename_in_netconfig_failed:
+  error_code: 4057
+SM_iscsi_svc_not_available:
+  error_code: 4143
+SM_mismatching_subnet:
+  error_code: 4107
+SM_update_fail_eula_extract:
+  error_code: 3047
+SM_pool_unknown:
+  error_code: 1428
+SM_vol_clone_perfpol_move_invalid:
+  error_code: 4268
+SM_no_discovery_ip_in_manual_mode:
+  error_code: 4106
+SM_shelf_invalid_eeprom:
+  error_code: 6016
+SM_limit_hret_snap_retention_pool_max:
+  error_code: 1477
+SM_ext_trig_sched_already_present:
+  error_code: 1440
+SM_update_vers_notsup:
+  error_code: 3014
+SM_missing_arg:
+  error_code: 1456
+SM_download_blacklisted:
+  error_code: 3055
+SM_mgmt_ip_not_on_mgmt:
+  error_code: 4023
+SM_too_large_page_size:
+  error_code: 1528
+SM_qos_limit_not_in_range:
+  error_code: 4511
+SM_start_row_beyond_total_rows:
+  error_code: 1474
+SM_repl_enabled:
+  error_code: 1040
+SM_invalid_vol_assoc:
+  error_code: 1487
+SM_stats_no_such_object:
+  error_code: 1100
+SM_var_nospace:
+  error_code: 3001
+SM_no_operation_found:
+  error_code: 1452
+SM_repl_not_ancestor:
+  error_code: 2005
+SM_group_merge_diff_grp_access_protpcols:
+  error_code: 9422
+SM_mkdir:
+  error_code: 3008
+SM_migrate_bgl_unavail:
+  error_code: 1084
+SM_limit_volmv_snap_pool:
+  error_code: 1445
+SM_ext_trig_sched_attrib:
+  error_code: 1441
+SM_gl_migrate_high_to_low:
+  error_code: 1536
+SM_duplicate_initiator:
+  error_code: 4100
+SM_ddup_folder_merge:
+  error_code: 1116
+SM_array_missing_subnet:
+  error_code: 4031
+SM_conflicting_acl_lun:
+  error_code: 4130
+SM_pool_does_not_have_folder:
+  error_code: 1504
+SM_only_vvol_folder_appsrvr:
+  error_code: 1503
+SM_suggested_at_time:
+  error_code: 1540
+SM_shelf_pmd_state:
+  error_code: 6026
+SM_invalid_path_variable:
+  error_code: 1472
+SM_limit_hret_snap_pool:
+  error_code: 1481
+SM_enospc:
+  error_code: 28
+SM_volsnap_already_exported:
+  error_code: 4127
+SM_download_sw:
+  error_code: 1047
+SM_http_ok:
+  error_code: 200
+SM_duplicate_initiatorgrp:
+  error_code: 4096
+SM_second_mgmt_ip_found:
+  error_code: 4060
+SM_session_inval:
+  error_code: 1030
+SM_proc_einval:
+  error_code: 4502
+SM_repl_remote_refused:
+  error_code: 2014
+SM_asymmetric_fc_ports_deprecated:
+  error_code: 4170
+SM_reserved_app_name:
+  error_code: 9100
+SM_invalid_initiator_iqn:
+  error_code: 4098
+SM_cannot_read_object:
+  error_code: 1455
+SM_alarm_shelf_A_SHELF_LOC_ID_OVER_LIMIT:
+  error_code: 7110
+SM_eperm:
+  error_code: 1
+SM_too_many_sorter:
+  error_code: 1525
+SM_stats_start_time_seek_failed:
+  error_code: 9205
+SM_limit_group:
+  error_code: 1443
+SM_pool_flash_mismatch:
+  error_code: 1098
+SM_nic_unassign_no_force:
+  error_code: 4101
+SM_vol_not_online:
+  error_code: 1491
+SM_vlan_subnet_in_manual:
+  error_code: 4105
+SM_vol_unknown:
+  error_code: 1429
+SM_mgmt_ip_invalid:
+  error_code: 4054
+SM_invalid_data_subnet:
+  error_code: 4015
+SM_folder_volmv_enospace:
+  error_code: 1506
+SM_pool_dedupe_incapable:
+  error_code: 4259
+SM_encryption_invalid_mode:
+  error_code: 4306
+SM_pool_last_array:
+  error_code: 1087
+SM_alarm_shelf_A_SHELF_DISK_SAS_LINK:
+  error_code: 7102
+SM_vol_incompatible_app_category:
+  error_code: 4256
+SM_no_iscsi_lun_assignment:
+  error_code: 4125
+SM_no_such_family:
+  error_code: 1035
+SM_missing_criteria_operator:
+  error_code: 1466
+SM_update_multi_error:
+  error_code: 3046
+SM_partner_subnet_does_not_exist:
+  error_code: 4065
+SM_update_precheck:
+  error_code: 3022
+SM_encryption_invalid_scope:
+  error_code: 4304
+SM_mismatch_wwnn_wwpn:
+  error_code: 4164
+SM_no_pkg:
+  error_code: 3017
+SM_group_merge_diff_mgmt_subnet:
+  error_code: 9411
+SM_dedupe_bulk_enable:
+  error_code: 4263
+SM_invalid_query_param:
+  error_code: 1461
+SM_takeover_timeout:
+  error_code: 1069
+SM_malformed_url:
+  error_code: 1483
+SM_asup_error:
+  error_code: 5004
+SM_invalid_discovery_ip:
+  error_code: 4076
+SM_http_request_timeout:
+  error_code: 408
+SM_initiatorgroups_out_of_sync:
+  error_code: 4404
+SM_subscriber_connected:
+  error_code: 8501
+SM_group_config_vol_reserve_greater_than_limit:
+  error_code: 1127
+SM_repl_rename_notsup:
+  error_code: 1400
+SM_pool_dedupe_all_encryption:
+  error_code: 4271
+SM_multi_array_group:
+  error_code: 1086
+SM_folder_enospace:
+  error_code: 1507
+SM_discovery_ip_invalid:
+  error_code: 4055
+SM_asup_pingfrom_mgmtip_error:
+  error_code: 5302
+SM_halt_gl_with_live_member_array:
+  error_code: 1104
+SM_group_config_smtp_username_password_encryption:
+  error_code: 1124
+SM_no_suggested_at_time:
+  error_code: 1542
+SM_vol_app_category_move_invalid:
+  error_code: 4266
+SM_update_interposer_fw:
+  error_code: 3034
+SM_pe_empty_initiator_iqn:
+  error_code: 4181
+SM_pool_merge_limit_decreased:
+  error_code: 1541
+SM_alarm_shelf_A_SHELF_CTRLR_SIDE:
+  error_code: 7100
+SM_add_when_previously_resetup:
+  error_code: 1413
+SM_array_limit_warning:
+  error_code: 1408
+SM_vol_has_connections:
+  error_code: 1523
+SM_array_too_many:
+  error_code: 1404
+SM_proc_unknown_states:
+  error_code: 4504
+SM_repl_partner_name_mismatch:
+  error_code: 1073
+SM_folder_volmv_einprog:
+  error_code: 1496
+SM_invalid_initiatorgrp_desc:
+  error_code: 4095
+SM_repl_vol_name_conflict:
+  error_code: 2038
+SM_mismatching_array_subnet:
+  error_code: 4022
+SM_invalid_pkg_list_response:
+  error_code: 3053
+SM_update_interposer:
+  error_code: 3033
+SM_enomem:
+  error_code: 12
+SM_update_net_degrade:
+  error_code: 3023
+SM_group_config_snap_reserve_greater_than_limit:
+  error_code: 1130
+SM_volmv_abort_ealready:
+  error_code: 1438
+SM_no_such_branch:
+  error_code: 1037
+SM_netconfig_cannot_update_gid:
+  error_code: 9207
+SM_pinned:
+  error_code: 1054
+SM_conflicting_initiator_alias:
+  error_code: 4118
+SM_limit_snap_group:
+  error_code: 1419
+SM_ealready:
+  error_code: 114
+SM_pool_set_default_false:
+  error_code: 4513
+SM_encryption_enc_vol_exists:
+  error_code: 4310
+SM_peer_network_degraded:
+  error_code: 4111
+SM_eremote:
+  error_code: 66
+SM_overlapping_subnets:
+  error_code: 4026
+SM_alarm_shelf_A_CTRLR_RAID_ASSEMBLY_DEG:
+  error_code: 7117
+SM_array_not_active_standby:
+  error_code: 4506
+SM_second_untagged_assignment:
+  error_code: 4090
+SM_unpack:
+  error_code: 3021
+SM_repl_too_many_streams:
+  error_code: 2010
+SM_folder_incompatible_agent_type:
+  error_code: 1497
+SM_alarm_shelf_A_SHELF_SAS_LINK_DISABLED:
+  error_code: 7111
+SM_duplicate_initiator_with_args:
+  error_code: 4132
+SM_connect_spt_server:
+  error_code: 3010
+SM_second_disc_ip_found:
+  error_code: 4061
+SM_volmv_vol_einprog:
+  error_code: 1432
+SM_update_precheck_array:
+  error_code: 3045
+SM_second_mgmt_subnet:
+  error_code: 4018
+SM_group_merge_aborted:
+  error_code: 1079
+SM_enodata:
+  error_code: 61
+SM_scratch_nospace:
+  error_code: 3002
+SM_update_old_pkg_format:
+  error_code: 3057
+SM_forbidden_by_group_merge:
+  error_code: 1122
+SM_repl_not_replicating:
+  error_code: 2012
+SM_limit_scope:
+  error_code: 1444
+SM_repl_no_branch:
+  error_code: 2006
+SM_pool_set_default_already:
+  error_code: 4514
+SM_alarm_shelf_A_SHELF_SES_ERR:
+  error_code: 7101
+SM_resetup_with_multiple_arrays:
+  error_code: 1412
+SM_group_merge_diff_ad_domains:
+  error_code: 9423
+SM_send_recv:
+  error_code: 3011
+SM_invalid_host_type:
+  error_code: 4201
+SM_no_data_ip_on_mgmt_plus_data:
+  error_code: 4071
+SM_snapluns_out_of_sync:
+  error_code: 4403
+SM_controller_not_active:
+  error_code: 4505
+SM_no_such_partner:
+  error_code: 1041
+SM_support_ip_not_on_mgmt:
+  error_code: 4021
+SM_start_fail:
+  error_code: 1075
+SM_proc_incompatible_state:
+  error_code: 4501
+SM_alarm_array_unreachable:
+  error_code: 7000
+SM_gateway_not_in_subnets:
+  error_code: 4059
+SM_encryption_group_scope_override:
+  error_code: 4305
+SM_usb_absent:
+  error_code: 3048
+SM_volmv_enospace:
+  error_code: 1435
+SM_pool_has_folder:
+  error_code: 1500
+SM_group_merge_busy:
+  error_code: 1078
+SM_limit_snaplun:
+  error_code: 4401
+SM_takeover_role_inval:
+  error_code: 1066
+SM_discovery_ip_without_automatic_method_deprecated:
+  error_code: 4080
+SM_update_nimmodel_mem:
+  error_code: 3041
+SM_update_currvers_notfound:
+  error_code: 3029
+SM_array_add_limit_decreased:
+  error_code: 1535
+SM_conflicting_host_type_args:
+  error_code: 4200
+SM_asup_nameres_error:
+  error_code: 5301
+SM_limit_snap_pool:
+  error_code: 1418
+SM_ad_leave:
+  error_code: 7201
+SM_shelf_invalid_afs_count:
+  error_code: 6029
+SM_alarm_shelf_A_SHELF_DISK_SAS_LINK_ERR:
+  error_code: 7112
+SM_enolink:
+  error_code: 67
+SM_incompatible_cache_policy:
+  error_code: 4177
+SM_fc_svc_not_available:
+  error_code: 4171
+SM_support_ip_invalid:
+  error_code: 4053
+SM_branch_frozen:
+  error_code: 1056
+SM_no_assoc_vols:
+  error_code: 1032
+SM_invalid_netconfig:
+  error_code: 4110
+SM_update_nimmodel_db:
+  error_code: 3039
+SM_too_many_snaps_at_time:
+  error_code: 1539
+SM_multi_protocol_access_not_supported:
+  error_code: 4144
+SM_repl_stopped:
+  error_code: 2011
+SM_not_downloading_sw:
+  error_code: 1046
+SM_update_not_active_solo:
+  error_code: 3036
+SM_invalid_mtu:
+  error_code: 4034
+SM_shelf_create_rfail:
+  error_code: 6005
+SM_snap_has_clone:
+  error_code: 1511
+SM_eagain:
+  error_code: 11
+SM_invalid_route:
+  error_code: 4000
+SM_shelf_expander_err:
+  error_code: 6022
+SM_failover_bgl_already:
+  error_code: 1064
+SM_shelf_no_drive_set:
+  error_code: 6038
+SM_array_multi_array_group:
+  error_code: 1402
+SM_session_create:
+  error_code: 1029
+SM_nic_not_found:
+  error_code: 4010
+SM_vss_validation_timedout:
+  error_code: 9500
+SM_fc_ping_payload_mismatched:
+  error_code: 4150
+SM_vol_dedupe_invalid_perf_policy:
+  error_code: 4254
+SM_missing_advanced_criteria_constructor:
+  error_code: 1463
+SM_group_target_already_enabled:
+  error_code: 1118
+SM_http_not_implemented:
+  error_code: 501
+SM_group_target_already_disabled:
+  error_code: 1119
+SM_invalid_vol_mbps_limit:
+  error_code: 4510
+SM_http_partial_content:
+  error_code: 206
+SM_vol_dedupe_move_invalid:
+  error_code: 4265
+SM_incompatible_volumes:
+  error_code: 4195
+SM_invalid_non_iscsi_data_subnet:
+  error_code: 4172
+SM_limit_volmv_hret_snap_pool:
+  error_code: 1482
+SM_in_use_app_uuid:
+  error_code: 4185
+SM_swupdate_einprog:
+  error_code: 4176
+SM_migrate_role_inval:
+  error_code: 1082
+SM_invalid_volacl_scope:
+  error_code: 1110
+SM_route_exists:
+  error_code: 4028
+SM_pe_conflicting_acl:
+  error_code: 4188
+SM_resolve_host:
+  error_code: 3051
+SM_eintr:
+  error_code: 4
+SM_limit_snap_retention_vol:
+  error_code: 1421
+SM_automatic_connection_method_without_discovery_ip:
+  error_code: 4067
+SM_mismatching_duplicate_subnet:
+  error_code: 4016
+SM_partner_offline:
+  error_code: 1042
+SM_invalid_nic:
+  error_code: 4087
+SM_tmp_nospace:
+  error_code: 3000
+SM_repl_key_value_unsup:
+  error_code: 2032
+SM_eaccess:
+  error_code: 13
+SM_too_small:
+  error_code: 1055
+SM_shelf_invalid_model:
+  error_code: 6032
+SM_acl_scope_overlap:
+  error_code: 4126
+SM_limit_snap_retention_volcoll:
+  error_code: 1422
+SM_conflicting_initiator_alias_with_args:
+  error_code: 4156
+SM_repl_no_partner_avail:
+  error_code: 2025
+SM_too_many_snaps:
+  error_code: 1538
+SM_no_path_found:
+  error_code: 1454
+SM_update_nimmodel_ssd:
+  error_code: 3044
+SM_subscription_limit:
+  error_code: 8502
+SM_subscriber_limit:
+  error_code: 8500
+SM_update_fw_incompatible:
+  error_code: 3025
+SM_array_key_not_unique:
+  error_code: 1406
+SM_add_conflicting_host_type:
+  error_code: 4199
+SM_too_many_subnets:
+  error_code: 4003
+SM_shelf_wrong_ctrlr_side:
+  error_code: 6014
+SM_afs_disconnected:
+  error_code: 6037
+SM_shelf_invalid_count:
+  error_code: 6028
+SM_empty_fc_config:
+  error_code: 4157
+SM_wrong_cksum:
+  error_code: 3020
+SM_vol_offline:
+  error_code: 1484
+SM_update_fc_degrade:
+  error_code: 3049
+SM_unmatched_fc_intf:
+  error_code: 4167
+SM_info_async_job_id:
+  error_code: 8001
+SM_vol_size_decreased:
+  error_code: 1543
+SM_repl_remote_generic:
+  error_code: 2013
+SM_migrate_check_err:
+  error_code: 1083
+SM_proc_changed_state:
+  error_code: 4503
+SM_shelf_expr_mfg_ver_inval:
+  error_code: 6013
+SM_asup_failed:
+  error_code: 5002
+SM_repl_delete_replica_unsup:
+  error_code: 2037
+SM_array_not_found_with_args:
+  error_code: 1090
+SM_untagged_mtu_not_largest:
+  error_code: 4091
+SM_subnet_does_not_exist:
+  error_code: 4040
+SM_default_gateway_not_in_mgmt_subnet:
+  error_code: 4063
+SM_vol_dedupe_unassigned_app_category:
+  error_code: 4255
+SM_enoent:
+  error_code: 2
+SM_invalid_netconfig_to_delete:
+  error_code: 4027
+SM_vvol_already_enabled:
+  error_code: 1111
+SM_limit_scope_values:
+  error_code: 1516
+SM_vol_clone_dedupe_move_invalid:
+  error_code: 4267
+SM_volmv_dedupe_not_enough_cache:
+  error_code: 1134
+SM_http_unauthorized:
+  error_code: 401
+SM_no_method_for_URL_pattern:
+  error_code: 1453
+SM_update_nimmodel_check:
+  error_code: 3035
+SM_disable_last_protocol:
+  error_code: 4204
+SM_fc_single_array_pool:
+  error_code: 4142
+SM_empty_pool:
+  error_code: 1426
+SM_serial_collision:
+  error_code: 1448
+SM_volmv_incompatible_agent_type:
+  error_code: 1498
+SM_repl_eexist:
+  error_code: 2039
+SM_no_vss_writer:
+  error_code: 1031
+SM_folder_limit_inval:
+  error_code: 1509
+SM_add_nonfc_to_fc_group:
+  error_code: 4153
+SM_duplicate_subnet:
+  error_code: 4103
+SM_nospace:
+  error_code: 3004
+SM_unsupported_access_protocol:
+  error_code: 4207
+SM_vol_cache_pin_dedupe_notsupp:
+  error_code: 1132
+SM_pool_not_found:
+  error_code: 1059
+SM_invalid_netmask:
+  error_code: 4014
+SM_no_subnet_with_label:
+  error_code: 4082
+SM_repl_vvol_unsup:
+  error_code: 2030
+SM_limit_snapcoll_volcoll:
+  error_code: 1420
+SM_failed_source_group_login:
+  error_code: 9400
+SM_group_merge_diff_discovery_subnet:
+  error_code: 9412
+SM_folder_needs_limit:
+  error_code: 1505
+SM_resolve_proxy:
+  error_code: 3009
+SM_incompatible_initiator_access_protocol:
+  error_code: 4121
+SM_folder_perfpol_agent_type:
+  error_code: 1517
+SM_at_least_one_group_subnet:
+  error_code: 4136
+SM_cache_pinned_notsup:
+  error_code: 1490
+SM_erange:
+  error_code: 34
+SM_array_subnet_mismatch:
+  error_code: 4017
+SM_invalid_app_uuid:
+  error_code: 4184
+SM_pool_usage_unavailable:
+  error_code: 1430
+SM_update_raid_degrade:
+  error_code: 3027
+SM_iscsi_all_access_not_available:
+  error_code: 4151
+SM_unexpected_query_param:
+  error_code: 1462
+SM_shelf_foreign:
+  error_code: 6007
+SM_multi_array_without_automatic_connection_method:
+  error_code: 4069
+SM_shelf_ssd_degraded:
+  error_code: 6025
+SM_alarm_shelf_A_SHELF_CTRLR_LOOP:
+  error_code: 7107
+SM_nic_subnet_does_not_exist:
+  error_code: 4036
+SM_conflicting_acl_vol:
+  error_code: 4129
+SM_invalid_netconfig_name:
+  error_code: 4013
+SM_shelf_foreign_disk:
+  error_code: 6010
+SM_repl_edit_partner_name_not_paused:
+  error_code: 2022
+SM_appserver_in_use:
+  error_code: 1499
+SM_invalid_initiatorgrp_access_protocol_with_args:
+  error_code: 4155
+SM_not_fc_initiatorgrp:
+  error_code: 4134
+SM_no_action:
+  error_code: 1048
+SM_update_nimmodel_nic:
+  error_code: 3042
+SM_missing_criteria_param:
+  error_code: 1467
+SM_einprogress:
+  error_code: 115
+SM_vol_assoc_volcoll:
+  error_code: 1512
+SM_array_not_found:
+  error_code: 1049
+SM_mgmt_ip_already_exists:
+  error_code: 4044
+SM_array_group_leader:
+  error_code: 1409
+SM_fc_driver_diag_test_failure:
+  error_code: 4147
+SM_repl_no_base_snap:
+  error_code: 2003
+SM_invalid_initiator_alias_with_args:
+  error_code: 4178
+SM_discovery_ip_incorrect:
+  error_code: 4050
+SM_invalid_fc_config:
+  error_code: 4169
+SM_remove_nonempty_folder:
+  error_code: 1489
+SM_takeover_db_fail:
+  error_code: 1070
+SM_shelf_invalid_disk_count:
+  error_code: 6003
+SM_too_many:
+  error_code: 1052
+SM_shelf_invalid_loc:
+  error_code: 6012
+SM_alarm_shelf_A_SHELF_INVALID_EEPROM:
+  error_code: 7104
+SM_invalid_netzone_type:
+  error_code: 4084
+SM_shutdown:
+  error_code: 1094
+SM_encryption_group_cipher_override:
+  error_code: 4301
+SM_initiatorgrp_subnet_does_not_exist:
+  error_code: 4109
+SM_missing_discovery_ip:
+  error_code: 4075
+SM_discovery_ip_not_found:
+  error_code: 4078
+SM_missing_subnet:
+  error_code: 4002
+SM_change_mgmt_ip_eperm:
+  error_code: 4007
+SM_http_insufficient_storage:
+  error_code: 507
+SM_repl_partner_version_unknown:
+  error_code: 2026
+SM_invalid_cursor:
+  error_code: 1526
+SM_npiv_not_supported:
+  error_code: 4168
+SM_duplicate_subnet_label:
+  error_code: 4085
+SM_no_such_volume:
+  error_code: 1036
+SM_pool_dedupe_all_vol_hybrid:
+  error_code: 4273
+SM_perfpol_vol_move_app_category:
+  error_code: 4269
+SM_data_ip_not_on_subnet:
+  error_code: 4033

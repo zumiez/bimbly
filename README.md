@@ -18,7 +18,18 @@ A Ruby library for interacting with Nimble Storage devices using ReST and RPC ca
     * [Details](#details)
     * [Reset](#reset)    
     * [Call](#call)
-    
+
+# Versions
+-------------
+
+As of v1.2.0 Bimbly supports API v4 for Nimble OS v4 which puts generate methods number at 237 and has additional Data Types and Error Codes.
+
+To use the library for API v3 use the `:version` option when instantiating
+
+```
+nimble = Bimbly.new( version: '3' )
+```
+
 # Mission Statement
 ------------------
 

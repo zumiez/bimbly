@@ -11,11 +11,17 @@ class Bimbly
 
   def initialize(opts = {})
     # Read in setup files
-    @error_codes = YAML.load(File.read("#{File.dirname(__FILE__)}/error_codes.yml"))
-    #@obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets.yml"))
-    @obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets_v2.yml"))
-    @data_type = YAML.load(File.read("#{File.dirname(__FILE__)}/data_types.yml"))
-
+    if opts[:version] == "3"
+      opts.delete(:version)
+      @error_codes = YAML.load(File.read("#{File.dirname(__FILE__)}/error_codes_v3.yml"))
+      @obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets_v3.yml"))
+      @data_type = YAML.load(File.read("#{File.dirname(__FILE__)}/data_types_v3.yml"))
+    else
+      @error_codes = YAML.load(File.read("#{File.dirname(__FILE__)}/error_codes_v4.yml"))
+      @obj_sets = YAML.load(File.read("#{File.dirname(__FILE__)}/object_sets_v4.yml"))
+      @data_type = YAML.load(File.read("#{File.dirname(__FILE__)}/data_types_v4.yml"))
+    end
+    
     @meth_name = nil
     
     @base_url = "NotConnected"

@@ -22,7 +22,7 @@ A Ruby library for interacting with Nimble Storage devices using ReST and RPC ca
 # Versions
 -------------
 
-As of v1.2.0 Bimbly supports API v4 for Nimble OS v4 which puts generate methods number at 237 and has additional Data Types and Error Codes.
+As of v1.2.0 Bimbly supports API v4 for Nimble OS v4 which puts the amount of generated methods at 237 and has additional Data Types and Error Codes.
 
 To use the library for API v3 use the `:version` option when instantiating
 
@@ -33,7 +33,7 @@ nimble = Bimbly.new( version: '3' )
 # Mission Statement
 ------------------
 
-nnWhen first searching through the API docs before setting down to write the code, I realized just how vast and thorough the docs were. And then I realized I could leverage this. As a user of my own library, I wanted a way to ask the library what my options were when interacting with a Nimble Storage device rather than just try to memorize all of my options.
+When first searching through the API docs before setting down to write the code, I realized just how vast and thorough the docs were. And then I realized I could leverage this. As a user of my own library, I wanted a way to ask the library what my options were when interacting with a Nimble Storage device rather than just try to memorize all of my options.
 
 Imagine sitting at a Nimble Storage restaurant wanting to order...something to do with a device:
 
@@ -363,4 +363,4 @@ TODO
 - [x] Check payload against mandatory attributes
 - [x] Check payload against available attributes
 - [ ] Finish the Interactive Shell portion
-- [ ] Update library to load API docs v4.1 and be interchangeable
+- [x] Update library to load API docs v4.1 and be interchangeable

@@ -6,9 +6,12 @@ require 'pp'
 
 class Bimbly
   attr_reader :data_type, :error_codes, :error_names, :obj_sets
-  attr_accessor :array, :base_url, :cert, :doc_pointer, :file, :file_select, :headers, :meth_name,
-                :menu, :param_pointer, :password, :pointer, :port, :req_pointer, :user, :verb
+  attr_accessor :array, :base_url, :cert, :doc_pointer, :file, :file_select, :headers, :mando_array,
+                :meth_name, :menu, :param_pointer, :password, :pointer, :port, :req_pointer, :user,
+                :verb
 
+  MANDO_EXCEPT = { create_volumes: ['size'] }
+  
   def initialize(opts = {})
     # Read in setup files
     if opts[:version] == "3"
@@ -288,20 +291,22 @@ class Bimbly
 
         # Maybe pull this out into its own method
         # Check for mandatory payload info
-        mando_array = []
+        @mando_array = []
         if not hash[:request].nil?
           hash[:request].each { |key, value|
-            mando_array << key
+            @mando_array << key if value['mandatory'] == 'true'
+            @mando_array << key if not MANDO_EXCEPT[method_name].nil? and
+              MANDO_EXCEPT[method_name].include? key
           }
         end
 
         raise ArgumentError,
-              "Must supply :payload with attributes #{mando_array} on #{method_name}" if
-          not mando_array.empty? and payload.nil?
+              "Must supply :payload with attributes #{@mando_array} on #{method_name}" if
+          not @mando_array.empty? and payload.nil?
         
-        mando_array.each { |ele|
+        @mando_array.each { |ele|
           raise ArgumentError,
-                "\'#{ele}\' is a mandatory attribute in the payload for #{method_name}: Please supply these attributes #{mando_array}" unless
+                "\'#{ele}\' is a mandatory attribute in the payload for #{method_name}: Please supply these attributes #{@mando_array}" unless
             payload.keys.to_s.include?(ele)
         }
 

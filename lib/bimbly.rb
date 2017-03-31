@@ -37,6 +37,10 @@ class Bimbly
     new_connection(opts)
   end
 
+  def inspect
+    "#<Bimbly:#{object_id}>"
+  end
+
   def call(opts = {})
     verb = @verb
     payload = @payload
@@ -180,6 +184,10 @@ class Bimbly
     @param_pointer
   end
 
+  def required
+    @mando_array
+  end
+
   def request
     puts @req_pointer.to_yaml
   end
@@ -317,7 +325,7 @@ class Bimbly
               hash[:request].keys.include?(key.to_s)
           }
         end
-        
+
         self
       }
     }

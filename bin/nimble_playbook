@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+require 'bimbly'
+
+config, playbook = ARGV
+
+config = YAML.load_file(config)
+playbook = YAML.load_file(playbook)
+
+raise ArgumentError, "Supply a valid yaml file for playbook" if not playbook.class == Hash
+
+nimbly = Bimbly.new(file: config)
+
+puts nimbly.read_volumes.call

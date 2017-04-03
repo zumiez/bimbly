@@ -1,4 +1,14 @@
-volumes:
-  create:
-    name: "kyles_test"
-    size: 1000
+- create:
+  - volumes:
+      name: "kyles_test"
+      size: 1000
+      id: tehe
+
+  - volumes:
+      name: "second_test"
+      size: 5500
+
+- dont_create:
+  - volumes:
+      name: "kyles_test"
+      size: 5000

@@ -3,13 +3,39 @@
 require 'yaml'
 require 'bimbly'
 
+raise ArgumentError, "Supply a config yaml file and a playbook yaml file" if ARGV.nil?
+
 config, playbook = ARGV
 
-config = YAML.load_file(config)
+raise ArgumentError, "Supply a config yaml file" if config.nil?
+raise ArgumentError, "Supply a playbook yaml file" if playbook.nil?
+
 playbook = YAML.load_file(playbook)
 
-raise ArgumentError, "Supply a valid yaml file for playbook" if not playbook.class == Hash
+raise ArgumentError, "Supply a valid yaml file for playbook" unless
+  playbook.class == Hash or playbook.class == Array
 
-nimbly = Bimbly.new(file: config)
+#nimbly = Bimbly.new(file: config)
 
-puts nimbly.read_volumes.call
+#puts nimbly.read_volumes.call
+
+playbook.each do |play|
+  play.each do |task|
+    operation = task.shift
+    task.each do |object_array|
+      puts object_array
+      object_array.each do |object_set|
+        puts object_set.class
+#        puts object_set
+        object_set.each do |object, values|
+          method_call = "#{operation}_#{object}"
+          method_call = "#{method_call}_by_id( id: #{values["id"]} )" unless values["id"].nil?
+          payload = { payload: values}
+
+      
+          puts method_call
+        end
+      end
+    end
+  end
+end

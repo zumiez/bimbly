@@ -7,8 +7,8 @@ require 'pp'
 class Bimbly
   attr_reader :data_type, :error_codes, :error_names, :obj_sets
   attr_accessor :array, :base_url, :cert, :doc_pointer, :file, :file_select, :headers, :mando_array,
-                :meth_name, :menu, :param_pointer, :password, :pointer, :port, :req_pointer, :user,
-                :verb
+                :meth_name, :menu, :param_pointer, :password, :pointer, :port, :req_pointer,
+                :saved_array, :user, :verb
 
   MANDO_EXCEPT = { create_volumes: ['size'] }
   
@@ -26,6 +26,7 @@ class Bimbly
     end
     
     @meth_name = nil
+    @saved_array = []
     
     @base_url = "NotConnected"
     @menu = []
@@ -161,6 +162,8 @@ class Bimbly
     @meth_name = nil
     @doc_pointer = @obj_sets
     @param_pointer = @obj_sets
+
+    return nil
   end
   
   def details
@@ -214,6 +217,74 @@ class Bimbly
     return nil
   end
 
+  def save
+    #Method to save call to array
+    method_array = @meth_name.to_s.split("_")
+
+    operation = method_array.shift
+
+    if method_array.last == "id"
+      method_array.pop(2)
+    elsif method_array.last == "detailed"
+      method_array.pop
+    end
+    
+    object = method_array.join("_")
+    
+    operations_hash = {}
+    
+    if @meth_name.match(/_by_id/)
+      id = @uri.match(/#{object}\/(.*)/)[1]
+      id = id.split("/")[0]
+      operations_hash['id'] = id unless id.nil?
+    end
+    
+    operations_hash['params'] = extract_params if @uri.match(/\?/)
+    operations_hash['request'] = @payload unless @payload.nil?
+
+    if operations_hash.empty?
+      @saved_array << { operation => [ object ] }
+    else
+      @saved_array << { operation => [ object => operations_hash ] }
+    end
+    
+    reset
+  end
+
+  def review
+    #Method to review calls that are saved
+    @saved_array.each do |ele|
+      pp ele
+    end
+    
+    return nil
+  end
+
+  def create_playbook(file)
+    #Method to output saved calls to a yaml formated playbook
+    raise ArgumentError, "Supply #create_playbook with a file name" if file.nil?    
+    File.write(file, @saved_array.to_yaml)
+
+    return nil
+  end
+
+  def create_template(file)
+    #Method to take saved calls, scrub data, and create a yml template for them    
+    raise ArgumentError, "Supply #create_template with a file name" if file.nil?
+  end
+
+  def extract_params
+    params_hash = {}
+    params = @uri.split("?")[1]
+    params_array = params.split("&")
+    params_array.each do |param|
+      key, value = param.split("=")
+
+      params_hash[key] = value
+    end
+    params_hash
+  end
+  
   def build_params(hash)
     raise ArgumentError, "Please provide a valid hash for parameters" unless
       hash.instance_of? Hash and hash != {}
@@ -284,6 +355,7 @@ class Bimbly
         if not payload.nil?
           payload = JSON.parse(payload) if payload.class == String
           payload = payload["data"] if payload.keys.include?("data")
+          payload = Hash[payload.map{|(k,v)| [k.to_s,v]}]
         end
         
         @uri = uri

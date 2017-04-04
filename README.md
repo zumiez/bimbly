@@ -18,6 +18,10 @@ A Ruby library for interacting with Nimble Storage devices using ReST and RPC ca
     * [Details](#details)
     * [Reset](#reset)    
     * [Call](#call)
+    * [Save](#save)
+    * [Review](#Review)
+    * [Create Playbook](#create-playbook)
+    * [Create Template](#create-template)
 
 # Versions
 -------------
@@ -349,6 +353,74 @@ Verb: delete
 Payload: n/a
 ```
 
+## Save
+-------------
+
+Instead of calling 'call' on the Bimbly object and sending the ReST call to the nimble array, the method 'save' can be used to store the call in an array. This resets the environment as well. The reason for saving a call instead of sending it is so you can build up a series of calls which can then be reviewed and saved to a yaml file for use with Nimble_Playbook
+
+```
+nimble.read_volumes_by_id( id: "ohla" )
+
+nimble.save
+
+payload = { id: 'id', dest_pool_id: 'pool_id' }
+
+nimble.move_volumes_by_id( id: 'volume_id', payload: payload)
+
+nimble.save
+
+puts nimble.saved_array
+=>
+{"read"=>[{"volumes"=>{"id"=>"ohla"}}]}
+{"move"=>[{"volumes"=>{"id"=>"volume_id", "request"=>{"id"=>"id", "dest_pool_id"=>"pool_id"}}}]}
+```
+
+## Review
+-------------
+
+The 'review' method is used to output saved calls so you can see what will be output to a yaml file
+
+```
+nimble.review
+=>
+{"read"=>[{"volumes"=>{"id"=>"ohla"}}]}
+{"move"=>
+  [{"volumes"=>
+     {"id"=>"volume_id", "request"=>{"id"=>"id", "dest_pool_id"=>"pool_id"}}}]}
+```
+
+## Create Playbook
+--------------------
+
+The 'create_playbook' method can be called on the Bimbly object to create a yaml file for use with Nimble Playbook. This method requires a file name as a parameter.
+
+```
+nimble.create_playbook('test_playbook.yml')
+=> nil
+
+<on filesystem>
+
+cat ./test_playbook.yaml
+=>
+---
+- read:
+  - volumes:
+      id: ohla
+- move:
+  - volumes:
+      id: volume_id
+      request:
+        id: id
+        dest_pool_id: pool_id
+```
+
+## Create Template
+-----------------
+
+<This method under construction>
+
+The 'create_template' method can be used on the Bimbly object to create a yaml file for use with Nimble Playbook, but unlike 'create_playbook' it will stub out the data and show all the required fields. This will be useful if you know what kind of operations you want to do, and just want a yaml file that can be edited.
+
 This Code Is Ready For Use!
 --------------------------------
 
@@ -362,3 +434,4 @@ TODO
 - [x] Check payload against available attributes
 - [x] Finish the Interactive Shell portion
 - [x] Update library to load API docs v4.1 and be interchangeable
+- [ ] Create Template method for generating playbooks

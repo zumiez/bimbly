@@ -1,0 +1,5 @@
+---
+cert: "nimble_CA.crt"
+user: "admin_user"
+password: "admin_password"
+array: "fqdn_of_array"

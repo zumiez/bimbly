@@ -49,7 +49,7 @@ The waiter/waitress then asks, "What kind of parameters do you want?"
 
 As a user, I want to be able to ask, "What do you got?"
 
-This is what lead me to parse the API docs into 4 yaml files that could be used to generate methods and also be interacted with in order to talk to Nimble Storage devices on another level - knowing exactly what you want before sending potentially dangerous commands or getting ambiguous replies and deciphering error codes.
+This is what lead me to parse the API docs into 3 yaml files that could be used to generate methods and also be interacted with in order to talk to Nimble Storage devices on another level - knowing exactly what you want before sending potentially dangerous commands or getting ambiguous replies and deciphering error codes.
 
 # How to Install
 -------------

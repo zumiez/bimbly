@@ -1,14 +1,31 @@
 - create:
   - volumes:
-      name: "kyles_test"
-      size: 1000
-      id: tehe
+      request:
+        name: first_test
+        size: 1000
 
   - volumes:
-      name: "second_test"
-      size: 5500
+      request:
+        name: second_test
+        size: 5500
 
-- dont_create:
+- read:
   - volumes:
-      name: "kyles_test"
-      size: 5000
+      params:
+        name: first_test
+        
+- update:
+  - volumes:
+      id: 'id_of_volume'
+      params:
+        force: false
+      request:
+        id: 'id_of_volume' 
+      
+- delete:
+  - volumes:
+      id: 'id_of_volume'
+  - volumes:
+      id: 'id_of_second_volume'
+
+      

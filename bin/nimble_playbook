@@ -15,25 +15,39 @@ playbook = YAML.load_file(playbook)
 raise ArgumentError, "Supply a valid yaml file for playbook" unless
   playbook.class == Hash or playbook.class == Array
 
-#nimbly = Bimbly.new(file: config)
+nimbly = Bimbly.new(file: config)
 
-#puts nimbly.read_volumes.call
-
-playbook.each do |play|
+playbook.each_with_index do |play, play_index|
   play.each do |task|
-    operation = task.shift
+    operation = task.shift.downcase
     task.each do |object_array|
-      puts object_array
-      object_array.each do |object_set|
-        puts object_set.class
-#        puts object_set
+      object_array.each_with_index do |object_set, object_index|
         object_set.each do |object, values|
           method_call = "#{operation}_#{object}"
-          method_call = "#{method_call}_by_id( id: #{values["id"]} )" unless values["id"].nil?
-          payload = { payload: values}
-
+          values = {} if values.nil?
+          method_call = "#{method_call}_by_id" unless values["id"].nil?
+          
+          ## Maybe I'll need to delete 'id' from payload??
+          ## Maybe only if it's a 'delete'?? idk
+#          if operation == "delete"
+#          end
       
-          puts method_call
+#          puts "#{method_call}"
+#          puts values
+
+#          puts nimbly.respond_to?(method_call.to_sym)
+
+          if nimbly.respond_to?(method_call.to_sym)
+            nimbly.send(method_call.to_sym,
+                        id: values["id"],
+                        params: values["params"],
+                        payload: values["request"])
+            
+          #            puts nimbly.details
+            puts nimbly.call
+          else
+            puts "There was a problem with object set at location: #{object_index} of the #{play_index} task. Could not find a method with the name #{method_call}"
+          end
         end
       end
     end

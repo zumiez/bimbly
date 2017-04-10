@@ -93,7 +93,7 @@ class Bimbly
   def error_format(messages)
     message_array = []
     JSON.parse(messages)["messages"].each { |message|
-      message.merge!(@error_names[message["code"]])
+      message.merge!(@error_codes[message["code"]])
       message.delete("Error_Desc")
       message_array << message
     }

@@ -162,7 +162,7 @@ nimble.menu.grep /volume/
 nimble.menu.grep /read/
 ```
 
-I have menu returning the underlying Array data structure so that it can be operated on. If you'd like it more readable you can print it cleanly using `puts` in front.
+I have menu returning the underlying Array data structure so that it can be operated on. If you'd like it more readable you can print it cleanly using `puts nimble.menu`.
 
 Each method that has been generated will load information about the call into the `nimble` object. We can inspect the information loaded before making a call to the Nimble device using the following methods.
 
@@ -346,7 +346,10 @@ Payload:
 ```
 DELETE
 
+nimble.delete_users_by_id(id: 'USER_ID')
+
 nimble.details
+=>
 Method Selected: delete_users_by_id
 URI: https://NIMBLE_ARRAY:5392/v1/users/NEW_ID
 Verb: delete

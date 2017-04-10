@@ -77,7 +77,8 @@ class Bimbly
       puts "Response Headers:"
       pp e.response.headers
       puts "Response Body:"
-      pp error_format(e.response.body)
+      puts e.response.body
+      #pp error_format(e.response.body)
       puts "Response Object:"
       puts e.response.request.inspect
     end
@@ -392,6 +393,8 @@ class Bimbly
 
         if not payload.nil?
           payload.keys.each { |key|
+            raise ArgumentError, "The method #{method_name} does not utilize :payload" if
+              hash[:request].nil?
             raise ArgumentError,
                   "The attribute \'#{key}\' is not an available attribute for #{method_name}" unless
               hash[:request].keys.include?(key.to_s)

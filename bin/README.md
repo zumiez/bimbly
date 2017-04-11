@@ -36,76 +36,76 @@ Example Yaml
 ---
 - create:
   - volumes:
-    request:
-      name: <volume_name>
-      size: <volume_size>
+      request:
+        name: <volume_name>
+        size: <volume_size>
       
   - volumes:
-    request:
-      name: <second_volume_name>
-      size: <second_volume_size>
+      request:
+        name: <second_volume_name>
+        size: <second_volume_size>
 
 - update:
   - volumes:
-    id: <volume_id>
-    request:
       id: <volume_id>
-      size: <new_size>
+      request:
+        id: <volume_id>
+        size: <new_size>
 
 - delete:
   - volumes:
-    id: <volume_id>
+      id: <volume_id>
 
 - move:
   - volumes:
-    id: <volume_id>
-    request:
       id: <volume_id>
-      dest_pool_id: <pool_id>
+      request:
+        id: <volume_id>
+        dest_pool_id: <pool_id>
 
 - restore:
   - volumes:
-    id: <volume_id>
-    request:
       id: <volume_id>
-      base_snap_id: <snapshot_id>
+      request:
+        id: <volume_id>
+        base_snap_id: <snapshot_id>
 
 - bulk_move:
   - volumes:
-    request:
-      vol_ids: <array_of_vol_ids>
-      dest_pool_id: <pool_id>
+      request:
+        vol_ids: <array_of_vol_ids>
+        dest_pool_id: <pool_id>
 
 - create:
   - users:
-    request:
-      name: <name>
-      password: <password>
+      request:
+        name: <name>
+        password: <password>
 
   - users:
-    request:
-      name: <second_name>
-      password: <second_pass>
+      request:
+        name: <second_name>
+        password: <second_pass>
 
 - update:
   - users:
-    id: <user_id>
-    request:
       id: <user_id>
-      name: <new_name>
+      request:
+        id: <user_id>
+        name: <new_name>
       
   - users:
-    id: <second_user_id>
-    request:
       id: <second_user_id>
-      role: 'administrator'
+      request:
+        id: <second_user_id>
+        role: 'administrator'
 
 - delete:
   - users:
-    id: <user_id>
+      id: <user_id>
 
   - users:
-    id: <second_user_id>
+      id: <second_user_id>
 ```
 
 Changes to the Bimbly library help facilitate the creation of a Nimble playbook for use by this script. Please check out the README to see how the library can be used, specifically the methods Save, Review, and Create_Playbook.

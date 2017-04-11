@@ -77,8 +77,7 @@ class Bimbly
       puts "Response Headers:"
       pp e.response.headers
       puts "Response Body:"
-      puts e.response.body
-      #pp error_format(e.response.body)
+      pp error_format(e.response.body)
       puts "Response Object:"
       puts e.response.request.inspect
     end

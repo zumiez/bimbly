@@ -1,4 +1,4 @@
-Introducing Nimble Playbook
+Nimble Playbook
 ------------------
 
 I've built a script that digests yaml config files to automate agaist a Nimble Storage device using Rest calls. I pulled some inspiration from Ansible Playbook and it functions as if given a list of tasks. 

@@ -1,31 +1,39 @@
 - create:
   - volumes:
       request:
-        name: first_test
+        name: first_volume
         size: 1000
 
   - volumes:
       request:
-        name: second_test
+        name: second_volume
         size: 5500
 
 - read:
   - volumes:
       params:
-        name: first_test
-        
+        name: first_volume
+
+# Must turn volumes offline before deleting them        
 - update:
   - volumes:
-      id: 'id_of_volume'
+      id: id_of_first_volume
       params:
         force: false
       request:
-        id: 'id_of_volume' 
-      
+        id: id_of_first_volume
+        online: false
+
+  - volumes:
+      id: id_of_volume
+      request:
+        id: id_of_volume
+        online: false
+        
 - delete:
   - volumes:
-      id: 'id_of_volume'
+      id: id_of_first_volume
   - volumes:
-      id: 'id_of_second_volume'
+      id: id_of_second_volume
 
       

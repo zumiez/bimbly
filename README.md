@@ -66,11 +66,8 @@ Then you can load the library either in a script or using irb with the line:
 require 'bimbly'
 ```
 
-The rest of this documentation will be focused on the *interactive* aspect of this library to show the extent of its usefullness, though the library is just as powerful in scripts as well. To remove some unwanted clutter in `irb` that happens because of the returned objects during use, you can turn off the echo in `irb` with:
+The rest of this documentation will be focused on the *interactive* aspect of this library to show the extent of its usefullness, though the library is just as powerful in scripts as well.
 
-```
-conf.echo = false
-```
 
 # Available Methods
 ---------------------------
